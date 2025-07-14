@@ -28,7 +28,7 @@
         </div>
         <div class="field">
             <div class="control">
-                <button class="button is-link" type="submit">{{ t('contactMe:SEND') }}</button>
+                <button class="button is-link" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
             </div>
         </div>
         <div v-if="error">{{ t('contactMe:ERROR_MESSAGE') }}</div>
@@ -41,9 +41,11 @@
 import { useTranslation } from 'i18next-vue';
 const { t } = useTranslation();
 
-import { reactive } from 'vue';
+import { ref, reactive } from 'vue';
 
 import { useEmailJs } from '../../lib/useEmailJs';
+
+const isSubmitting = ref(false);
 
 const form = reactive({
     name: '',
@@ -54,6 +56,8 @@ const form = reactive({
 
 const { sendEmail, error, success } = useEmailJs();
 async function handleSubmit() {
+    if (isSubmitting.value) return;
+    isSubmitting.value = true;
     await sendEmail({
         name: form.name,
         email: form.email,
