@@ -23,8 +23,16 @@
 
     const isHomePage = computed(() => route.name === 'HomePage')
 
-    const isProjectPage = computed(() => route.path.includes('/projet/'))
+    const isAllProjectsPage = computed(() => route.name === 'projets')
 
+    const isSpecificProjectPage = computed(() => route.path.startsWith('/projet/') )
+    
+    console.log("🚀 ~ route:", route.path)
+    console.log( 'isHomePage', isHomePage.value)
+    console.log( 'isAllProjectsPage', isAllProjectsPage.value)
+    console.log( 'isSpecificProjectPage', isSpecificProjectPage.value)
+
+    
     const showNavbar = ref(false);
 
     onMounted(() => {
@@ -45,14 +53,11 @@
             <!-- Logo -->
             <div class="navbar-brand" id="logo" >
 
-                <!-- logo sur HomePage -->
-                <router-link to="/" id="logo" aria-label="Retour à l'accueil" v-if="isHomePage">
+                <!-- logo vers HomePage -->
+                <router-link to="/" id="logo" aria-label="Retour à l'accueil" >
                     <img :src="logo" class="logoNif" alt="Logo renard Nif">
                 </router-link>
-                <!-- logo sur autres pages - utilisation de navigation programmatique-->
-                <!-- <a href="#"  v-else>
-                    <img :src="logo" alt="" class="logoNif">
-                </a> -->
+
                 
                 <!-- Bouton burger -->
                 <button @click="toggleMenu" :class="{'is-active': isBurgerActive}"
@@ -65,6 +70,7 @@
             </div>
             <!-- Menu -->
             <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}" >
+                <!-- Liens de navigation sur la page d'accueil -->
                 <div class="navbar-start ml-6" v-if="isHomePage">
                     <a class="navbar-item"
                         href="#aboutMe" >
@@ -86,7 +92,8 @@
                         <strong>{{ t('navBar:CONTACT_BUTTON') }}</strong>
                     </a>
                 </div>
-                <div class="navbar-start ml-6" v-else-if="isProjectPage">
+                <!-- Liens sur la page des projets -->
+                <div class="navbar-start ml-6" v-else-if="isAllProjectsPage">
                     <router-link to="/#" class="navbar-item" >
                         {{ t('navBar:BACK_TO_HOME') }}
                     </router-link>
@@ -94,18 +101,25 @@
                         {{ t('navBar:OTHER_PROJECTS_BUTTON') }}
                     </router-link>
                 </div>
+                <!-- Liens sur les pages de chaque projet unique -->
+                <div class="navbar-start ml-6" v-else-if="isSpecificProjectPage">
+                    <router-link to="/projets" class="navbar-item">
+                        {{ t('navBar:OTHER_PROJECTS_BUTTON') }} 
+                    </router-link>
+                </div>
+                <!-- Liens vers la page d'accueil par défaut sur les autres pages -->
                 <div class="navbar-start ml-6" v-else>
                     <router-link to="/#" class="navbar-item" >
-                        {{ t('navBar:BACK_TO_HOME') }}
+                        {{ t('navBar:BACK_TO_HOME') }} 
                     </router-link>
                 </div>
 
-                <!-- Bouton CTA -->
+                <!-- Boutons de changement de langue et de dark mode -->
                 <div class="navbar-end">
                     
-                        <div class="buttons">
-                            <ToggleDarkMode/>
+                        <div class="buttons is-justify-content-space-evenly">
                             <LangChangeProp/>
+                            <ToggleDarkMode/>
                         </div>
                     
                     
