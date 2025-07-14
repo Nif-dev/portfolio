@@ -17,15 +17,18 @@
 <template>
 
     <NavBar />
+
     <div class="main-container mx-auto">
         <HeroBanner />
         <AboutMe />
         <SkillsList />
             <SeparatorProp />
-        <ProjectsSection />
-        <ContactSection />
+            <ProjectsSection />
+            <SeparatorProp color="var(--color-purple-transparent)"/>
+            <ContactSection />
         <ScrollToTop />
     </div>
+
     <MyFooter />
 
 </template>

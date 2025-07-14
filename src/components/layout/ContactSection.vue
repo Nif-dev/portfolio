@@ -12,19 +12,27 @@
     <section id="contact" class="section ">
         <div class="container ">
 
-            <div class="has-text-centered bcg-blur">
-                <h2 class="title mb-5"> {{ t('contactMe:CTA') }} </h2>
+            <div class="has-text-centered">
+                <div class="bcg-blur">
+                    <h2 class="title is-4 mb-5"> {{ t('contactMe:SUBTITLE') }} </h2>
+                </div>
+                <div class="bcg-blur">
+                    <h1 class="title is-5 mb-3"> {{ t('contactMe:CTA') }} </h1>
+                </div>
             </div>
-            <div class="columns is-centered is-multiline">
-                <div class="column is-one-third has-text-centered is-offset-one-quarter">
-                    <h1 class="title "> {{ t('contactMe:FORM') }} </h1>
+            <div class="columns is-centered ">
+            
+
+            
+                <!-- formulaire de contact -->
+                <div class="column has-text-centered is-three-fifths">
                     <ContactForm />
                 </div>
-                <div class="column is-one-quarter has-text-centered ">
-                    <h1 class="title bcg-blur"> {{ t('contactMe:SOCIAL_NETWORK') }} </h1>
-                    <ContactLinks />
-                </div>
+                
             </div>
+        
+            <!-- liens réseaux -->
+            <ContactLinks />
         </div>
 
         
@@ -34,6 +42,8 @@
 <style scoped>
 [data-theme="light"]
     .bcg-blur{
-        background-color: var(--color-white-transparent);
+        width: fit-content;
+        margin: auto;
+        padding: 10px;
     }
 </style>
