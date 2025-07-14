@@ -5,8 +5,8 @@
 
     import { gemenyApp } from '../../data/projects/gemenyApp'
 
-    import dwwmLink_1 from '../../assets/Diapo-soutenance-DWWM.pdf';
-    import dwwmLink_2 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
+    import dwwmLink_1 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
+    import dwwmLink_2 from '../../assets/Diapo-soutenance-DWWM.pdf';
     
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
