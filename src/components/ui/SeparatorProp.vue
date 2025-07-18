@@ -3,7 +3,9 @@
   <div
     class="separator"
     :style="{
-      '--separator-color': separatorColor
+      '--separator-color': separatorColor,
+      '--separator-size': separatorSize,
+      '--separator-margin': separatorMargin,
     }"
   ></div>
 </template>
@@ -31,7 +33,13 @@ onMounted(() => {
 const props = defineProps<{
   color?: string
   colorDark?: string
+  size?: string
+  margin?: string
 }>()
+
+const separatorSize = computed(()=> props.size || '15px');
+
+const separatorMargin = computed(()=> props.margin || '1em');
 
 const separatorColor = computed(() => {
   if (theme.value === 'dark' && props.colorDark)
@@ -44,15 +52,15 @@ const separatorColor = computed(() => {
 <style scoped>
 .separator {
   border: 0;
-  height: 15px;
+  height: var(--separator-size);
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0),
     var(--separator-color),
     rgba(0, 0, 0, 0)
   );
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: var(--separator-margin);
+  margin-bottom: var(--separator-margin);
   width: 100%;
 
   position: relative;

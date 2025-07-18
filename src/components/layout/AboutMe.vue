@@ -30,6 +30,11 @@
 </template>
 
 <style scoped>
+
+.about-text{
+    text-align: justify;
+    height: fit-content;
+}
 .bcg-blur{
     border-radius: 10px;
 }

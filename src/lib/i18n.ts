@@ -8,7 +8,7 @@ i18next
     .use(LanguageDetector)
     .init({
         fallbackLng: "en",
-        debug: true,
+        debug: false,
         resources: translations,
         interpolation: { escapeValue: false },
         ns: ["common", "errors", "navBar", "altDesc", "aboutMe"],

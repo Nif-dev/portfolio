@@ -1,6 +1,5 @@
 export default {
     TITLE:"Portfolio - Yoann Le Goff",
-    SUB_TITLE:"Je cherche une alternance Concepteur Développeur d'Applications - CDA",
 
     SKILLS_TITLE:"Compétences",
     SKILLS_SUBTITLE:"Mes compétences évoluent chaque jour, portées par ma curiosité, ma passion et mon envie constante de créer des solutions numériques utiles et accessibles.",

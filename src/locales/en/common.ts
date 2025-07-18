@@ -1,6 +1,5 @@
 export default {
     TITLE:"Portfolio - Yoann Le Goff",
-    SUB_TITLE:"I'm looking for a CDA internship",
 
     SKILLS_TITLE:"Skills",
     SKILLS_SUBTITLE:"I have acquired solid technical foundations and confirmed my interest in creating useful and accessible digital solutions.",
