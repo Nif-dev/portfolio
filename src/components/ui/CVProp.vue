@@ -6,7 +6,7 @@
     import CVpdf from '../../assets/CV_Alternance_CDA_YLG.pdf' ;
 
     import { useTranslation } from 'i18next-vue';
-    const { t } = useTranslation('errors');
+    const { t } = useTranslation('');
 
     const showZoom = ref(false);
 
@@ -15,10 +15,10 @@
 <template>
     <div class="card">
         <div class="card-image">
-            <p class="card-header-title"> Mon C.V.</p>
-            <p class="has-text-centered has-text-danger has-text-weight-bold">{{ t('FRENCH_ONLY') }}</p>
-            <figure class="image miniature" @click="showZoom = true">
-                <img :src="CVjpgCropped" alt="CV Icon"/>
+            <p class="card-header-title is-flex is-justify-content-center mb-0"> {{ t('aboutMe:CV') }}</p>
+            <p class="has-text-centered has-text-danger has-text-weight-bold">{{ t('errors:FRENCH_ONLY') }}</p>
+            <figure class="image miniature my-1" @click="showZoom = true">
+                <img :src="CVjpgCropped" alt="CV Icon" />
             </figure>
             </div>
 
@@ -49,6 +49,7 @@
 </template>
 
 <style scoped>
+
 .modal-content.scrollable-modal img {
     max-width: 100%;
     height: auto;
@@ -63,9 +64,9 @@
 
 .miniature {
   /* Le conteneur de l'image */
-    /* height: 50vw;  */
-    /* max-height: 540px;        */
-    border-radius: 8px 8px 0px 0px; 
+
+    max-height: 540px;
+    border-radius: 30px 30px 30px 30px; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     cursor: zoom-in;
     display: flex;

@@ -4,7 +4,9 @@
 
   import {useTranslation} from 'i18next-vue'
 
-  import logo from '../../assets/logo.png';
+  // import logo from '../../assets/logo.png';
+  import logo from '../../assets/img/common/404-fox.png';
+
   import SeparatorProp from '../ui/SeparatorProp.vue';
 
   const {t} = useTranslation();
@@ -22,16 +24,23 @@
 <div class="box">
   <article class="media">
     <div class="media-left">
-      <figure class="image is-64x64">
+      <figure class="image is-128x128">
         <img :src=logoNif alt="" />
       </figure>
     </div>
     <div class="media-content">
       <div class="content">
-          <p class="subtitle has-text-weight-bold">
-            Yoann Le Goff - <small> {{ t('aboutMe:DIPLOMA') }}</small>
+
+        <div class="subtitle has-text-weight-bold is-flex is-justify-content-space-between mx-6 mb-0 mt-3">
+          <p class="is-size-4">
+            Yoann Le Goff 
           </p>
+          <p class="mr-6"><small> {{ t('aboutMe:DIPLOMA') }} </small>
+          </p>
+        </div>
+
           <SeparatorProp size="10px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
+
           <br />
           <p class="has-text-weight-bold">
             {{ t('aboutMe:NEWS') }}
@@ -39,6 +48,7 @@
           {{ t('aboutMe:LFJOB_1') }}
           <strong> {{ t('aboutMe:FUTUR_DIPLOMA') }} </strong>
           {{ t('aboutMe:LFJOB_2') }}
+
           <SeparatorProp size="5px" margin="0.8em" color="var(--color-orange-transparent)" colorDark="var(--color-light-purple-transparent)"/>
             {{ t('aboutMe:RIGHT_NOW') }}
           
@@ -53,12 +63,6 @@
 </template>
 
 <style scoped>
-
-.banner-text{
-  position: relative;
-  z-index: 1;
-
-}
 
 [data-theme="light"] .hero-background {
   background-image: url('../../assets/img/common/hero-banner-jour.png') !important;

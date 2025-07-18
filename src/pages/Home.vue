@@ -20,6 +20,7 @@
 
     <div class="main-container mx-auto">
         <HeroBanner />
+            <SeparatorProp margin="5em"/>
         <AboutMe />
         <SkillsList />
             <SeparatorProp color="var(--color-dutch-white-transparent)" color-dark="var(--color-purple-transparent)"/>
