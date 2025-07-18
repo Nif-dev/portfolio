@@ -38,7 +38,7 @@
     text-align: justify;
     height: fit-content;
     align-items: center;
-    width: calc(50% - 2em);
+    width: 60%;
     margin: auto;
     padding: 0.5em;
 }
