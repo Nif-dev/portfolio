@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <section class="section bcg-blur" id="projects">
+  <section class="section bcg-blur has-text-centered" id="projects">
   <h1 class="title">{{ t('common:PROJECTS_TITLE') }}</h1>
   <h2 class="subtitle">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
 
