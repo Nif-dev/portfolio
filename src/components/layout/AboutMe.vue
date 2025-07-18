@@ -31,12 +31,12 @@
 
 <style scoped>
 .bcg-blur{
-    border-radius: 10px; ;
+    border-radius: 10px;
 }
 
 [data-theme="light"] {
     .bcg-blur{
-        background-color: var(--color-dutch-white-transparent);
+        background-color: var(--color-white-transparent);
     }
     .about-text{
         color: black;

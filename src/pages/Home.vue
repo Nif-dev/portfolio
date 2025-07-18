@@ -22,10 +22,10 @@
         <HeroBanner />
         <AboutMe />
         <SkillsList />
-            <SeparatorProp />
-            <ProjectsSection />
-            <SeparatorProp color="var(--color-purple-transparent)"/>
-            <ContactSection />
+            <SeparatorProp color="var(--color-dutch-white-transparent)" color-dark="var(--color-purple-transparent)"/>
+        <ProjectsSection />
+            <SeparatorProp color="var(--color-dutch-white-transparent)" color-dark="var(--color-purple-transparent)"/>
+        <ContactSection />
         <ScrollToTop />
     </div>
 

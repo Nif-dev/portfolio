@@ -39,7 +39,7 @@
 
   [data-theme="light"] {
     .bcg-blur {
-      background-color: var(--color-dutch-white-transparent);
+      background-color: var(--color-white-transparent);
     }
     .is-CTA {
       background-color: var(--color-orange-transparent);

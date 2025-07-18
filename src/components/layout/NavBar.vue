@@ -26,13 +26,7 @@
     const isAllProjectsPage = computed(() => route.name === 'projets')
 
     const isSpecificProjectPage = computed(() => route.path.startsWith('/projet/') )
-    
-    console.log("🚀 ~ route:", route.path)
-    console.log( 'isHomePage', isHomePage.value)
-    console.log( 'isAllProjectsPage', isAllProjectsPage.value)
-    console.log( 'isSpecificProjectPage', isSpecificProjectPage.value)
 
-    
     const showNavbar = ref(false);
 
     onMounted(() => {

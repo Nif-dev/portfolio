@@ -8,6 +8,7 @@ export default {
     SKILLS_BACKEND_TITLE:"Back-end",
     SKILLS_DATABASE_TITLE:"Database",
     SKILLS_OTHER_TITLE:"Other",
+    SKILLS_FAVORITE_TITLE:"The most used",
 
     PROJECTS_TITLE:"Discover my projects below !",
     PROJECTS_SUBTITLE:"Discover my projects and the skills mobilized for each one. Click on the image to learn more about each realization.",
