@@ -15,12 +15,14 @@ const frontendRef = ref<HTMLElement | null>(null);
 const backendRef = ref<HTMLElement | null>(null);
 const databaseRef = ref<HTMLElement | null>(null);
 const otherRef = ref<HTMLElement | null>(null);
+const favoriteRef = ref<HTMLElement | null>(null);
 
 // Visibilité de chaque bloc
 const frontendVisible = ref(false);
 const backendVisible = ref(false);
 const databaseVisible = ref(false);
 const otherVisible = ref(false);
+const favoriteVisible = ref(false);
 
 let observer: IntersectionObserver;
 
@@ -41,6 +43,9 @@ onMounted(() => {
                     case otherRef.value:
                         otherVisible.value = true;
                         break;
+                    case favoriteRef.value:
+                        favoriteVisible.value = true;
+                        break;
                 }
             }
         });
@@ -50,6 +55,7 @@ onMounted(() => {
   if (backendRef.value) observer.observe(backendRef.value);
   if (databaseRef.value) observer.observe(databaseRef.value);
   if (otherRef.value) observer.observe(otherRef.value);
+  if (favoriteRef.value) observer.observe(favoriteRef.value);
 });
 
 </script>
@@ -95,6 +101,16 @@ onMounted(() => {
       :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': otherVisible }]"
     >
       <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
+        <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+      </div>
+    </div>
+
+    <h1 class="is-size-3">{{ t('common:SKILLS_FAVORITE_TITLE') }}</h1>
+    <div
+      ref="favoriteRef"
+      :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': favoriteVisible }]"
+    >
+      <div class="m-4" v-for="skill in skillsListByType.favorite" :key="skill.name">
         <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
       </div>
     </div>

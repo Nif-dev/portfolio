@@ -38,5 +38,6 @@ export const skillsListByType = {
     frontend: skillsList.filter(skill => skill.type === "frontend"),
     backend: skillsList.filter(skill => skill.type === "backend"),
     database: skillsList.filter(skill => skill.type === "database"),
-    other: skillsList.filter(skill => skill.type === "other")
+    other: skillsList.filter(skill => skill.type === "other"),
+    favorite: skillsList.filter(skill => skill.type === "favorite"),
 }

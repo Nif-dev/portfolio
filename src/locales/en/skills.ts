@@ -22,6 +22,8 @@ import { gitlab_EN } from "../../data/skills/other/gitlab";
 import { intellij_EN } from "../../data/skills/other/intellij";
 import { vscode_EN } from "../../data/skills/other/vscode";
 
+import { penPaper_EN } from "../../data/skills/other/penPaper";
+
 export default {
     Java : java_EN,
     SQL : sql_EN,
@@ -46,5 +48,7 @@ export default {
     GitLab : gitlab_EN,
     IntelliJ : intellij_EN,
     VSCode : vscode_EN,
+
+    PenPaper : penPaper_EN,
 
 }

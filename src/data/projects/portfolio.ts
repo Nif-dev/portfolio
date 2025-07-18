@@ -23,7 +23,7 @@ export const portfolio = {
     tags: ["Frontend"],
     cardLinkedSkills: linkedSkills, 
     allLinkedSkills: allLinkedSkills,
-    link : undefined,
+    link: undefined,
     presentation : "/projet/portfolio",
     textsCount: 0,
 }
