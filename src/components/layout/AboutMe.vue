@@ -21,7 +21,7 @@
                 <br>
                 <p> {{ t('aboutMe:ABOUT_ME_3') }} </p>
                 <br>
-                <p><strong> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </strong></p>
+                <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
             </div>
             <div class="column">
                 <CVProp />
@@ -45,6 +45,8 @@
 
 .bcg-blur{
     border-radius: 10px;
+    background-color: var(--color-white-transparent);
+    color: black;
 }
 
 .bulleBD {
@@ -70,13 +72,6 @@
   filter: drop-shadow(0 2px 2px rgba(0,0,0,0.05));
 }
 
-[data-theme="light"] {
-    .bcg-blur{
-        background-color: var(--color-white-transparent);
-    }
-    .about-text{
-        color: black;
-    }
-}
+
 </style>
 

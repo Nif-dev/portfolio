@@ -23,9 +23,9 @@
             <SeparatorProp margin="5em"/>
         <AboutMe />
         <SkillsList />
-            <SeparatorProp color="var(--color-dutch-white-transparent)" color-dark="var(--color-purple-transparent)"/>
+            <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="10px"/>
         <ProjectsSection />
-            <SeparatorProp color="var(--color-dutch-white-transparent)" color-dark="var(--color-purple-transparent)"/>
+            <SeparatorProp margin="5em"/>
         <ContactSection />
         <ScrollToTop />
     </div>
