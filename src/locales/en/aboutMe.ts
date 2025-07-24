@@ -15,4 +15,6 @@ export default {
     RIGHT_NOW: "Right now working full-time as an ambulance and taxi driver and on web projects on my free-time as much as I can.",
 
     CV: "My CV",
+    CV_ZOOM: "Zoom",
+    CV_PDF: "View as PDF",
 }

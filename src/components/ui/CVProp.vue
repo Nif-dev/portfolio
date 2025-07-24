@@ -24,10 +24,10 @@
 
             <div class="card-footer">
                 <a :href="CVpdf" class="card-footer-item" target="_blank" rel="noreferrer">
-                    Open PDF
+                    {{ t('aboutMe:CV_PDF') }}
                 </a>
             <button class="card-footer-item" @click="showZoom = true">
-                Zoom
+                {{ t('aboutMe:CV_ZOOM') }}
             </button>
         </div>
     </div>
