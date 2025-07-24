@@ -39,22 +39,9 @@
 
 <style scoped>
 .bcg-blur{
-    width: fit-content;
     margin: auto;
     padding: 10px;
 }
 
-[data-theme="dark"]
-    .bcg-blur-bulles{
-        background-color: var(--color-purple-transparent);
-    }
-[data-theme="light"]
-    {
-        .bcg-blur-bulles{
-            background-color: var(--color-white-transparent);
-        }
-        .bcg-blur{
-            background-color: var(--color-white-transparent);
-        }
-    }
+
 </style>
