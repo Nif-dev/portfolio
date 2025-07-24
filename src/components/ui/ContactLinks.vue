@@ -17,6 +17,10 @@
 
 <style scoped>
     .bcg-blur{
-        width: 50%;
+        width: fit-content;
+    }
+
+    a{
+        margin: 10px;
     }
 </style>
