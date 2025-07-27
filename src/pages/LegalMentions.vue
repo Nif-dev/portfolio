@@ -45,7 +45,6 @@
         font-family: Arial, sans-serif;
         line-height: 1.6;
         padding-top: 10em;
-        background-color: var(--color-dutch-white);
         height: 100vh;
     }
 
