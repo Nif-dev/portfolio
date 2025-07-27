@@ -4,6 +4,7 @@ import { DEPLOY_CONFIG } from './deploy.config'
 import Home from './pages/Home.vue'
 import NotFound from './pages/404.vue'
 import Index from './pages/projects/Index.vue'
+import LegalMentions from './pages/LegalMentions.vue'
 
 import PageGemenyApp from './pages/projects/PageGemenyApp.vue'
 // import PageGemenyAuth from './pages/projects/PageGemenyAuth.vue'
@@ -15,6 +16,8 @@ const routes = [
     { path: '/',name: 'HomePage', component: Home },
     
     { path: '/projets/:any?', name: 'ProjectsList', component: Index },
+
+    { path: '/mentions', name: 'MentionsLegales', component: LegalMentions },
 
     { path: '/projet/portfolio', name: 'PagePortfolio', component: Index },
     { path: '/projet/gemeny-app', name: 'PageGemenyApp', component: PageGemenyApp },

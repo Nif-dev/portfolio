@@ -11,9 +11,7 @@
             <div class="mt-4">
                 <p> ©<strong>Yoann Le Goff {{ new Date().getFullYear() }}</strong> - {{ t('common:FOOTER_TEXT') }}</p>
                 <div class="is-flex is-justify-content-space-evenly">
-                    <router-link to="/legal" class="footer-link">{{ t('common:FOOTER_LEGAL_TEXT') }}</router-link>
-                    -
-                    <router-link to="/plan-site" class="footer-link">{{ t('common:FOOTER_SITE_PLAN') }}</router-link>
+                    <router-link to="/mentions" class="footer-link">{{ t('common:FOOTER_LEGAL_TEXT') }}</router-link>
                 </div>
             </div>
         
@@ -45,9 +43,6 @@
     filter: drop-shadow(var(--color-purple) 0px -2px 2px);
 
 }
-/* [data-theme="dark"] .footer-link {
-    color: var(--color-orange-transparent) !important;
-} */
 
 /* Pour le light mode */
 :root[data-theme="light"] .footer {

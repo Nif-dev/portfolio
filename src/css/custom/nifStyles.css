@@ -3,6 +3,12 @@ html {
     scroll-padding-top: 64px;
 }
 
+/* décollement du header */
+.section{
+    padding-top: 10em;
+    position: relative;
+}
+
 .body-modal-open {
     overflow: hidden !important;
     position: fixed;
@@ -15,10 +21,6 @@ html {
 
 [data-theme="dark"] body {
     background-color: var(--bulma-body-background-color);
-}
-
-.section{
-    position: relative;
 }
 
 .bcg-blur{
