@@ -3,6 +3,12 @@ html {
     scroll-padding-top: 64px;
 }
 
+.body-modal-open {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
 [data-theme="light"] body {
     background: var(--color-dutch-white);
 }

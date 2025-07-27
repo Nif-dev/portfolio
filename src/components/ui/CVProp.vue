@@ -1,14 +1,24 @@
 <script setup lang="ts">
-    import { ref } from 'vue';
+
+    import { ref,watch } from 'vue';
 
     import CVjpg from '../../assets/img/common/CV-ylg.jpg';
-    import CVjpgCropped from '../../assets/img/common/cropped-CV-ylg.jpg';
+
     import CVpdf from '../../assets/CV_Alternance_CDA_YLG.pdf' ;
 
     import { useTranslation } from 'i18next-vue';
     const { t } = useTranslation('');
 
     const showZoom = ref(false);
+
+    watch(showZoom, (val) => {
+        if (val) {
+            document.body.classList.add('body-modal-open');
+        } else {
+            document.body.classList.remove('body-modal-open');
+        }
+    });
+
 
 </script>
 
@@ -17,11 +27,15 @@
         <div class="card-image">
             <p class="card-header-title is-flex is-justify-content-center mb-0"> {{ t('aboutMe:CV') }}</p>
             <p class="has-text-centered has-text-danger has-text-weight-bold">{{ t('errors:FRENCH_ONLY') }}</p>
-            <figure class="image miniature my-1" @click="showZoom = true">
-                <img :src="CVjpgCropped" alt="CV Icon" />
+        
+            <figure class="image miniature my-5"
+                style="position: relative;"
+                @click="showZoom = true"
+            >
+                <img :src="CVjpg" alt="CV Icon" />
             </figure>
-            </div>
 
+            </div>
             <div class="card-footer">
                 <a :href="CVpdf" class="card-footer-item" target="_blank" rel="noreferrer">
                     {{ t('aboutMe:CV_PDF') }}
@@ -65,28 +79,25 @@
 .miniature {
   /* Le conteneur de l'image */
 
-    max-height: 540px;
+    display: block;
+    width: 90%;
     border-radius: 30px 30px 30px 30px; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     cursor: zoom-in;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
 }
 
 
 .image {
-    margin: auto;
     overflow: hidden;
 }
 
 .modal-content.scrollable-modal {
-    width: 80%;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: visible;
-    display: flex;
-    align-items: flex-start;
+    max-height: 100vh;
+    max-width: 80%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 .modal.is-active {
     position: fixed;

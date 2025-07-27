@@ -20,10 +20,10 @@
 
     <div class="main-container mx-auto">
         <HeroBanner />
-            <SeparatorProp margin="5em"/>
+        <SeparatorProp margin="5em"/>
         <AboutMe />
         <SkillsList />
-            <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="10px"/>
+            <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
         <ProjectsSection />
             <SeparatorProp margin="5em"/>
         <ContactSection />

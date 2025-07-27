@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class=" bcg-blur bcg-blur-bulles is-flex is-flex-direction-row is-justify-content-space-around">
+    <div class=" bcg-blur bcg-blur-bulles is-flex is-flex-direction-row is-justify-content-space-around ">
         <a href="https://www.linkedin.com/in/yoann-le-goff-0129a0283/" target="_blank" rel="noopener" >
             <img :src="linkedIn" alt="linkedin" width="48px"/>
         </a>
@@ -21,6 +21,9 @@
     }
 
     a{
-        margin: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 3px;
+        margin-bottom: 0px;
     }
 </style>

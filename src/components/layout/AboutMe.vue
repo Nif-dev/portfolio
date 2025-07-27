@@ -12,22 +12,25 @@
 
 <template>
     <section id="aboutMe" class="section">
-        <h1 class="title bcg-blur mb-6"> {{ t('aboutMe:TITLE') }} </h1>
         <div class="columns">
-            <div class="column bulleBD  bcg-blur">
-                <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
-                <br>
-                <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
-                <br>
-                <p> {{ t('aboutMe:ABOUT_ME_3') }} </p>
-                <br>
-                <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
+            <div class="column is-align-content-center">
+                <h1 class="title bcg-blur mb-6"> {{ t('aboutMe:TITLE') }} </h1>
+                <div class="bulleBD  bcg-blur">
+                    <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
+                    <br>
+                    <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
+                    <br>
+                    <p> {{ t('aboutMe:ABOUT_ME_3') }} </p>
+                    <br>
+                    <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
+                </div>
             </div>
             <div class="column">
                 <CVProp />
             </div>
         </div>
     </section>
+
 </template>
 
 <style scoped>
@@ -41,6 +44,17 @@
     width: 75%;
     margin: auto;
     padding: 0.5em;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;         /* Hauteur du triangle = border-top ci-dessous */         /* Pour aligner visuellement la flèche sur la bulle */
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 40px solid var(--color-white-transparent);
 }
 
 .bcg-blur{
@@ -58,18 +72,12 @@
 }
 
 .bulleBD::before {
-  content: "";
-  position: absolute;
-  top: -32px;         /* Hauteur du triangle = border-bottom ci-dessous */
-  right: 8em;         /* Pour aligner visuellement la flèche sur la bulle */
-  width: 0;
-  height: 0;
-
-  border-left: 32px solid transparent;
-  border-right: 32px solid transparent;
-  border-bottom: 32px solid var(--color-white-transparent);   /* Même couleur que la bulle */
-  /* Optionnel pour l'effet BD : une ombre */
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.05));
+    content: "";
+    position: absolute;
+    top: -32px;         /* Hauteur du triangle = border-bottom ci-dessous */
+    right: 8em;         /* Pour aligner visuellement la flèche sur la bulle */
+    width: 0;
+    height: 0;
 }
 
 
