@@ -122,6 +122,10 @@ onMounted(() => {
   position: relative;
 }
 
+.bcg-blur {
+  border-radius: 0px;
+}
+
 [data-theme="light"] {
 
   .bcg-blur {

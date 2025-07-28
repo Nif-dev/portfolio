@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
     import SeparatorProp from '../components/ui/SeparatorProp.vue';
+    import SectionBackground from '../components/layout/SectionBackground.vue';
 
     import NavBar from '../components/layout/NavBar.vue'
     import HeroBanner from '../components/layout/HeroBanner.vue'
@@ -18,17 +19,30 @@
 
     <NavBar />
 
+    <SeparatorProp margin="10vh"/>
     <div class="main-container mx-auto">
         <HeroBanner />
-        <SeparatorProp margin="5em"/>
-        <AboutMe />
-        <SkillsList />
-            <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
-        <ProjectsSection />
+    </div>
+    <SeparatorProp margin="20vh"/>
+    
+    <SectionBackground color="var(--color-light-sable)" colorDark="var(--color-dark-grey)" margin="">
+        <div class="main-container mx-auto">
+            <AboutMe />
+        </div>
+    </SectionBackground>
+
+        <div class="main-container mx-auto">
+            <SkillsList />
+        </div>
+        <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
+        
+
+        <div class="main-container mx-auto">
+            <ProjectsSection />
+        </div>
             <SeparatorProp margin="5em"/>
         <ContactSection />
         <ScrollToTop />
-    </div>
 
     <MyFooter />
 
