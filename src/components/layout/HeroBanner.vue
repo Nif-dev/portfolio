@@ -4,7 +4,6 @@
 
   import {useTranslation} from 'i18next-vue'
 
-  // import logo from '../../assets/logo.png';
   import logo from '../../assets/img/common/404-fox.png';
 
   import SeparatorProp from '../ui/SeparatorProp.vue';
@@ -111,8 +110,6 @@
 /* décollement du header */
 .section{
   position: relative;
-  padding-top: 10em;
-  z-index: 1;
 }
 
 </style>
