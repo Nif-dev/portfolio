@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { useTranslation } from 'i18next-vue'
-import { ref } from 'vue'
 import { portfolio } from '../../data/projects/portfolio'
 import NavBar from '../../components/layout/NavBar.vue'
 import ScrollToTop from '../../components/ui/ScrollToTop.vue'
 import MyFooter from '../../components/layout/MyFooter.vue'
-import SkillIcons from '../../components/ui/skillsIcons.vue'
+// import SkillIcons from '../../components/ui/skillsIcons.vue'
 import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
 const { t } = useTranslation()
