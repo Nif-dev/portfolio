@@ -9,7 +9,7 @@
         <a href="https://www.linkedin.com/in/yoann-le-goff-0129a0283/" target="_blank" rel="noopener" >
             <img :src="linkedIn" alt="linkedin" width="48px"/>
         </a>
-        <a href="https://www.linkedin.com/in/yoann-le-goff-0129a0283/" target="_blank" rel="noopener" >
+        <a href="https://github.com/YLG29fr" target="_blank" rel="noopener" >
             <img :src="github" alt="github" width="48px"/>
         </a>
     </div>

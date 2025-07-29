@@ -7,8 +7,8 @@ import Index from './pages/projects/Index.vue'
 import LegalMentions from './pages/LegalMentions.vue'
 
 import PageGemenyApp from './pages/projects/PageGemenyApp.vue'
-// import PageGemenyAuth from './pages/projects/PageGemenyAuth.vue'
-// import PagePortfolio from './pages/projects/PagePortfolio.vue'
+import PageGemenyAuth from './pages/projects/PageGemenyAuth.vue'
+import PagePortfolio from './pages/projects/PagePortfolio.vue'
 
 
 
@@ -19,9 +19,9 @@ const routes = [
 
     { path: '/mentions', name: 'MentionsLegales', component: LegalMentions },
 
-    { path: '/projet/portfolio', name: 'PagePortfolio', component: Index },
+    { path: '/projet/portfolio', name: 'PagePortfolio', component: PagePortfolio },
     { path: '/projet/gemeny-app', name: 'PageGemenyApp', component: PageGemenyApp },
-    { path: '/projet/gemeny-auth', name: 'PageGemenyAuth', component: Index },
+    { path: '/projet/gemeny-auth', name: 'PageGemenyAuth', component: PageGemenyAuth },
 
     { path: '/projet/:name?', name: 'ProjectNotFound', component: Index },
 
