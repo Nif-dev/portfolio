@@ -30,17 +30,29 @@
     const sectionPadding = computed(()=> props.padding || '0em');
 
     const backgroundColor = computed(() => {
-        if (theme.value === 'dark' && props.colorDark)
-            return props.colorDark;
+        if (!props.color) return '';
+        if (props.color.includes('gradient')) return ''; // On ne met pas en background-color les gradients
+        if (theme.value === 'dark' && props.colorDark) return props.colorDark;
         return props.color;
     });
+
+    // Les gradients sont des images, leurs noms doivent inclure "gradient" pour être reconnus
+    const backgroundImage = computed(() => {
+        if (!props.color) return '';
+        if (props.color.includes('gradient')) return props.color;
+        if (theme.value === 'dark' && props.colorDark?.includes('gradient')) return props.colorDark;
+        return '';
+    });
+
 
 </script>
 
 <template>
     <section
         class="section-background"
-        :style="{ backgroundColor: backgroundColor || '',
+        :style="{ 
+            backgroundColor: backgroundColor || '',
+            backgroundImage: backgroundImage || '',
             margin: sectionMargin,
             padding: sectionPadding }"
     >
@@ -50,7 +62,7 @@
 
 <style scoped>
     .section-background {
-        box-shadow: 0 2px 8px #0001;
+        /* box-shadow: 0 2px 8px #0001; */
         padding: 2rem 1rem;
         margin: 2rem 0;
         transition: background 0.3s;

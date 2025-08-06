@@ -89,7 +89,7 @@
 
 
 .image {
-    max-height: 720px;
+    max-height: inherit;
     overflow: hidden;
 }
 

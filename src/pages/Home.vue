@@ -19,26 +19,26 @@
 
     <NavBar />
 
-<div class="is-hidden-mobile">
+<!-- <div class="is-hidden-mobile">
     <SeparatorProp margin="13vh"/>
 </div>
 <div class="is-hidden-desktop">
     <SeparatorProp margin="3vh"/>
-</div>
+</div> -->
 
 <div class="main-container mx-auto">
     <HeroBanner />
 </div>
 
-<div class="is-hidden-mobile">
+<!-- <div class="is-hidden-mobile">
     <SeparatorProp margin="20vh"/>
 </div>
 
 <div class="is-hidden-desktop">
     <SeparatorProp margin="5vh"/>
-</div>
+</div> -->
 
-    <SectionBackground color="var(--color-light-sable)" colorDark="var(--color-dark-grey)" margin="">
+    <SectionBackground color="var(--color-gradient-transparent-to-green)" colorDark="var(--color-dark-grey)"  padding="5rem 0">
         <div class="main-container mx-auto">
             <AboutMe />
         </div>

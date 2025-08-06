@@ -6,6 +6,8 @@
     const {t} = useTranslation();
 
     import CVProp from '../ui/CVProp.vue';
+import HeroCard from '../ui/HeroCard.vue';
+import SeparatorProp from '../ui/SeparatorProp.vue';
     
 
 </script>
@@ -13,8 +15,11 @@
 <template>
     <section id="aboutMe" class="section">
         <div class="columns">
-            <div class="column is-align-content-center">
-                <h1 class="title bcg-blur mb-6"> {{ t('aboutMe:TITLE') }} </h1>
+            <div class="column">
+
+                <HeroCard />
+                <SeparatorProp size="3rem" />
+                <h1 class="title bcg-blur my-6"> {{ t('aboutMe:TITLE') }} </h1>
                 <div class="bcg-blur">
                     <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
                     <br>
@@ -25,9 +30,11 @@
                     <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
                 </div>
             </div>
+
             <div class="column is-align-content-center">
                 <CVProp />
             </div>
+
         </div>
     </section>
 
