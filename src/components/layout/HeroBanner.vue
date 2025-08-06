@@ -112,4 +112,9 @@
   position: relative;
 }
 
+.box{
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 </style>

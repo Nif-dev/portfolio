@@ -89,7 +89,12 @@
 
 
 .image {
+    max-height: 720px;
     overflow: hidden;
+}
+
+.card{
+    height: fit-content;
 }
 
 .modal-content.scrollable-modal {

@@ -25,7 +25,7 @@
                     <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-align-content-center">
                 <CVProp />
             </div>
         </div>
