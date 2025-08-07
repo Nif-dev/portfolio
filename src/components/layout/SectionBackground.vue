@@ -30,17 +30,17 @@
     const sectionPadding = computed(()=> props.padding || '0em');
 
     const backgroundColor = computed(() => {
+        if (theme.value === 'dark' && props.colorDark && !props.colorDark.includes('gradient')) return props.colorDark;
         if (!props.color) return '';
-        if (props.color.includes('gradient')) return ''; // On ne met pas en background-color les gradients
-        if (theme.value === 'dark' && props.colorDark) return props.colorDark;
+        if (props.color?.includes('gradient')) return ''; // On ne met pas en background-color les gradients
         return props.color;
     });
 
     // Les gradients sont des images, leurs noms doivent inclure "gradient" pour être reconnus
     const backgroundImage = computed(() => {
+        if (theme.value === 'dark' && props.colorDark && props.colorDark?.includes('gradient')) return props.colorDark;
         if (!props.color) return '';
         if (props.color.includes('gradient')) return props.color;
-        if (theme.value === 'dark' && props.colorDark?.includes('gradient')) return props.colorDark;
         return '';
     });
 
