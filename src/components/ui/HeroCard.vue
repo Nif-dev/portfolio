@@ -16,8 +16,8 @@
 <template>
 
     <div class="box">
-    <!-- entête -->
-    <article class="media is-hidden-mobile">
+    <!-- entête ancien-->
+    <!-- <article class="media is-hidden-mobile">
         <div class="media-left">
         <figure class="image is-128x128">
             <img :src=logoNif alt="" />
@@ -35,8 +35,9 @@
 
         </div>
         </div>
-    </article>
-    <article class="media is-hidden-tablet noBorderTop">
+    </article> -->
+
+    <!-- <article class="media is-hidden-tablet noBorderTop">
         <div class="media-left">
         <figure class="image is-96x96">
             <img :src=logoNif alt="" />
@@ -54,13 +55,13 @@
 
         </div>
         </div>
-    </article>
+    </article> -->
     <!-- contenu -->
     <article>
-        <SeparatorProp size="10px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>  
-        <p class="has-text-weight-bold">
+        <p class="subtitle has-text-weight-bold">
         {{ t('aboutMe:NEWS') }}
         </p>
+        <SeparatorProp size="10px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>  
         {{ t('aboutMe:LFJOB_1') }}
         <strong> {{ t('aboutMe:FUTUR_DIPLOMA') }} </strong>
         {{ t('aboutMe:LFJOB_2') }}

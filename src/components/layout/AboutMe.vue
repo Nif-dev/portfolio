@@ -17,7 +17,7 @@ import SeparatorProp from '../ui/SeparatorProp.vue';
         <div class="columns">
             <div class="column">
 
-                <HeroCard />
+                
                 <SeparatorProp size="3rem" />
                 <h1 class="title bcg-blur my-6"> {{ t('aboutMe:TITLE') }} </h1>
                 <div class="bcg-blur">
@@ -32,6 +32,8 @@ import SeparatorProp from '../ui/SeparatorProp.vue';
             </div>
 
             <div class="column is-align-content-center">
+                <HeroCard />
+                <div class="my-2"></div>
                 <CVProp />
             </div>
 

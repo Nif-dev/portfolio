@@ -32,7 +32,7 @@
                 style="position: relative;"
                 @click="showZoom = true"
             >
-                <img :src="CVjpg" alt="CV Icon" />
+                <!-- <img :src="CVjpg" alt="CV Icon" /> -->
             </figure>
 
             </div>
