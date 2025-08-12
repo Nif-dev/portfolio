@@ -23,16 +23,17 @@
     <HeroBanner />
 </div>
 
-    <SectionBackground color="var(--color-gradient-transparent-to-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">
+    <SectionBackground color="var(--color-gradient-transparent-to-light-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">
         <div class="main-container mx-auto">
             <AboutMe />
         </div>
     </SectionBackground>
-
+    <SectionBackground color="var(--color-gradient-transparent-from-light-green)" colorDark="var(--color-gradient-transparent-from-grey)">
         <div class="main-container mx-auto">
             <SkillsList />
         </div>
-        <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
+    </SectionBackground>
+    <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
         
 
         <div class="main-container mx-auto">

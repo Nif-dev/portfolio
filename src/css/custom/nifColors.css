@@ -6,6 +6,7 @@
     --color-orange : #f48c06;
 
     --color-green : #095b16;
+    --color-light-green : #28a745;
 
     --color-sable : #feeab7;
     --color-light-sable : #fff9ea;
@@ -24,8 +25,10 @@
     --color-dark-orange-transparent : #e65c0480;
     --color-orange-transparent : #f48c0680;
 
-    --color-gradient-transparent-to-green: linear-gradient(to bottom, transparent 0%, #28a745 30%, #28a745 70%, transparent 100%);
-    --color-gradient-transparent-to-grey: linear-gradient(to bottom, transparent 0%, #2c2c2c 30%, #2c2c2c 70%, transparent 100%);
+    --color-gradient-transparent-to-light-green: linear-gradient(to bottom, transparent 0%, #28a745 30%, #28a745 100%);
+    --color-gradient-transparent-from-light-green: linear-gradient(to bottom, #28a745 0%, #28a745 95%, transparent 100%);
+    --color-gradient-transparent-to-grey: linear-gradient(to bottom, transparent 0%, #2c2c2c 30%, #2c2c2c 100%);
+    --color-gradient-transparent-from-grey: linear-gradient(to bottom, #2c2c2c 0%, #2c2c2c 95%, transparent 100%);
 
     --color-gradient-transparent-to-orange: linear-gradient(to bottom, transparent 0%, #f48c06 50%, transparent 100%);
 

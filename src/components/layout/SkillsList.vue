@@ -61,7 +61,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section bcg-blur" id="skills">
+  <section class="section bcg-blur " id="skills">
     <h1 class="title">{{ t('common:SKILLS_TITLE') }}</h1>
     <h2 class="subtitle">{{ t('common:SKILLS_SUBTITLE') }}</h2>
 
@@ -123,17 +123,8 @@ onMounted(() => {
 }
 
 .bcg-blur {
-  border-radius: 0px;
+  border-radius: 10px;
 }
-
-[data-theme="light"] {
-
-  .bcg-blur {
-    background-color: var(--color-white-transparent);
-  }
-
-}
-
 
 /* Animation slide-in */
 .slide-anim {
