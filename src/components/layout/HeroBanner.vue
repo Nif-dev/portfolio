@@ -1,15 +1,15 @@
 <!-- src/components/layout/HelloWorld.vue -->
 
 <script setup lang="ts">
-
+  import HeroCard from '../ui/HeroCard.vue';
 </script>
 <template>
 
   <div class="hero-background fullwidth">
   </div>
   
-  <section class="section" >
-
+  <section class="section is-align-content-center" >
+    <HeroCard />
   </section>
 
 </template>

@@ -22,6 +22,7 @@
     <!-- Hero / image de fond -->
     <div class="main-container mx-auto">
         <HeroBanner />
+        
     </div>
 <!-- Section de presentation -->
     <SectionBackground color="var(--color-gradient-transparent-to-light-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">

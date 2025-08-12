@@ -6,8 +6,8 @@
     const {t} = useTranslation();
 
     import CVProp from '../ui/CVProp.vue';
-import HeroCard from '../ui/HeroCard.vue';
-import SeparatorProp from '../ui/SeparatorProp.vue';
+    import SituationCard from '../ui/SituationCard.vue';
+    import SeparatorProp from '../ui/SeparatorProp.vue';
     
 
 </script>
@@ -32,7 +32,7 @@ import SeparatorProp from '../ui/SeparatorProp.vue';
             </div>
 
             <div class="column is-align-content-center">
-                <HeroCard />
+                <SituationCard />
                 <div class="my-2"></div>
                 <CVProp />
             </div>
