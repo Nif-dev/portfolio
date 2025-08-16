@@ -72,5 +72,10 @@ import SeparatorProp from '../ui/SeparatorProp.vue';
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
+
+#aboutMe{
+    background: url('../../assets/icons/common/repeating-triangles.svg');
+    border: none;
+}
 </style>
 
