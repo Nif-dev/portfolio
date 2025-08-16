@@ -61,9 +61,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section bcg-blur" id="skills">
-    <h1 class="title">{{ t('common:SKILLS_TITLE') }}</h1>
-    <h2 class="subtitle">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+  <section class="section  " id="skills">
+    <div class="bcg-blur p-2">
+
+      <h1 class="title">{{ t('common:SKILLS_TITLE') }}</h1>
+      <h2 class="subtitle">{{ t('common:SKILLS_SUBTITLE') }}</h2>
 
     <h1 class="is-size-3">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
     <div
@@ -89,32 +91,34 @@ onMounted(() => {
     <div
       ref="databaseRef"
       :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': databaseVisible }]"
-    >
+      >
       <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
         <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
       </div>
     </div>
-
+    
     <h1 class="is-size-3">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
     <div
-      ref="otherRef"
-      :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': otherVisible }]"
+    ref="otherRef"
+    :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': otherVisible }]"
     >
-      <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
-        <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
-      </div>
+    <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
+      <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
     </div>
-
-    <h1 class="is-size-3">{{ t('common:SKILLS_FAVORITE_TITLE') }}</h1>
-    <div
-      ref="favoriteRef"
-      :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': favoriteVisible }]"
-    >
-      <div class="m-4" v-for="skill in skillsListByType.favorite" :key="skill.name">
-        <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
-      </div>
-    </div>
+  </div>
+  
+  <h1 class="is-size-3">{{ t('common:SKILLS_FAVORITE_TITLE') }}</h1>
+  <div
+  ref="favoriteRef"
+  :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': favoriteVisible }]"
+  >
+  <div class="m-4" v-for="skill in skillsListByType.favorite" :key="skill.name">
+    <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+  </div>
+</div>
+</div>
   </section>
+
 </template>
 
 <style scoped>
@@ -123,17 +127,8 @@ onMounted(() => {
 }
 
 .bcg-blur {
-  border-radius: 0px;
+  border-radius: 10px;
 }
-
-[data-theme="light"] {
-
-  .bcg-blur {
-    background-color: var(--color-white-transparent);
-  }
-
-}
-
 
 /* Animation slide-in */
 .slide-anim {

@@ -19,29 +19,38 @@
 
     <NavBar />
 
-<div class="main-container mx-auto">
-    <HeroBanner />
-</div>
-
-    <SectionBackground color="var(--color-gradient-transparent-to-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">
+    <!-- Hero / image de fond -->
+    <div class="main-container mx-auto">
+        <HeroBanner />
+        
+    </div>
+<!-- Section de presentation -->
+    <SectionBackground color="var(--color-gradient-transparent-to-light-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">
         <div class="main-container mx-auto">
             <AboutMe />
         </div>
     </SectionBackground>
 
+<!-- Section des compétences -->
+    <SectionBackground color="var(--color-gradient-transparent-from-light-green)" colorDark="var(--color-gradient-transparent-from-grey)">
         <div class="main-container mx-auto">
             <SkillsList />
         </div>
-        <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
-        
+    </SectionBackground>
 
+    <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
+
+<!-- Section des projets -->
         <div class="main-container mx-auto">
             <ProjectsSection />
         </div>
             <SeparatorProp margin="5em"/>
-        <ContactSection />
-        <ScrollToTop />
 
+<!-- Section de contact -->
+        <ContactSection />
+
+
+    <ScrollToTop />
     <MyFooter />
 
 </template>
