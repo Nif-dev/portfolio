@@ -73,9 +73,15 @@
 }
 
 
-#aboutMe{
-    background: url('../../assets/icons/common/repeating-triangles.svg');
+/* #aboutMe{
     border: none;
 }
+[data-theme="light"] #aboutMe{
+    background: url('../../assets/background/repeating-triangles.svg');
+}
+[data-theme="dark"] #aboutMe{
+    background: url('../../assets/background/endless-constellation.svg');
+} */
+
 </style>
 

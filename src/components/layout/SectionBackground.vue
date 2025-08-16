@@ -36,13 +36,16 @@
         return props.color;
     });
 
-    // Les gradients sont des images, leurs noms doivent inclure "gradient" pour être reconnus
+    // Les gradients et SVG sont des images, leurs noms doivent inclure "gradient" ou "url" pour être reconnus
     const backgroundImage = computed(() => {
-        if (theme.value === 'dark' && props.colorDark && props.colorDark?.includes('gradient')) return props.colorDark;
+        if (theme.value === 'dark' && props.colorDark && (props.colorDark.includes('gradient') || props.colorDark.includes('url'))) 
+            return props.colorDark;
         if (!props.color) return '';
-        if (props.color.includes('gradient')) return props.color;
+        if (props.color.includes('gradient') || props.color.includes('url')) 
+            return props.color;
         return '';
     });
+
 
 
 </script>
@@ -51,8 +54,8 @@
     <section
         class="section-background"
         :style="{ 
-            backgroundColor: backgroundColor || '',
-            backgroundImage: backgroundImage || '',
+            background: backgroundImage || backgroundColor ||'',
+            border: backgroundImage? 'none' : '',
             margin: sectionMargin,
             padding: sectionPadding }"
     >
@@ -62,7 +65,6 @@
 
 <style scoped>
     .section-background {
-        /* box-shadow: 0 2px 8px #0001; */
         padding: 2rem 1rem;
         margin: 2rem 0;
         transition: background 0.3s;

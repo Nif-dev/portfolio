@@ -25,14 +25,14 @@
         
     </div>
 <!-- Section de presentation -->
-    <SectionBackground color="var(--color-gradient-transparent-to-light-green)" colorDark="var(--color-gradient-transparent-to-grey)"  padding="5rem 0">
+    <SectionBackground color="url(../assets/background/repeating-triangles.svg)" colorDark="var(--color-gradient-transparent-to-grey)" >
         <div class="main-container mx-auto">
             <AboutMe />
         </div>
     </SectionBackground>
 
 <!-- Section des compétences -->
-    <SectionBackground color="var(--color-gradient-transparent-from-light-green)" colorDark="var(--color-gradient-transparent-from-grey)">
+    <SectionBackground color="url(../assets/background/repeating-triangles.svg)" colorDark="var(--color-gradient-transparent-from-grey)">
         <div class="main-container mx-auto">
             <SkillsList />
         </div>
