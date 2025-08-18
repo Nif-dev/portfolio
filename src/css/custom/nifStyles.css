@@ -9,13 +9,6 @@ html {
     width: 100%;
 }
 
-[data-theme="light"] body {
-    background: var(--color-dutch-white);
-}
-
-[data-theme="dark"] body {
-    background-color: var(--bulma-body-background-color);
-}
 
 .bcg-blur{
     backdrop-filter: blur(12px); 

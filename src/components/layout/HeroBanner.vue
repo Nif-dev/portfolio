@@ -17,7 +17,7 @@
 <style scoped>
 
 [data-theme="light"] .hero-background {
-  background-image: url('../../assets/img/common/hero-banner-jour.png') !important;
+  background-image: url('../../assets/img/common/hero-banner-jour.png') ;
 }
 
 [data-theme="dark"] .hero-background {
@@ -30,7 +30,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
   background-size: cover;
   background-position: center;
 }

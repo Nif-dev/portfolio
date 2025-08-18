@@ -33,7 +33,7 @@
     // Décale l'affichage pour laisser le temps à la transition d'être vue
     setTimeout(() => {
         showNavbar.value = true;
-    }, 100); // 100ms
+    }, 80); // 100ms
     });
 
 </script>

@@ -141,15 +141,6 @@ onMounted(() => {
   transform: translateX(0);
 }
 
-/* #skills{
-    border: none;
-}
-[data-theme="light"] #skills{
-    background: url('../../assets/background/repeating-triangles.svg');
-}
-[data-theme="dark"] #skills{
-    background: url('../../assets/background/endless-constellation.svg');
-} */
 
 </style>
 
