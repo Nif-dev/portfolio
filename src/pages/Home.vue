@@ -17,10 +17,13 @@
     import blocksLight from '../assets/background/light/pattern-randomized.svg?raw';
     import trianglesLight from '../assets/background/light/repeating-triangles.svg?raw';
     import starsLight from '../assets/background/light/endless-constellation.svg?raw';
+    import hexagonsLight from '../assets/background/light/hexagons.svg?raw';
 
     import blocksDark from '../assets/background/dark/pattern-randomized.svg?raw';
     import trianglesDark from '../assets/background/dark/repeating-triangles.svg?raw';
     import starsDark from '../assets/background/dark/endless-constellation.svg?raw';
+    import hexagonsDark from '../assets/background/dark/hexagons.svg?raw';
+
 
     //  Fonction pour créer le style de fond en utilisant le contenu SVG
     function createSvgBgStyle(svgContent: string) {
@@ -47,8 +50,10 @@
     // Objet contenant les styles de fond selon le thème
     const backgrounds = computed(() => ({
         aboutMe: theme.value === 'dark' ? createSvgBgStyle(starsDark) : createSvgBgStyle(starsLight),
-        skills: theme.value === 'dark' ? createSvgBgStyle(blocksDark) : createSvgBgStyle(blocksLight),
+        skills: theme.value === 'dark' ? createSvgBgStyle(hexagonsDark) : createSvgBgStyle(hexagonsLight),
         projects: theme.value === 'dark' ? createSvgBgStyle(trianglesDark) : createSvgBgStyle(trianglesLight),
+        unusedBlocks: theme.value === 'dark' ? createSvgBgStyle(blocksDark) : createSvgBgStyle(blocksLight),
+        
     }));
 
 
@@ -75,7 +80,7 @@
 
 <!-- Section des compétences -->
     <div id="skills" :style= backgrounds.skills>
-        <div class="main-container mx-auto py-6">
+        <div class="main-container mx-auto py-6" >
             <SkillsList />
         </div>
     </div>

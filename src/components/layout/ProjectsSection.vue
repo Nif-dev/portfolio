@@ -10,9 +10,11 @@
 </script>
 
 <template>
-  <section class="section bcg-blur has-text-centered" id="projects">
-  <h1 class="title">{{ t('common:PROJECTS_TITLE') }}</h1>
-  <h2 class="subtitle">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
+  <section class="section 
+    
+    has-text-centered" id="projects">
+  <h1 class="title my-2">{{ t('common:PROJECTS_TITLE') }}</h1>
+  <h2 class="subtitle bcg-blur">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
 
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <div class="m-4" v-for="project in projectsList" :key="project.name">
@@ -20,7 +22,7 @@
       </div>
     </div>
 
-    <div class="is-flex is-justify-content-center">
+    <div class="is-flex is-justify-content-center mt-6 pt-6">
       <router-link to="/projets/">
         <button class="button  has-text-weight-bold is-CTA" > {{ t('common:PROJECTS_BUTTON') }} </button>
       </router-link>
@@ -30,7 +32,14 @@
 </template>
 
 <style scoped>
-
+.bcg-blur {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.5em;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
+}
 
 [data-theme="dark"] .is-CTA {
     background-color: var(--color-purple-transparent);
