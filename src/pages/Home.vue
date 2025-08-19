@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
-    import { ref,computed, onMounted } from 'vue';
+    import { useThemedSvgBackground } from '../lib/useThemedBackground';
+    import { computed } from 'vue';
 
     import SeparatorProp from '../components/ui/SeparatorProp.vue';
 
@@ -24,43 +25,20 @@
     import starsDark from '../assets/background/dark/endless-constellation.svg?raw';
     import hexagonsDark from '../assets/background/dark/hexagons.svg?raw';
 
-
-    //  Fonction pour créer le style de fond en utilisant le contenu SVG
-    function createSvgBgStyle(svgContent: string) {
-        const encodedSvg = encodeURIComponent(svgContent);
-            return {
-                backgroundImage: `url("data:image/svg+xml,${encodedSvg}")`,
-                backgroundRepeat: 'repeat',
-                backgroundSize: 'auto',
-            };
-    }
-
-    // Thème actuel
-    const theme = ref('light');
-    // Mise à jour du thème
-    onMounted(() => {
-        theme.value = document.documentElement.getAttribute('data-theme') || 'light';
-    })
-    const observer = new MutationObserver(() => {
-        theme.value = document.documentElement.getAttribute('data-theme') || 'light';
-    });
-    // Observation des changements de thème
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    // Traitement des fonds selon le thème
+    const aboutMeBg = useThemedSvgBackground(starsLight, starsDark);
+    const skillsBg = useThemedSvgBackground(hexagonsLight, hexagonsDark);
+    const projectsBg = useThemedSvgBackground(trianglesLight, trianglesDark);
+    const unusedBlocksBg = useThemedSvgBackground(blocksLight, blocksDark);
 
     // Objet contenant les styles de fond selon le thème
     const backgrounds = computed(() => ({
-        aboutMe: theme.value === 'dark' ? createSvgBgStyle(starsDark) : createSvgBgStyle(starsLight),
-        skills: theme.value === 'dark' ? createSvgBgStyle(hexagonsDark) : createSvgBgStyle(hexagonsLight),
-        projects: theme.value === 'dark' ? createSvgBgStyle(trianglesDark) : createSvgBgStyle(trianglesLight),
-        unusedBlocks: theme.value === 'dark' ? createSvgBgStyle(blocksDark) : createSvgBgStyle(blocksLight),
-        
+    aboutMe: aboutMeBg.value,
+    skills: skillsBg.value,
+    projects: projectsBg.value,
+    unusedBlocks: unusedBlocksBg.value,
     }));
-
-
-    
-
 </script>
-
 
 <template>
 
@@ -79,13 +57,11 @@
     </div>
 
 <!-- Section des compétences -->
-    <div id="skills" :style= backgrounds.skills>
+    <div id="skills" :style= backgrounds.projects>
         <div class="main-container mx-auto py-6" >
             <SkillsList />
         </div>
     </div>
-
-
 
 <!-- Section des projets -->
     <div id="projects" :style= backgrounds.projects>
@@ -98,6 +74,7 @@
     <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="100px"/>
     <ContactSection />
 
+    <!-- Footer et bouton haut de page -->
     <ScrollToTop />
     <MyFooter />
 
