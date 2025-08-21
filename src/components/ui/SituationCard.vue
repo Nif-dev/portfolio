@@ -15,11 +15,11 @@
 <template>
 
     <div class="box">
-        <article>
+        <article class="is-size-5">
             <p class="subtitle has-text-weight-bold">
             {{ t('aboutMe:NEWS') }}
             </p>
-            <SeparatorProp size="10px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>  
+            <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>  
             {{ t('aboutMe:LFJOB_1') }}
             <strong> {{ t('aboutMe:FUTUR_DIPLOMA') }} </strong>
             {{ t('aboutMe:LFJOB_2') }}

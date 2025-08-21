@@ -2,6 +2,7 @@
 
     import {useTranslation} from 'i18next-vue'
 
+    import SeparatorProp from './SeparatorProp.vue';
     import logo from '../../assets/img/common/404-fox.png';
 
     const {t} = useTranslation();
@@ -11,7 +12,8 @@
 </script>
 
 <template>
-    <div class="box">
+
+    <div class="box is-hidden-mobile">
         <article class="media is-hidden-mobile">
             <div class="media-left">
                 <figure class="image is-128x128">
@@ -22,17 +24,19 @@
             <div class="media-content">
                 <div class="content">
                     <div class="subtitle has-text-weight-bold">
-                    <p class="is-size-4">
+                    <p class="is-size-3 ml-6">
                         Yoann Le Goff 
                     </p>
-                    <p class="mr-6"><small> {{ t('aboutMe:DIPLOMA') }} </small>
+                    <SeparatorProp color="var(--color-orange)" size="12px"/>
+                    <p class="mr-6 is-size-4 has-text-centered"><small> {{ t('aboutMe:DIPLOMA') }} </small>
                     </p>
                     </div>
                 </div>
             </div>
         </article>
-
-        <article class="media is-hidden-tablet noBorderTop">
+    </div>
+    <div class="box is-hidden-tablet mt-6">
+        <article class="media is-hidden-tablet">
             <div class="media-left">
                 <figure class="image is-96x96">
                     <img :src=logoNif alt="" />
@@ -45,12 +49,21 @@
                         <p class="is-size-4">
                             Yoann Le Goff 
                         </p>
-                        <p class="mr-6"><small> {{ t('aboutMe:DIPLOMA') }} </small>
+                        
+                    <SeparatorProp color="var(--color-orange)" size="12px" />
+                        <p class="mr-6 is-size-5"><small> {{ t('aboutMe:DIPLOMA') }} </small>
                         </p>
                     </div>
                 </div>
             </div>
         </article>
-
     </div>
+
 </template>
+
+<style>
+    .box{
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+</style>

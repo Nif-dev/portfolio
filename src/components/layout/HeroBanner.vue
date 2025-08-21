@@ -2,6 +2,7 @@
 
 <script setup lang="ts">
   import HeroCard from '../ui/HeroCard.vue';
+  import SituationCard from '../ui/SituationCard.vue';
 </script>
 <template>
 
@@ -10,6 +11,7 @@
   
   <section class="section is-align-content-center" >
     <HeroCard />
+    <SituationCard />
   </section>
 
 </template>

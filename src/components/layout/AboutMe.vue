@@ -5,8 +5,6 @@
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
 
-    import CVProp from '../ui/CVProp.vue';
-    import SituationCard from '../ui/SituationCard.vue';
     import SeparatorProp from '../ui/SeparatorProp.vue';
     
 
@@ -14,13 +12,12 @@
 
 <template>
     <section id="aboutMe" class="section">
-        <div class="columns">
-            <div class="column">
+        <div class="">
 
                 
                 <SeparatorProp size="3rem" />
                 <h1 class="title bcg-blur my-6"> {{ t('aboutMe:TITLE') }} </h1>
-                <div class="bcg-blur">
+                <div class="bcg-blur is-size-5">
                     <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
                     <br>
                     <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
@@ -31,13 +28,6 @@
                 </div>
             </div>
 
-            <div class="column is-align-content-center">
-                <SituationCard />
-                <div class="my-2"></div>
-                <CVProp />
-            </div>
-
-        </div>
     </section>
 
 </template>
