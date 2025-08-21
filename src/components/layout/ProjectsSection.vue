@@ -51,7 +51,7 @@
       background-color: var(--color-white-transparent);
     }
     .is-CTA {
-      background-color: var(--color-orange-transparent);
+      background-color: var(--color-orange);
     }
   }
 
