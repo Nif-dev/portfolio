@@ -41,7 +41,4 @@ html {
         .bcg-blur-bulles{
             background-color: var(--color-white-transparent);
         }
-        .bcg-blur{
-            background-color: var(--color-white-transparent);
-        }
     }
