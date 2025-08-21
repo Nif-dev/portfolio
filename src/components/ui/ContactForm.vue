@@ -1,7 +1,8 @@
 <!-- src/components/ui/ContactForm.vue -->
 <template>
 
-    <form @submit.prevent="handleSubmit">
+<div class="is-size-1">
+    <form @submit.prevent="handleSubmit" >
         <div class="field">
             <label class="label" for="form-name">{{ t('contactMe:NAME') }}</label>
             <div class="control">
@@ -34,6 +35,7 @@
         <div v-if="error">{{ t('contactMe:ERROR_MESSAGE') }}</div>
         <div v-if="success">{{ t('contactMe:SUCCESS_MESSAGE') }}</div>
     </form>
+</div>
 </template>
 
 <script setup lang="ts">
@@ -78,3 +80,7 @@ if (error.value) {
 }
 
 </script>
+
+<style scoped>
+
+</style>
