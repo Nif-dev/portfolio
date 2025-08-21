@@ -17,9 +17,9 @@
                     <h2 class="title is-4 mb-5"> {{ t('contactMe:SUBTITLE') }} </h2>
                     <h1 class="title is-5 mb-3"> {{ t('contactMe:CTA') }} </h1>
                 </div>
-                <div class="bcg-blur bcg-blur-bulles mt-4"></div>
+                <!-- <div class="bcg-blur bcg-blur-bulles mt-4"></div>
                 <div class="bcg-blur bcg-blur-bulles my-2"></div>
-                <div class="bcg-blur bcg-blur-bulles mb-6"></div>
+                <div class="bcg-blur bcg-blur-bulles mb-6"></div> -->
             </div>
 
             <div class="columns is-centered ">

@@ -1,9 +1,13 @@
 <script setup lang="ts">
 
     import { useTranslation } from 'i18next-vue'
-    import { ref } from 'vue'
+    import { ref, computed } from 'vue'
 
     import { gemenyApp } from '../../data/projects/gemenyApp'
+    import { useThemedSvgBackground } from '../../lib/useThemedBackground';
+
+    import backgroundSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
+    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
 
     import dwwmLink_1 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
     import dwwmLink_2 from '../../assets/Diapo-soutenance-DWWM.pdf';
@@ -18,14 +22,17 @@
 
     const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
 
+    const backgroundSVG = useThemedSvgBackground(backgroundSVGLight, backgroundSVGDark);
+    const background = computed(() => ({ hexagons:backgroundSVG.value }));
 
 </script>
 
 <template>
     <NavBar />
+<div :style= background.hexagons>
 
-    <section class="section main-container mx-auto">
-
+    <section class="section main-container mx-auto" >
+        
         <!-- le titre de la page -->
         <div class="block hero has-text-centered ">
             <h1 class="title"> {{ gemenyApp.name }} </h1>
@@ -44,7 +51,7 @@
                         <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
                     </div>
                 </div>
-        </div>
+            </div>
     
         <!-- soutenance + CTA -->
         <div class="block is-vcentered">
@@ -75,10 +82,10 @@
                     <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.COMPANY_NAME`) }}</h1>
                     <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.COMPANY_DESCRIPTION`) }}</h2>
                 </div>
-        </div>
-    
-        <!-- le produit -->
-        <div class="block columns is-vcentered">
+            </div>
+            
+            <!-- le produit -->
+            <div class="block columns is-vcentered">
                 <div class="column has-text-centered">
                     <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.PRODUCT_TITLE`) }}</h1>
                     <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.PRODUCT_DESCRIPTION`) }}</h2>
@@ -129,7 +136,7 @@
         <!-- les tabs de sélection sur les réalisations du projet -->
         <h1 class="block title">{{ t(`projects:${gemenyApp.localesName}.ENVIRONMENT_TITLE`) }}</h1>
         <div class="block is-vcentered">
-        
+            
             <!-- les tabs de sélection du contenu -->
             <div class="tabs is-boxed is-fullwidth is-medium tabs-header">
                 <ul>
@@ -207,13 +214,11 @@
         </div>
     
 
-
-            
-
     </section>
-
+    
     <ScrollToTop />
     <MyFooter />
+</div>
 </template>
 
 <style scoped>

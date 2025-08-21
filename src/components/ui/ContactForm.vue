@@ -1,7 +1,55 @@
 <!-- src/components/ui/ContactForm.vue -->
+
+<script setup lang="ts">
+
+import { useTranslation } from 'i18next-vue';
+const { t } = useTranslation();
+
+import { ref, reactive } from 'vue';
+
+import { useEmailJs } from '../../lib/useEmailJs';
+
+const isSubmitting = ref(false);
+
+const form = reactive({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+});
+
+const { sendEmail, error, success } = useEmailJs();
+async function handleSubmit() {
+    if (isSubmitting.value) return;
+    isSubmitting.value = true;
+    await sendEmail({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message
+});
+if (success.value) {
+    console.info(t('contactMe:SUCCESS_MESSAGE'));
+    form.name = '';
+    form.email = '';
+    form.subject = '';
+    form.message = '';
+
+    setTimeout(() => {
+        isSubmitting.value = false;
+    }, 10000);
+}
+if (error.value) {
+    console.error(t('contactMe:ERROR_MESSAGE'));
+}
+
+}
+
+</script>
+
 <template>
 
-<div class="is-size-1">
+<div class="bcg-blur contactForm">
     <form @submit.prevent="handleSubmit" >
         <div class="field">
             <label class="label" for="form-name">{{ t('contactMe:NAME') }}</label>
@@ -38,49 +86,3 @@
 </div>
 </template>
 
-<script setup lang="ts">
-
-import { useTranslation } from 'i18next-vue';
-const { t } = useTranslation();
-
-import { ref, reactive } from 'vue';
-
-import { useEmailJs } from '../../lib/useEmailJs';
-
-const isSubmitting = ref(false);
-
-const form = reactive({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-});
-
-const { sendEmail, error, success } = useEmailJs();
-async function handleSubmit() {
-    if (isSubmitting.value) return;
-    isSubmitting.value = true;
-    await sendEmail({
-        name: form.name,
-        email: form.email,
-        subject: form.subject,
-        message: form.message
-});
-if (success.value) {
-    console.info(t('contactMe:SUCCESS_MESSAGE'));
-    form.name = '';
-    form.email = '';
-    form.subject = '';
-    form.message = '';
-}
-if (error.value) {
-    console.error(t('contactMe:ERROR_MESSAGE'));
-}
-
-}
-
-</script>
-
-<style scoped>
-
-</style>

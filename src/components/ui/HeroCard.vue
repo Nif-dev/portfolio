@@ -46,12 +46,12 @@
             <div class="media-content">
                 <div class="content">
                     <div class="subtitle has-text-weight-bold">
-                        <p class="is-size-4">
+                        <p class="is-size-5">
                             Yoann Le Goff 
                         </p>
                         
                     <SeparatorProp color="var(--color-orange)" size="12px" />
-                        <p class="mr-6 is-size-5"><small> {{ t('aboutMe:DIPLOMA') }} </small>
+                        <p class="mr-6 is-size-6"><small> {{ t('aboutMe:DIPLOMA') }} </small>
                         </p>
                     </div>
                 </div>

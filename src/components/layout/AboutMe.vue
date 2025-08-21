@@ -17,7 +17,7 @@
                 
                 <SeparatorProp size="3rem" />
                 <h1 class="title bcg-blur my-6"> {{ t('aboutMe:TITLE') }} </h1>
-                <div class="bcg-blur is-size-5">
+                <div class="bcg-blur is-size-6">
                     <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
                     <br>
                     <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
@@ -39,9 +39,8 @@
     justify-content: center;
     text-align: justify;
     align-items: center;
-    width: 75%;
+    width: fit-content;
     margin: auto;
-    padding: 0.5em;
 }
 
 .title::before {

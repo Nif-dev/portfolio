@@ -4,7 +4,6 @@ import { portfolio } from '../../data/projects/portfolio'
 import NavBar from '../../components/layout/NavBar.vue'
 import ScrollToTop from '../../components/ui/ScrollToTop.vue'
 import MyFooter from '../../components/layout/MyFooter.vue'
-// import SkillIcons from '../../components/ui/skillsIcons.vue'
 import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
 const { t } = useTranslation()
@@ -20,7 +19,7 @@ const { t } = useTranslation()
       </h2>
     </div>
 
-    <SeparatorProp color="#095b16" />
+    <SeparatorProp color="var(--color-dark-orange)" />
 
     <div class="block columns is-vcentered">
       <div class="column has-text-centered">
@@ -29,18 +28,7 @@ const { t } = useTranslation()
       </div>
     </div>
 
-    <SeparatorProp color="#095b16" />
-
-    <!-- <div class="block columns is-vcentered">
-      <div class="column has-text-centered">
-        <h1 class="title">{{ t(`projects:${portfolio.localesName}.MAIN_FEATURES_TITLE`) }}</h1>
-        <ul class="content is-size-5">
-          <li v-for="feature in portfolio.MAIN_FEATURES_LIST" :key="feature">{{ feature }}</li>
-        </ul>
-      </div>
-    </div> -->
-
-    <SeparatorProp color="#095b16" />
+    <SeparatorProp color="var(--color-dark-orange)" />
 
     <div class="block">
       <h1 class="title">{{ t(`projects:${portfolio.localesName}.ORGANISATION_TITLE`) }}</h1>
@@ -52,7 +40,7 @@ const { t } = useTranslation()
       <h2 class="subtitle">{{ t(`projects:${portfolio.localesName}.ENVIRONMENT_DESCRIPTION`) }}</h2>
     </div>
 
-    <SeparatorProp color="#095b16" />
+    <SeparatorProp color="var(--color-dark-orange)" />
 
     <div class="block">
       <h1 class="title">{{ t(`projects:${portfolio.localesName}.UX_TITLE`) }}</h1>

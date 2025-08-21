@@ -15,7 +15,7 @@
 <template>
 
     <div class="box">
-        <article class="is-size-5">
+        <article class="is-size-6">
             <p class="subtitle has-text-weight-bold">
             {{ t('aboutMe:NEWS') }}
             </p>
@@ -35,10 +35,6 @@
 
 <style scoped>
 
-.noBorderTop{
-  border-top: none !important;
-  overflow: hidden !important;
-}
 
 .box{
   margin: 0 auto;
