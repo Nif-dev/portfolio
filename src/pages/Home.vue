@@ -5,9 +5,10 @@
 
     import SeparatorProp from '../components/ui/SeparatorProp.vue';
 
-    import NavBar from '../components/layout/NavBar.vue'
-    import HeroBanner from '../components/layout/HeroBanner.vue'
-    import AboutMe from '../components/layout/AboutMe.vue'
+    import NavBar from '../components/layout/NavBar.vue';
+    import HeroBanner from '../components/layout/HeroBanner.vue';
+    import AboutMe from '../components/layout/AboutMe.vue';
+    import MyServices from '../components/layout/MyServices.vue';
     import SkillsList from '../components/layout/SkillsList.vue';
     import ProjectsSection from '../components/layout/ProjectsSection.vue';
     import ContactSection from '../components/layout/ContactSection.vue';
@@ -50,12 +51,17 @@
     </div>
 
 <!-- Section de presentation -->
-    <div id="about-me" :style= backgrounds.aboutMe>
+    <div id="about-me" :style= backgrounds.aboutMe class="is-align-content-center">
         <div class="main-container mx-auto py-6">
             <AboutMe />
         </div>
     </div>
 
+    <div id="my-services">
+        <div class="main-container mx-auto py-6">
+            <MyServices />
+        </div>
+    </div>
 <!-- Section des compétences -->
     <div id="skills" :style= backgrounds.projects>
         <div class="main-container mx-auto py-6" >
