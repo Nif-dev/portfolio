@@ -161,7 +161,7 @@
                         <div class="column has-text-centered">
                             <h2 class="title">{{ t(`projects:${gemenyApp.localesName}.ORGANISATION_TITLE`) }}   </h2>
                             <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.ORGANISATION_DESCRIPTION`) }}   </h2>
-                        
+                            <div class="m-6"></div>
                             <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.DEPLOYMENT_TITLE`) }}</h1>
                             <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.DEPLOYMENT_DESCRIPTION`) }}   </h2>
                         </div>
@@ -255,15 +255,15 @@
 }
 
 
-[data-theme="light"] .tabs.is-boxed li.is-active a {
+/* [data-theme="light"] .tabs.is-boxed li.is-active a {
     background: var(--color-dutch-white);
     color: var(--color-orange);
     font-weight: 700;
     border-color: var(--color-orange);
 
-}
+} */
 
-[data-theme="light"] .tabs-content{
+/* [data-theme="light"] .tabs-content{
     background-color: var(--color-dutch-white);
-}
+} */
 </style>

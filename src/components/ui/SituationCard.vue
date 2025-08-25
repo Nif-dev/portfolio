@@ -37,8 +37,8 @@
 
 
 .box{
+  max-width: 40rem;
   margin: 0 auto;
-  max-width: 900px;
 }
 
 </style>

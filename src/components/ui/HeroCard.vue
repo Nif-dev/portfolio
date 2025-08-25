@@ -61,7 +61,7 @@
 
 </template>
 
-<style>
+<style scoped>
     .box{
         max-width: 40rem;
         margin: 0 auto;

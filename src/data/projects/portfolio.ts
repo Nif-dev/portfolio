@@ -25,7 +25,7 @@ export const portfolio = {
     allLinkedSkills: allLinkedSkills,
     link: undefined,
     presentation : "/projet/portfolio",
-    textsCount: 0,
+    
 }
 
 export const portfolio_EN = {

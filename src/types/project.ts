@@ -10,8 +10,8 @@ export interface Project {
     allLinkedSkills: Skill[];
     
     link?: string;
+    onlineLink?: string;
     presentation?: string;
-    textsCount: number
 
 
 }

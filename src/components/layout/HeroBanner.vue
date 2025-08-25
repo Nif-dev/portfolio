@@ -11,6 +11,7 @@
   
   <section class="section is-align-content-center" >
     <HeroCard />
+    <div class="m-6"></div>
     <SituationCard />
   </section>
 
