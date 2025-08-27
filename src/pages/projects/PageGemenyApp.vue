@@ -254,16 +254,4 @@
     margin-inline: 2rem;
 }
 
-
-/* [data-theme="light"] .tabs.is-boxed li.is-active a {
-    background: var(--color-dutch-white);
-    color: var(--color-orange);
-    font-weight: 700;
-    border-color: var(--color-orange);
-
-} */
-
-/* [data-theme="light"] .tabs-content{
-    background-color: var(--color-dutch-white);
-} */
 </style>
