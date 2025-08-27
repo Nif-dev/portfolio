@@ -12,18 +12,18 @@
     import MyFooter from '../../components/layout/MyFooter.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
-    import backgroundSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
-    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+    import simpleStripeSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
+    import simpleStripeSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
 
     const {t} = useTranslation()
 
-    const backgroundSVG = useThemedSvgBackground(backgroundSVGLight, backgroundSVGDark);
-    const background = computed(() => ({ hexagons: backgroundSVG.value }));
+    const simpleStripeSVG = useThemedSvgBackground(simpleStripeSVGLight, simpleStripeSVGDark);
+    const background = computed(() => ({ simpleStripe: simpleStripeSVG.value }));
 
 </script>
 
 <template>
-<div :style="background.hexagons">
+<div :style="background.simpleStripe">
     <div class="main-container">        
     
         <section class="section mx-auto">

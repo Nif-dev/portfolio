@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { useTranslation } from 'i18next-vue'
-import { ref } from 'vue'
+import { ref,computed } from 'vue'
 
 // DATA IMPORTS
 import { gemenyAuth } from '../../data/projects/gemenyAuth'
 
-    import dwwmLink_1 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
+import { useThemedSvgBackground } from '../../lib/useThemedBackground';
+import simpleStripeSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
+import simpleStripeSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+
     import dwwmLink_2 from '../../assets/Diapo-soutenance-DWWM.pdf';
+    import dwwmLink_1 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
 
 import NavBar from '../../components/layout/NavBar.vue'
 import ScrollToTop from '../../components/ui/ScrollToTop.vue'
@@ -16,23 +20,29 @@ import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
 const { t } = useTranslation()
 const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
+
+const simpleStripeSVG = useThemedSvgBackground(simpleStripeSVGLight, simpleStripeSVGDark);
+const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
+
 </script>
 
 <template>
-    <NavBar />
+<div :style="background.simpleStripe">
 
-    <section class="section main-container mx-auto">
-
-                <!-- le titre de la page -->
-        <div class="block hero has-text-centered">
-        <h1 class="title"> {{ gemenyAuth.name }} </h1>
-        <h2 class="subtitle mb-6">
-            {{ t(`projects:${gemenyAuth.localesName}.DESCRIPTION`) }}
-        </h2>
-        </div>
-
-        <!-- les skills -->
-        <div class="block is-vcentered">
+        <NavBar />
+        
+        <section class="section main-container mx-auto">
+            
+            <!-- le titre de la page -->
+            <div class="block hero has-text-centered">
+                <h1 class="title"> {{ gemenyAuth.name }} </h1>
+                <h2 class="subtitle mb-6">
+                    {{ t(`projects:${gemenyAuth.localesName}.DESCRIPTION`) }}
+                </h2>
+            </div>
+            
+            <!-- les skills -->
+            <div class="block is-vcentered">
         <h1 class="title"> {{ t('projects:PROJECT_SKILLS') }} </h1>
         <div class="is-flex is-flex-wrap-wrap">
             <div v-for="skill in gemenyAuth.allLinkedSkills" :key="skill.name" class="m-4">
@@ -70,7 +80,7 @@ const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
         </div>
 
         <div class="block columns is-vcentered">
-        <div class="column has-text-centered">
+            <div class="column has-text-centered">
             <h1 class="title">{{ t(`projects:${gemenyAuth.localesName}.API_TITLE`) }}</h1>
             <h2 class="subtitle">{{ t(`projects:${gemenyAuth.localesName}.API_DESCRIPTION`) }}</h2>
         </div>
@@ -120,7 +130,7 @@ const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
         <div class="block is-vcentered">
         <div class="tabs is-boxed is-fullwidth is-medium tabs-header">
             <ul>
-            <li :class="{ 'is-active': activeTab === 'gestion' }">
+                <li :class="{ 'is-active': activeTab === 'gestion' }">
                 <a @click="activeTab = 'gestion'"><span>Gestion</span></a>
             </li>
             <li :class="{ 'is-active': activeTab === 'design' }">
@@ -166,8 +176,8 @@ const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
                 <div class="column has-text-justified">
                 <h1 class="title">{{ t(`projects:${gemenyAuth.localesName}.STRUCTURE_TITLE`) }}</h1>
                 <h2 class="subtitle">{{ t(`projects:${gemenyAuth.localesName}.STRUCTURE_DESCRIPTION`) }}</h2>
-                </div>
-                <div class="column-separator"></div>
+            </div>
+            <div class="column-separator"></div>
                 <div class="column has-text-justified">
                 <img :src="gemenyAuth.images[6]" alt="tree">
                 </div>
@@ -180,15 +190,16 @@ const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
                 <div class="column has-text-justified">
                 <h1 class="title">{{ t(`projects:${gemenyAuth.localesName}.REALISATION_TITLE`) }}</h1>
                 <h2 class="subtitle">{{ t(`projects:${gemenyAuth.localesName}.REALISATION_DESCRIPTION`) }}</h2>
-                </div>
-            </div>
             </div>
         </div>
-        </div>
-    </section>
-
+    </div>
+</div>
+</div>
+        </section>
+        
     <ScrollToTop />
     <MyFooter />
+</div>
 </template>
 
 <style scoped>

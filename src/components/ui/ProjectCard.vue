@@ -1,11 +1,17 @@
 <!-- src/components/ui/ProjectCard.vue -->
 <template>
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 20rem;">
     <!-- Header avec le nom du projet -->
-    <header class="card-header">
+    <header class="card-header ">
       <p class="card-header-title">
         {{ t(`${project.localesName}.TITLE`) }}
       </p>
+      
+    <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
+          <button class="button">
+            Voir projet <p class="is-size-4 ml-2">⭷</p>
+          </button>
+        </router-link>
     </header>
 
     <!-- Image principale du projet -->
@@ -62,6 +68,15 @@ defineProps<{
   }
   [data-theme="dark-unused"] .card{
         background-color: var(--color-purple-transparent);
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  }
+
+  [data-theme="dark"] .button{
+        background-color: var(--color-purple-transparent);
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  }
+  [data-theme="light"] .button{
+        background-color: var(--color-orange-transparent);
         box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   }
 
