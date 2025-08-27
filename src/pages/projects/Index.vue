@@ -1,8 +1,10 @@
 <script setup lang="ts">
 
     import { useTranslation } from 'i18next-vue'
+    import { computed } from 'vue'
 
     import { projectsList } from '../../data/projects'
+    import { useThemedSvgBackground } from '../../lib/useThemedBackground';
     
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
@@ -10,75 +12,81 @@
     import MyFooter from '../../components/layout/MyFooter.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
+    import backgroundSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
+    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+
     const {t} = useTranslation()
 
+    const backgroundSVG = useThemedSvgBackground(backgroundSVGLight, backgroundSVGDark);
+    const background = computed(() => ({ hexagons: backgroundSVG.value }));
 
 </script>
 
 <template>
-    <div class="main-container">
-        
+<div :style="background.hexagons">
+    <div class="main-container">        
     
-    <section class="section mx-auto">
+        <section class="section mx-auto">
 
-        <NavBar />
+            <NavBar />
+            
+
+        <!-- Affiche la liste des projets -->
+        <h1 class="title has-text-centered"> {{ t('common:PROJECTS_LIST') }}</h1>
         
-
-    <!-- Affiche la liste des projets -->
-    <h1 class="title has-text-centered"> {{ t('common:PROJECTS_LIST') }}</h1>
-    
-    <ul>
-        <li v-for="project in projectsList" :key="project.name">
-            <SeparatorProp color="var(--color-purple)"/>
-            <div class="is-justify-content-center">
-                
-                <!-- Nom du projet -->
-                <div class="">
-                    <h1 class="title has-text-centered m-2"> {{ project.name }} </h1>
-                    <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
-                </div>
-            
-                <!-- Images -->
-                <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
-                
-                    <!-- Affiche les 3 premières images de chaque projet -->
-                        <img
-                        v-for="(img, idx) in project.images.slice(0, 3)" 
-                        :key="idx"
-                        :src="img"
-                        :alt="`screen ${idx + 1} projet ${project.name}`"
-                        style="max-width: 20%;"
-                        />
-                
-                </div>
-            
-                <!-- Compétences -->
+        <ul>
+            <li v-for="project in projectsList" :key="project.name">
+                <SeparatorProp color="var(--color-purple)"/>
                 <div class="is-justify-content-center">
-                    <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
-                        <div v-for="skill in project.allLinkedSkills" :key="skill.name" class="m-4">
-                            <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
+                    
+                    <!-- Nom du projet -->
+                    <div class="">
+                        <h1 class="title has-text-centered m-2"> {{ project.name }} </h1>
+                        <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
+                    </div>
+                
+                    <!-- Images -->
+                    <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
+                    
+                        <!-- Affiche les 3 premières images de chaque projet -->
+                            <img
+                            v-for="(img, idx) in project.images.slice(0, 3)" 
+                            :key="idx"
+                            :src="img"
+                            :alt="`screen ${idx + 1} projet ${project.name}`"
+                            style="max-width: 20%;"
+                            />
+                    
+                    </div>
+                
+                    <!-- Compétences -->
+                    <div class="is-justify-content-center">
+                        <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+                            <div v-for="skill in project.allLinkedSkills" :key="skill.name" class="m-4">
+                                <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- CTA page du projet -->
-                <div class="is-flex is-justify-content-center mt-6 ">
-                    <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="has-text-dark">
-                        <button v-if="project.presentation" class="button is-success is-CTA">
-                            {{ t('projects:PROJECT_PRESENTATION') }}
-                        </button>
-                    </router-link>
+                    
+                    <!-- CTA page du projet -->
+                    <div class="is-flex is-justify-content-center mt-6 ">
+                        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="has-text-dark">
+                            <button v-if="project.presentation" class="button is-success is-CTA">
+                                {{ t('projects:PROJECT_PRESENTATION') }}
+                            </button>
+                        </router-link>
+                    </div>
+
                 </div>
 
-            </div>
-
-        </li>
-    </ul>
-    
-<SeparatorProp color="var(--color-purple)"/>
-</section>
-    <ScrollToTop />
-    <MyFooter/>
+            </li>
+        </ul>
+        
+    <SeparatorProp color="var(--color-purple)"/>
+        </section>
+            <ScrollToTop />
+            <MyFooter/>
+    </div>
 </div>
 </template>
 
