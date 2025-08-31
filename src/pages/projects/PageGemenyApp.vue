@@ -6,8 +6,8 @@
     import { gemenyApp } from '../../data/projects/gemenyApp'
     import { useThemedSvgBackground } from '../../lib/useThemedBackground';
 
-    import backgroundSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
-    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+    import simpleStripeSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
+    import simpleStripeSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
 
     import dwwmLink_1 from '../../assets/Dossier-projets-Yoann_Le_Goff.pdf';
     import dwwmLink_2 from '../../assets/Diapo-soutenance-DWWM.pdf';
@@ -22,14 +22,14 @@
 
     const activeTab = ref<'gestion' | 'design' | 'code'>('gestion')
 
-    const backgroundSVG = useThemedSvgBackground(backgroundSVGLight, backgroundSVGDark);
-    const background = computed(() => ({ hexagons:backgroundSVG.value }));
+    const simpleStripeSVG = useThemedSvgBackground(simpleStripeSVGLight, simpleStripeSVGDark);
+    const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
 
 </script>
 
 <template>
     <NavBar />
-<div :style= background.hexagons>
+<div :style= background.simpleStripe>
 
     <section class="section main-container mx-auto" >
         

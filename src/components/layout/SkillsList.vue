@@ -64,7 +64,7 @@ onMounted(() => {
   <section class="section  " id="skills">
     <div class="p-2">
 
-      <h1 class="title ">{{ t('common:SKILLS_TITLE') }}</h1>
+      <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
       <h2 class="subtitle my-5 bcg-blur p-2">{{ t('common:SKILLS_SUBTITLE') }}</h2>
       
       <div class="">
@@ -129,10 +129,14 @@ onMounted(() => {
     position: relative;
   }
 
-  .bcg-blur {
-    width: fit-content;
-    border-radius: 10px;
-  }
+.bcg-blur {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.8em;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
+}
 
   /* Animation slide-in */
   .slide-anim {

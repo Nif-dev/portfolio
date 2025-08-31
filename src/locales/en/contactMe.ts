@@ -1,6 +1,6 @@
 export default {
     TITLE : "Contact me",
-    SUBTITLE : "If you have any questions or would like to work together, please don't hesitate to contact me.",
+    SUBTITLE : "A project ? Any question ? Let's talk about it!",
     CTA : "Through my social networks or using the following form : ",
     NAME : "Name",
     NAME_FILLER : "Your name",
