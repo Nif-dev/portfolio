@@ -73,7 +73,7 @@ export const gemenyApp_EN = {
     DWWM_DESCRIPTION : "This project served as the main support for my presentation at the SOFINS exhibition for obtaining the DWWM title. You can find the presentation documents below:",
 
     DWWM_LINK_1 : "PDF 1 - Project Report",
-    DWWM_LINK_2 : "PDF 2 - Presentation Support - Powerpoint",
+    DWWM_LINK_2 : "PDF 2 - Presentation Support",
 }
 
 export const gemenyApp_FR = {
@@ -121,5 +121,5 @@ export const gemenyApp_FR = {
     DWWM_DESCRIPTION : "Ce projet a servi de support principal à ma soutenance pour l'obtention du titre Développeur Web et Web Mobile (DWWM).Vous pouvez consulter les documents de présentation ci-dessous :",
 
     DWWM_LINK_1 : "PDF 1 – Rapport de projet",
-    DWWM_LINK_2 : "PDF 2 – Support de présentation - powerpoint",
+    DWWM_LINK_2 : "PDF 2 – Support de présentation",
 };
