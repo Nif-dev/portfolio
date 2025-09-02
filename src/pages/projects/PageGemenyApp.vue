@@ -232,6 +232,8 @@
     .tabs-content{
         margin-top: 0px;
         min-height: 60vh;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
     }
 
     .image{

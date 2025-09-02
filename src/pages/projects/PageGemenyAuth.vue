@@ -49,7 +49,8 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
             <SkillIcons :skill="skill" :hoverable="true" :desc="true" />
             </div>
         </div>
-        </div>
+            </div>
+
             <!-- soutenance + CTA -->
             <div class="block is-vcentered">
                 <h1 class="title">
@@ -59,15 +60,15 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
                     {{ t(`projects:${gemenyAuth.localesName}.DWWM_DESCRIPTION`) }}
                 </h2>
                 <div class="buttons is-centered mt-4">
-                    <a class="button is-success" :href="dwwmLink_1" target="_blank" rel="noopener">
+                    <a class="button is-link" :href="dwwmLink_1" target="_blank" rel="noopener">
                         {{ t(`projects:${gemenyAuth.localesName}.DWWM_LINK_1`) }}
                     </a>
-                    <a class="button is-success" :href="dwwmLink_2" target="_blank" rel="noopener">
+                    <a class="button is-link" :href="dwwmLink_2" target="_blank" rel="noopener">
                         {{ t(`projects:${gemenyAuth.localesName}.DWWM_LINK_2`) }}
                     </a>
                 </div>
             </div>
-        <SeparatorProp color="#095b16"/>
+        <SeparatorProp color="#0070a3" margin="3em" />
 
         <div class="block columns is-vcentered">
         <div class="column">
@@ -89,7 +90,7 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
         </div>
         </div>
 
-        <SeparatorProp color="#0070a3"/>
+        <SeparatorProp color="#0070a3" margin="3em"/>
 
         <div class="block columns is-vcentered">
         <div class="column has-text-centered">
@@ -101,16 +102,14 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
         </div>
         </div>
 
-        <SeparatorProp color="#095b16"/>
-
         <!-- objectifs -->
         <div class="block columns is-vcentered">
         <div class="column">
             <img :src="gemenyAuth.images[3]" alt="objectifs" class="is-hidden-touch image"/>
             <img :src="gemenyAuth.images[3]" alt="objectifs" class="is-hidden-desktop"/>
         </div>
-        <div class="column has-text-justified is-two-thirds">
-            <h1 class="title">{{ t(`projects:${gemenyAuth.localesName}.OBJECTIVES`) }}</h1>
+        <div class="column has-text-justified ">
+            <h1 class="title has-text-centered">{{ t(`projects:${gemenyAuth.localesName}.OBJECTIVES`) }}</h1>
             <div class="content is-size-5">
             <ul>
                 <li>{{ t(`projects:${gemenyAuth.localesName}.OBJECTIVE_1`) }}</li>
@@ -123,10 +122,10 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
         </div>
         </div>
 
-        <SeparatorProp color="#0070a3"/>
+        <SeparatorProp color="#0070a3" margin="3em"/>
 
         <!-- tabs -->
-        <h1 class="block title">{{ t(`projects:${gemenyAuth.localesName}.ENVIRONMENT_TITLE`) }}</h1>
+        <h1 class="block title mb-3">{{ t(`projects:${gemenyAuth.localesName}.ENVIRONMENT_TITLE`) }}</h1>
         <div class="block is-vcentered">
         <div class="tabs is-boxed is-fullwidth is-medium tabs-header">
             <ul>
@@ -148,12 +147,13 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
                 <div class="column has-text-centered">
                 <h2 class="title">{{ t(`projects:${gemenyAuth.localesName}.ORGANISATION_TITLE`) }}</h2>
                 <h2 class="subtitle">{{ t(`projects:${gemenyAuth.localesName}.ORGANISATION_DESCRIPTION`) }}</h2>
+                <div class="m-6"></div>
                 <h1 class="title mt-5">{{ t(`projects:${gemenyAuth.localesName}.DEPLOYMENT_TITLE`) }}</h1>
                 <h2 class="subtitle">{{ t(`projects:${gemenyAuth.localesName}.DEPLOYMENT_DESCRIPTION`) }}</h2>
                 </div>
                 <div class="column-separator"></div>
                 <div class="column">
-                <img :src="gemenyAuth.images[4]" alt="gestion" class="kanban-img"/>
+                    <img :src="gemenyAuth.images[5]" alt="gestion" class="kanban-img"/>
                 </div>
             </div>
             </div>
@@ -166,7 +166,7 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
                 </div>
                 <div class="column-separator"></div>
                 <div class="column">
-                <img :src="gemenyAuth.images[5]" alt="design" class="design-img"/>
+                <img :src="gemenyAuth.images[4]" alt="design" class="design-img"/>
                 </div>
             </div>
             </div>
@@ -203,9 +203,20 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
 </template>
 
 <style scoped>
-/* Reprends ton style précédent, adapte si besoin */
-.main-container { max-width: 1600px; }
-.tabs-content { min-height: 60vh; }
+    .main-container { 
+        max-width: 1600px; 
+    }
+
+    .tabs-header{
+        margin-bottom: 0px;
+    }
+    .tabs-content{
+        margin-top: 0px;
+        min-height: 60vh;
+        border-top-left-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+
 .kanban-img, .design-img { max-height: 400px; }
 .section { padding-top: 10em; }
 .column-separator { width: 10px; margin-inline: 2rem; }
