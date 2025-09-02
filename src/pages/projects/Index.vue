@@ -12,18 +12,18 @@
     import MyFooter from '../../components/layout/MyFooter.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
-    import simpleStripeSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw';
-    import simpleStripeSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+    import randomSVGDark from '../../assets/background/dark/pattern-randomized.svg?raw';
+    import randomSVGLight from '../../assets/background/light/pattern-randomized.svg?raw';
 
     const {t} = useTranslation()
 
-    const simpleStripeSVG = useThemedSvgBackground(simpleStripeSVGLight, simpleStripeSVGDark);
-    const background = computed(() => ({ simpleStripe: simpleStripeSVG.value }));
+    const randomSVG = useThemedSvgBackground(randomSVGLight, randomSVGDark);
+    const background = computed(() => ({ randomizedPattern: randomSVG.value }));
 
 </script>
 
 <template>
-<div :style="background.simpleStripe">
+<div :style="background.randomizedPattern">
     <div class="main-container">        
     
         <section class="section mx-auto">
@@ -31,13 +31,17 @@
             <NavBar />
             
 
-        <!-- Affiche la liste des projets -->
-        <h1 class="title has-text-centered"> {{ t('common:PROJECTS_LIST') }}</h1>
+        <!-- Entête -->
+        <div class="m-6 ">
+            <h1 class="title has-text-centered is-size-1 project-hero"> {{ t('common:PROJECTS_LIST') }}</h1>
+            <h1 class="subtitle has-text-centered"> {{ t('common:PROJECTS_FORNOW') }}</h1>
+            </div>
         
+                <SeparatorProp margin="3em"/>
+        <!-- Section liste généré pour chaque projet -->
         <ul>
             <li v-for="project in projectsList" :key="project.name">
-                <SeparatorProp color="var(--color-purple)"/>
-                <div class="is-justify-content-center">
+                <div class="is-justify-content-center box m-6">
                     
                     <!-- Nom du projet -->
                     <div class="">
@@ -78,11 +82,11 @@
                     </div>
 
                 </div>
+                <SeparatorProp color="var(--color-orange)" color-dark="var(--color-purple)"/>
 
             </li>
         </ul>
         
-    <SeparatorProp color="var(--color-purple)"/>
         </section>
             <ScrollToTop />
             <MyFooter/>
@@ -91,6 +95,13 @@
 </template>
 
 <style scoped>
+
+[data-theme="dark"] .box{
+    background-color: #0e0d0d51;
+}
+[data-theme="light"] .box{
+    background-color: #1f1f1f11;
+}
 
     .level{
         max-width: 1000px;
@@ -101,10 +112,21 @@
         padding-top: 10em;
     }
 
-    /* overwrite couleur de fond du mode light BULMA */
-    [data-theme="light"] 
+    .project-hero::before{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.3;
 
-    body {
-        background: var(--bulma-body-background-color) !important;
+    }
+
+    [data-theme="dark"] .project-hero::before{
+        background-color: var(--color-purple);
+    }
+    [data-theme="light"] .project-hero::before{
+        background-color: var(--color-orange);
     }
 </style>

@@ -10,8 +10,9 @@ export default {
     SKILLS_FAVORITE_TITLE:"The most used",
 
     PROJECTS_TITLE:"Discover my projects below !",
-    PROJECTS_SUBTITLE:"Discover my projects and the skills mobilized for each one. Click on the image to learn more about each realization.",
-    PROJECTS_LIST:"Here you can find the projects I have worked on so far.",
+    PROJECTS_SUBTITLE:"The projects I have worked on, and the skills mobilized for each one. Click on the image to learn more about each realization.",
+    PROJECTS_LIST:"My projects : ",
+    PROJECTS_FORNOW:"( so far )",
     PROJECTS_BUTTON:"Check my other projects",
 
     FOOTER_TEXT:"All rights reserved",
