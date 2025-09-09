@@ -65,7 +65,7 @@
             <!-- Menu -->
             <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}" >
                 <!-- Liens de navigation sur la page d'accueil -->
-                <div class="navbar-start ml-6" v-if="isHomePage">
+                <div class="navbar-start ml-6" v-if="isHomePage" @click="toggleMenu" >
                     <a class="navbar-item"
                         href="#aboutMe" >
                         {{ t('navBar:ABOUT_ME_BUTTON') }}    
@@ -108,14 +108,18 @@
                     </router-link>
                 </div>
 
-                <!-- Boutons de changement de langue et de dark mode -->
+                <!-- Boutons de changement de langue et le dark mode -->
                 <div class="navbar-end">
-                    
-                        <div class="buttons is-justify-content-space-evenly">
-                            <LangChangeProp/>
+                        <div class="is-hidden-tablet m-4"></div>
+                        <div class="buttons">
+                            <div class="m-4"></div>
                             <ToggleDarkMode/>
+                            <div class="m-4"></div>
+                            <LangChangeProp/>
                         </div>
-                    
+                        <div class="is-hidden-tablet m-4"></div>
+                    <button class="button is-hidden-tablet m-4"
+                        @click="toggleMenu">X</button>
                     
                 </div>
             </div>
