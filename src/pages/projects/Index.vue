@@ -48,6 +48,7 @@
                         <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
                     </div>
                 
+                    
                     <!-- Images -->
                     <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                     
@@ -72,12 +73,18 @@
                     </div>
                     
                     <!-- CTA page du projet -->
-                    <div class="is-flex is-justify-content-center mt-6 ">
-                        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="has-text-dark">
-                            <button v-if="project.presentation" class="button is-success is-CTA">
+                    <div class="is-flex is-flex-wrap-wrap is-justify-content-center mt-6 has-text-dark ">
+
+                        <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="">
+                            <button v-if="project.presentation" class="button is-success is-CTA m-4">
                                 {{ t('projects:PROJECT_PRESENTATION') }}
                             </button>
                         </router-link>
+                    
+                        <button v-if='project.link' class="button is-link is-CTA has-text-dark m-4" :href="project.link">
+                            {{ t('projects:PROJECT_LINK') }}
+                        </button>
+                    
                     </div>
 
                 </div>

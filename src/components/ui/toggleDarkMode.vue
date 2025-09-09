@@ -2,6 +2,9 @@
 <script setup>
     import { ref, watch } from 'vue';
 
+    import SunIcon from '../../assets/icons/common/sun-shape.svg';
+    import MoonIcon from '../../assets/icons/common/moon-shape.svg';
+
     // Clé pour le localStorage
   const STORAGE_KEY = 'theme';
 
@@ -43,8 +46,15 @@
 <template>
 
     <label class="switch" aria-label="switch dark mode">
-        <input type="checkbox" :checked="selectedTheme === 'dark'" @change="selectedTheme = selectedTheme === 'dark' ? 'light' : 'dark'">
+        <input type="checkbox" 
+          :checked="selectedTheme === 'dark'" 
+          @change="selectedTheme = selectedTheme === 'dark' ? 'light' : 'dark'"
+        />
+
         <span class="slider round"></span>
+
+        <!-- <img :src="selectedTheme === 'dark' ? SunIcon : MoonIcon" alt="theme icon"> -->
+
     </label>
 
 
@@ -70,6 +80,8 @@
 .slider {
   position: absolute;
   cursor: pointer;
+  height: 34px;
+  width: 64px;
   top: 0;
   left: 0;
   right: 0;
@@ -99,15 +111,16 @@ input:focus + .slider {
   box-shadow: 0 0 1px var(--color-purple);
 }
 
-input:checked + .slider:before {
+input:checked + .slider:before  {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
+
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 32px;
 }
 
 .slider.round:before {

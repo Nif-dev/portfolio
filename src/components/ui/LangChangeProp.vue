@@ -2,6 +2,9 @@
 import { ref, computed } from 'vue';
 import i18next, { changeLanguage } from 'i18next';
 
+import frenchFlag from '../../assets/icons/common/frenchFlag.svg';
+import englishFlag from '../../assets/icons/common/englishFlag.svg';
+
     const currentLang = ref(i18next.language);
     i18next.on('languageChanged', (lng) => {
         currentLang.value = lng
@@ -9,12 +12,20 @@ import i18next, { changeLanguage } from 'i18next';
 
     const nextLang = computed(() => currentLang.value === 'fr' ? 'en' : 'fr')
 
+    const currentLangSVG = computed(() => currentLang.value === 'fr' ? frenchFlag : englishFlag)
+
     function changeLang() {
         changeLanguage(nextLang.value);
     }
 </script>
 <template>
-    <button class="button" @click="changeLang">
-        <strong> {{ currentLang.toUpperCase() }} </strong>
+    <button @click="changeLang" class="lang-prop">
+        <img :src="currentLangSVG" alt="Langue" width="30" height="30" />
     </button>
 </template>
+
+<style scoped>
+    .lang-prop{
+        background-color: transparent;
+    }
+</style>
