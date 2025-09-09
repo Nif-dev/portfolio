@@ -132,11 +132,16 @@ onMounted(() => {
 .bcg-blur {
   margin: 0 auto;
   width: fit-content;
-  padding: 0.8em;
+  padding: 0.5em;
   border-radius: 30px;
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
 }
+  [data-theme="light"] {
+    .bcg-blur {
+      background-color: var(--color-white-transparent);
+    }
+  }
 
   /* Animation slide-in */
   .slide-anim {

@@ -12,4 +12,6 @@ export default {
     PROJECT_LINK : "See the project online",
     PROJECT_PRESENTATION : "See project details",
     PROJECT_SKILLS : "Technologies used on this project",
+
+    PROJECTS_INDEX: "Projects I've made",
 }

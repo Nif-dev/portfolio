@@ -12,4 +12,6 @@ export default {
     PROJECT_LINK : "Voir le projet en ligne",
     PROJECT_PRESENTATION : "Voir les détails du projet",
     PROJECT_SKILLS : "Technologies employées sur ce projet",
+
+    PROJECTS_INDEX: "Mes projets réalisés",
 }

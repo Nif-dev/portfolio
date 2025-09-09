@@ -13,7 +13,7 @@
         <div class="container ">
 
             <div class="has-text-centered ">
-                <div class="bcg-blur">
+                <div class="bcg-blur contact-title">
                     <h2 class="title is-4 mb-5"> {{ t('contactMe:SUBTITLE') }} </h2>
                     <h1 class="title is-5 mb-3"> {{ t('contactMe:CTA') }} </h1>
                 </div>
@@ -38,6 +38,10 @@
 
 #contact{
     min-height: 100vh;
+}
+
+.contact-title{
+    width: fit-content;
 }
 .bcg-blur{
     margin: auto;

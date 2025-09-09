@@ -12,18 +12,18 @@
     import MyFooter from '../../components/layout/MyFooter.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
-    import randomSVGDark from '../../assets/background/dark/pattern-randomized.svg?raw';
-    import randomSVGLight from '../../assets/background/light/pattern-randomized.svg?raw';
+    import backgroundSVGDark from '../../assets/background/dark/endless-constellation.svg?raw';
+    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
 
     const {t} = useTranslation()
 
-    const randomSVG = useThemedSvgBackground(randomSVGLight, randomSVGDark);
-    const background = computed(() => ({ randomizedPattern: randomSVG.value }));
+    const backgroundSVG = useThemedSvgBackground(backgroundSVGLight, backgroundSVGDark);
+    const background = computed(() => ( backgroundSVG.value ));
 
 </script>
 
 <template>
-<div :style="background.randomizedPattern">
+<div :style="background">
     <div class="main-container">        
     
         <section class="section mx-auto">
@@ -32,10 +32,9 @@
             
 
         <!-- Entête -->
-        <div class="m-6 ">
-            <h1 class="title has-text-centered is-size-1 project-hero"> {{ t('common:PROJECTS_LIST') }}</h1>
-            <h1 class="subtitle has-text-centered"> {{ t('common:PROJECTS_FORNOW') }}</h1>
-            </div>
+        <div class="m-6">
+            <h1 class="title has-text-centered is-size-1 project-hero"> {{ t('projects:PROJECTS_INDEX') }}</h1>
+        </div>
         
                 <SeparatorProp margin="3em"/>
         <!-- Section liste généré pour chaque projet -->
@@ -116,7 +115,7 @@
         content:"";
         position: absolute;
         width: 100%;
-        height: 8rem;
+        height: 6rem;
         left: 50%;
         transform: translateX(-50%);
         opacity: 0.3;

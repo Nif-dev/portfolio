@@ -33,9 +33,8 @@ const router = createRouter({
     history: createWebHistory( DEPLOY_CONFIG.base ),
     routes,
     scrollBehavior() {
-        
-            return { top: 0}
-        
+        // remet en haut de page
+        return { top: 0}
     }
 
 })
