@@ -122,7 +122,7 @@
     background-color: #5f5e5e51;
 }
 [data-theme="light"] .box{
-    background-color: #1f1f1f28;
+    background-color: #fd912b48;
 }
 
     .level{
