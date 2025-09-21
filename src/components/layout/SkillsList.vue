@@ -65,7 +65,7 @@ onMounted(() => {
     <div class="p-2">
 
       <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
-      <h2 class="subtitle my-5 bcg-blur p-2">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+      <h2 class="subtitle my-5 bcg-blur p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
       
       <div class="">
         <h1 class="is-size-3">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>

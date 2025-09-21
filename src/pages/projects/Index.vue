@@ -32,7 +32,7 @@
             
 
         <!-- Entête -->
-        <div class="m-6">
+        <div class="m-4">
             <h1 class="title has-text-centered is-size-1 project-hero"> {{ t('projects:PROJECTS_INDEX') }}</h1>
         </div>
         
@@ -40,7 +40,7 @@
         <!-- Section liste généré pour chaque projet -->
         <ul>
             <li v-for="project in projectsList" :key="project.name">
-                <div class="is-justify-content-center box m-6">
+                <div class="is-justify-content-center box ">
                     
                     <!-- Nom du projet -->
                     <div class="">
@@ -49,8 +49,8 @@
                     </div>
                 
                     
-                    <!-- Images -->
-                    <div v-if="project.images" class="is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
+                    <!-- Images desktop -->
+                    <div v-if="project.images" class="is-hidden-mobile is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                     
                         <!-- Affiche les 3 premières images de chaque projet -->
                             <img
@@ -59,8 +59,24 @@
                             :src="img"
                             :alt="`screen ${idx + 1} projet ${project.name}`"
                             style="max-width: 20%;"
+                            class=""
                             />
+                            
+                    </div>
                     
+                    <!-- Images mobile -->
+                    <div v-if="project.images" class="is-hidden-desktop is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-2">
+                    
+                        <!-- Affiche les 3 premières images de chaque projet -->
+                            <img
+                            v-for="(img, idx) in project.images.slice(0, 3)" 
+                            :key="idx"
+                            :src="img"
+                            :alt="`screen ${idx + 1} projet ${project.name}`"
+                            style="max-width: 60%;"
+                            class="m-2"
+                            />
+                            
                     </div>
                 
                     <!-- Compétences -->
@@ -73,15 +89,15 @@
                     </div>
                     
                     <!-- CTA page du projet -->
-                    <div class="is-flex is-flex-wrap-wrap is-justify-content-center mt-6 has-text-dark ">
+                    <div class="is-flex is-flex-wrap-wrap is-justify-content-center mt-6  ">
 
                         <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="">
-                            <button v-if="project.presentation" class="button is-success is-CTA m-4">
+                            <button v-if="project.presentation" class="button is-success is-CTA m-3 ">
                                 {{ t('projects:PROJECT_PRESENTATION') }}
                             </button>
                         </router-link>
                     
-                        <button v-if='project.link' class="button is-link is-CTA has-text-dark m-4" :href="project.link">
+                        <button v-if='project.link' class="button is-link is-CTA m-4" :href="project.link">
                             {{ t('projects:PROJECT_LINK') }}
                         </button>
                     
@@ -103,10 +119,10 @@
 <style scoped>
 
 [data-theme="dark"] .box{
-    background-color: #0e0d0d51;
+    background-color: #5f5e5e51;
 }
 [data-theme="light"] .box{
-    background-color: #1f1f1f11;
+    background-color: #1f1f1f28;
 }
 
     .level{
@@ -126,7 +142,13 @@
         left: 50%;
         transform: translateX(-50%);
         opacity: 0.3;
+    }
 
+    @media screen and (max-width: 768px) {
+        .project-hero::before{
+            height: 0.5rem;
+        }
+        
     }
 
     [data-theme="dark"] .project-hero::before{

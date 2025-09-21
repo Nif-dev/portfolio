@@ -10,11 +10,9 @@
 </script>
 
 <template>
-  <section class="section 
-    
-    has-text-centered" id="projects">
-  <h1 class="title my-2">{{ t('common:PROJECTS_TITLE') }}</h1>
-  <h2 class="subtitle bcg-blur my-5">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
+  <section class="section" id="projects">
+  <h1 class="title my-2 has-text-centered">{{ t('common:PROJECTS_TITLE') }}</h1>
+  <h2 class="subtitle bcg-blur my-5 has-text-centered">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
 
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <div class="m-4" v-for="project in projectsList" :key="project.name">
