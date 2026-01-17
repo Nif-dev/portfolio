@@ -30,6 +30,14 @@
 </template>
 
 <style scoped>
+  .title, .subtitle{
+      display: flex;
+      justify-content: center;
+      text-align: justify;
+      align-items: center;
+      width: fit-content;
+      margin: auto;
+  }
 
 [data-theme="dark"] .is-CTA {
     background-color: var(--color-purple-transparent);

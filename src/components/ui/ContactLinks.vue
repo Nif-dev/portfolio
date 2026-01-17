@@ -18,6 +18,7 @@
 <style scoped>
     .bcg-blur{
         width: fit-content;
+        margin: auto;
     }
 
     a{

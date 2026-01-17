@@ -71,7 +71,7 @@ if (error.value) {
         </div>
         <div class="field">
             <label class="label" for="form-message">{{ t('contactMe:MESSAGE') }}</label>
-            <div class="control msg-field" id="form-message">
+            <div class="control" id="form-message">
                 <textarea class="textarea" v-model="form.message" :placeholder="t('contactMe:MESSAGE_FILLER')" rows="5" required></textarea>
             </div>
         </div>
@@ -87,8 +87,9 @@ if (error.value) {
 </template>
 
 <style scoped>
-    .msg-field{
-        min-height: 2rem;
+    textarea{
+        min-height: 3rem;
+        max-height: 30rem;
     }
 </style>
 

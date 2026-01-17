@@ -61,23 +61,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section  " id="skills">
-    <div class="p-2">
+  <section class="section " id="skills">
+    <div class="p-2 ">
 
       <h1 class="title has-text-centered bcg-blur-white">{{ t('common:SKILLS_TITLE') }}</h1>
       <h2 class="subtitle my-5 bcg-blur-white p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
       
-      <div class="">
-        <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
-        <div
-        ref="frontendRef"
-        :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': frontendVisible }]"
+      <div class="is-flex is-flex-wrap-wrap ">
+        <!-- Frontend -->
+        <div class="m-6">
+          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
+          <div
+          ref="frontendRef"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': frontendVisible }]"
           >
-            <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
-              <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
-            </div>
+          <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
+            <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
           </div>
-        
+        </div>
+      </div>
+        <!-- Backend -->
+        <div class="m-6">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
           <div
             ref="backendRef"
@@ -87,17 +91,22 @@ onMounted(() => {
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
-
-              <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
+        </div>
+        <!-- Database -->
+        <div class="m-6">
+          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
           <div
-            ref="databaseRef"
-            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': databaseVisible }]"
-            >
-            <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
-              <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
-            </div>
+          ref="databaseRef"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': databaseVisible }]"
+          >
+          <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
+            <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
           </div>
+        </div>
+      </div>
           
+      <!-- Autres skills -->
+      <div class="m-6">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
           <div
           ref="otherRef"
@@ -107,6 +116,7 @@ onMounted(() => {
             <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
           </div>
         </div>
+      </div>
       </div>
       </div>
   </section>
