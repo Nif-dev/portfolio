@@ -1,7 +1,7 @@
 // penPaper.ts
 import icon from '../../../assets/icons/skills/cryptoPapyrus.svg';
 export const cryptopapyrus = {
-  type: "favorite",
+  type: "other",
   name: "Cryptopapyrus",
   icon: icon,
 }

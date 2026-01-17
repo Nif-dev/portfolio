@@ -11,8 +11,8 @@
 
 <template>
   <section class="section" id="projects">
-  <h1 class="title my-2 has-text-centered">{{ t('common:PROJECTS_TITLE') }}</h1>
-  <h2 class="subtitle bcg-blur my-5 has-text-centered">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
+  <h1 class="title my-2 has-text-centered bcg-blur-white">{{ t('common:PROJECTS_TITLE') }}</h1>
+  <h2 class="subtitle bcg-blur-white my-5 has-text-centered">{{ t('common:PROJECTS_SUBTITLE') }}</h2>
 
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <div class="m-4" v-for="project in projectsList" :key="project.name">
@@ -30,14 +30,6 @@
 </template>
 
 <style scoped>
-.bcg-blur {
-  margin: 0 auto;
-  width: fit-content;
-  padding: 0.5em;
-  border-radius: 30px;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
-}
 
 [data-theme="dark"] .is-CTA {
     background-color: var(--color-purple-transparent);

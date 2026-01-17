@@ -25,7 +25,7 @@
                 <div class="content">
                     <div class="subtitle has-text-weight-bold">
                     <p class="is-size-3 ml-6">
-                        Yoann Le Goff 
+                        Yoann Le Goff     / Nif
                     </p>
                     <SeparatorProp color="var(--color-orange)" size="12px"/>
                     <p class="mr-6 is-size-4 has-text-centered"><small> {{ t('aboutMe:DIPLOMA') }} </small>
@@ -47,7 +47,7 @@
                 <div class="content">
                     <div class="subtitle has-text-weight-bold">
                         <p class="is-size-5">
-                            Yoann Le Goff 
+                            Yoann Le Goff     / Nif
                         </p>
                         
                     <SeparatorProp color="var(--color-orange)" size="12px" />

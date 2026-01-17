@@ -64,59 +64,49 @@ onMounted(() => {
   <section class="section  " id="skills">
     <div class="p-2">
 
-      <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
-      <h2 class="subtitle my-5 bcg-blur p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+      <h1 class="title has-text-centered bcg-blur-white">{{ t('common:SKILLS_TITLE') }}</h1>
+      <h2 class="subtitle my-5 bcg-blur-white p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
       
       <div class="">
-        <h1 class="is-size-3">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
+        <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
         <div
         ref="frontendRef"
-        :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': frontendVisible }]"
+        :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': frontendVisible }]"
           >
-            <div class="m-4" v-for="skill in skillsListByType.frontend" :key="skill.name">
+            <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
         
-          <h1 class="is-size-3">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
+          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
           <div
             ref="backendRef"
-            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': backendVisible }]"
+            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': backendVisible }]"
           >
             <div class="m-4" v-for="skill in skillsListByType.backend" :key="skill.name">
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
 
-              <h1 class="is-size-3">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
+              <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
           <div
             ref="databaseRef"
-            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': databaseVisible }]"
+            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': databaseVisible }]"
             >
             <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
           
-          <h1 class="is-size-3">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
+          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
           <div
           ref="otherRef"
-          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': otherVisible }]"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': otherVisible }]"
           >
           <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
             <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
           </div>
         </div>
-        
-        <h1 class="is-size-3">{{ t('common:SKILLS_FAVORITE_TITLE') }}</h1>
-        <div
-        ref="favoriteRef"
-        :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim', { 'slide-in': favoriteVisible }]"
-        >
-        <div class="m-4" v-for="skill in skillsListByType.favorite" :key="skill.name">
-          <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
-        </div>
-      </div>
       </div>
       </div>
   </section>
@@ -125,18 +115,30 @@ onMounted(() => {
 
 <style scoped>
 
+.is-size-3{
+    font-size: 1.5rem;
+    width: fit-content;
+    padding: 0rem 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+.bcg-blur-white{
+    width: fit-content;
+}
+
+  .title{
+      display: flex;
+      justify-content: center;
+      text-align: justify;
+      align-items: center;
+      width: fit-content;
+      margin: auto;
+  }
+
   .section {
     position: relative;
   }
 
-.bcg-blur {
-  margin: 0 auto;
-  width: fit-content;
-  padding: 0.5em;
-  border-radius: 30px;
-  position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
-}
   [data-theme="light"] {
     .bcg-blur {
       background-color: var(--color-white-transparent);

@@ -8,8 +8,11 @@
     <footer class="footer ">
         <div class=" mx-6 is-flex is-justify-content-center">
             
-            <div class="mt-4">
-                <p> ©<strong>Yoann Le Goff {{ new Date().getFullYear() }}</strong> - {{ t('common:FOOTER_TEXT') }}</p>
+            <div class="mt-4 has-text-centered">
+                <p> ©<strong>NifDev - {{ new Date().getFullYear() }}</strong></p>
+                <br>
+                {{ t('common:FOOTER_TEXT') }}
+                <br>
                 <div class="is-flex is-justify-content-space-evenly">
                     <router-link to="/mentions" class="footer-link">{{ t('common:FOOTER_LEGAL_TEXT') }}</router-link>
                 </div>
@@ -31,7 +34,19 @@
     }
 }
 
+/* Version mobile + tablet */
+@media screen and (max-width: 769px) {
+    .footer {
+        padding:  0%  0%  1rem 0%;
+        margin-inline: 10%;
+        border-radius: 50px 50px 0px 0px;
+        opacity: 0.9;
+    }
+}
+
+
 .footer {
+    height: fit-content;
     position: relative;
     z-index: 1;
     backdrop-filter: blur(12px);

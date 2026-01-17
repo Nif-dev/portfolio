@@ -1,9 +1,5 @@
 <script setup lang="ts">
 
-    import { useThemedSvgBackground } from '../lib/useThemedBackground';
-    import { computed } from 'vue';
-
-    
     // Importation des components
     import NavBar from '../components/layout/NavBar.vue';
     import HeroBanner from '../components/layout/HeroBanner.vue';
@@ -15,26 +11,6 @@
     import ScrollToTop from '../components/ui/ScrollToTop.vue';
     import SeparatorProp from '../components/ui/SeparatorProp.vue';
 
-// Importation des fonds SVG
-    import blocksLight from '../assets/background/light/pattern-randomized.svg?raw';
-    import trianglesLight from '../assets/background/light/repeating-triangles.svg?raw';
-    import starsLight from '../assets/background/light/endless-constellation.svg?raw';
-
-    import blocksDark from '../assets/background/dark/pattern-randomized.svg?raw';
-    import trianglesDark from '../assets/background/dark/repeating-triangles.svg?raw';
-    import starsDark from '../assets/background/dark/endless-constellation.svg?raw';
-
-    // Traitement des fonds selon le thème
-    const aboutMeBg = useThemedSvgBackground(starsLight, starsDark);
-    const projectsBg = useThemedSvgBackground(trianglesLight, trianglesDark);
-    const unusedBlocksBg = useThemedSvgBackground(blocksLight, blocksDark);
-
-    // Objet contenant les styles de fond selon le thème
-    const backgrounds = computed(() => ({
-    aboutMe: aboutMeBg.value,
-    projects: projectsBg.value,
-    unusedBlocks: unusedBlocksBg.value,
-    }));
 </script>
 
 <template>
@@ -47,7 +23,7 @@
     </div>
 
 <!-- Section de presentation -->
-    <div id="about-me" :style= backgrounds.projects class="is-align-content-center">
+    <div id="about-me" class="is-align-content-center">
         <div class="main-container mx-auto py-6">
             <AboutMe />
         </div>
@@ -60,14 +36,14 @@
     </div> -->
 
 <!-- Section des compétences -->
-    <div id="skills" :style= backgrounds.projects>
+    <div id="skills" >
         <div class="main-container mx-auto py-6" >
             <SkillsList />
         </div>
     </div>
 
 <!-- Section des projets -->
-    <div id="projects" :style= backgrounds.projects>
+    <div id="projects" >
         <div class="main-container mx-auto py-6">
             <ProjectsSection />
         </div>
@@ -89,8 +65,9 @@
         max-width: 1600px;
     }
 
-#about-me, #skills, #projects{
-    min-height: 110vh;
-}
+    #about-me, #skills, #projects{
+        min-height: 1
+        0vh;
+    }
 </style>
 

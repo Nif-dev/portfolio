@@ -17,6 +17,20 @@ html {
     border-radius: 20px;
 }
 
+.bcg-blur-white{
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+    border-radius: 20px;
+    border-radius: 30px;
+    background-color: var(--color-white-transparent);
+    color: black;
+    position: relative;           
+    padding: 1em;
+    height: fit-content;
+
+}
+
 .navbar-item {
     text-decoration: none !important; /* enlever le soulignement - sur github pages surtout */
 }
