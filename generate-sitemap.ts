@@ -1,6 +1,6 @@
 // generate-sitemap.ts
 
-import {writeFileSync} from 'fs';
+import {writeFileSync} from 'node:fs';
 import {DEPLOY_CONFIG} from './src/deploy.config.ts';
 
 const XML_BASE_URL = DEPLOY_CONFIG.baseSitemap;

@@ -6,7 +6,7 @@
 
     function updateTheme() {
         theme.value =
-            document.documentElement.getAttribute('data-theme') === 'dark'
+            document.documentElement.dataset.theme === 'dark'
             ? 'dark'
             : 'light';
     }

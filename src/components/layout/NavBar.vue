@@ -48,7 +48,7 @@
             <div class="navbar-brand" id="logo" >
 
                 <!-- logo vers HomePage -->
-                <router-link to="/" id="logo" aria-label="Retour à l'accueil" >
+                <router-link to="/" id="home-logo" aria-label="Retour à l'accueil" >
                     <img :src="logo" class="logoNif" alt="Logo renard Nif">
                 </router-link>
 

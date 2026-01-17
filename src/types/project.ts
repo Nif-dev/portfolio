@@ -1,5 +1,6 @@
 import type { Skill } from "./skill";
 
+// Typage des projets
 export interface Project {
     name: string;
     localesName: string;

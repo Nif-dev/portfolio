@@ -3,18 +3,19 @@
     import { useThemedSvgBackground } from '../lib/useThemedBackground';
     import { computed } from 'vue';
 
-    import SeparatorProp from '../components/ui/SeparatorProp.vue';
-
+    
+    // Importation des components
     import NavBar from '../components/layout/NavBar.vue';
     import HeroBanner from '../components/layout/HeroBanner.vue';
     import AboutMe from '../components/layout/AboutMe.vue';
     import SkillsList from '../components/layout/SkillsList.vue';
     import ProjectsSection from '../components/layout/ProjectsSection.vue';
     import ContactSection from '../components/layout/ContactSection.vue';
-    import ScrollToTop from '../components/ui/ScrollToTop.vue';
     import MyFooter from '../components/layout/MyFooter.vue';
+    import ScrollToTop from '../components/ui/ScrollToTop.vue';
+    import SeparatorProp from '../components/ui/SeparatorProp.vue';
 
-
+// Importation des fonds SVG
     import blocksLight from '../assets/background/light/pattern-randomized.svg?raw';
     import trianglesLight from '../assets/background/light/repeating-triangles.svg?raw';
     import starsLight from '../assets/background/light/endless-constellation.svg?raw';
@@ -57,6 +58,7 @@
             <MyServices />
         </div>
     </div> -->
+
 <!-- Section des compétences -->
     <div id="skills" :style= backgrounds.projects>
         <div class="main-container mx-auto py-6" >
