@@ -4,12 +4,12 @@ import { DEPLOY_CONFIG } from "./src/deploy.config"
 switch (DEPLOY_CONFIG.host) {
     case "github":
         execSync("npm run build && npm run deploy-github", { stdio: "inherit" });
-        console.log("Le site sera bientôt accessible sur https://ylg29fr.github.io/nif-portfolio/");
+        console.log('Le site sera bientôt accessible sur ', DEPLOY_CONFIG.baseSitemap);
         break;
 
     case "surge":
         execSync("npm run build && npm run deploy-surge", { stdio: "inherit" });
-        console.log("Le site sera bientôt accessible sur https://beta-portfolio-yoannlegoff.surge.sh/");
+        console.log('Le site sera bientôt accessible sur ', DEPLOY_CONFIG.baseSitemap);
         break;
 
     default:

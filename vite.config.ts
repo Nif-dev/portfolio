@@ -8,4 +8,8 @@ export default defineConfig({
   base: DEPLOY_CONFIG.base,
   
   plugins: [vue()],
+
+  build: {
+    chunkSizeWarningLimit: 1000,
+  }
 })
