@@ -3,7 +3,7 @@
 <script setup lang="ts">
     
     import { ref, onMounted } from 'vue';
-
+    import SeparatorProp from '../ui/SeparatorProp.vue';
     import {useTranslation} from 'i18next-vue'
     const {t} = useTranslation();
     
@@ -63,55 +63,71 @@ onMounted(() => {
 
 <template>
   <section class="section " id="skills">
-    <div class="p-2 ">
+    <div class="box">
+      <article>
+        <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
+        <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
+      </article>
+    </div>
 
-      <h1 class="title has-text-centered bcg-blur-white">{{ t('common:SKILLS_TITLE') }}</h1>
-      <h2 class="subtitle my-5 bcg-blur-white p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+    <div class="box">
+      <article>
+        <h2 class="subtitle my-5 p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+      </article>
+    </div>
       
+    <!-- Blocs de compétences -->
       <div class="is-flex is-flex-wrap-wrap ">
+
         <!-- Frontend -->
-        <div class="m-4">
-          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
+        <div class="box">
+          <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
+          <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
           ref="frontendRef"
-          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': frontendVisible }]"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': frontendVisible }]"
           >
-          <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
-            <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
+              <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            </div>
           </div>
         </div>
-      </div>
+
         <!-- Backend -->
-        <div class="m-4">
-          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
+        <div class="box">
+          <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
+          <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
             ref="backendRef"
-            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': backendVisible }]"
+            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': backendVisible }]"
           >
             <div class="m-4" v-for="skill in skillsListByType.backend" :key="skill.name">
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
         </div>
+
         <!-- Database -->
-        <div class="m-4">
-          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
+        <div class="box">
+          <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
+          <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
           ref="databaseRef"
-          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': databaseVisible }]"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': databaseVisible }]"
           >
           <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
             <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
           </div>
         </div>
       </div>
-          
+
       <!-- Autres skills -->
-      <div class="m-4">
-          <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
+      <div class="box">
+          <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
+          <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
           ref="otherRef"
-          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','bcg-blur-white', { 'slide-in': otherVisible }]"
+          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': otherVisible }]"
           >
           <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
             <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
@@ -119,20 +135,13 @@ onMounted(() => {
         </div>
       </div>
       </div>
-      </div>
+
   </section>
 
 </template>
 
 <style scoped>
 
-.is-size-3{
-    font-size: 1.5rem;
-    width: fit-content;
-    padding: 0rem 0.5rem;
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-}
 .bcg-blur-white{
     width: fit-content;
 }

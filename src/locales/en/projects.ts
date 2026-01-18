@@ -14,4 +14,5 @@ export default {
     PROJECT_SKILLS : "Technologies used on this project",
 
     PROJECTS_INDEX: "Projects I've made",
+    PROJECTS_ALL: "All my projects",
 }

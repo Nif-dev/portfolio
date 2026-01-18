@@ -12,14 +12,12 @@
     <section id="contact" class="section is-align-content-center">
         <div class="container ">
 
-            <div class="has-text-centered ">
-                <div class="bcg-blur-white contact-title">
-                    <h2 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h2>
-                    <h1 class="title is-5 mb-3 has-text-centered"> {{ t('contactMe:CTA') }} </h1>
-                </div>
+            <div class="box">
+                <h2 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h2>
+                <h1 class="title is-5 mb-3 has-text-centered"> {{ t('contactMe:CTA') }} </h1>
             </div>
 
-            <div class="columns is-centered ">
+            <div class="columns is-centered mb-6">
                 <!-- formulaire de contact -->
                 <div class="column has-text-centered is-three-fifths">
                     <ContactForm />
@@ -35,16 +33,6 @@
 </template>
 
 <style scoped>
-
-    .title{
-        display: flex;
-        justify-content: center;
-        text-align: justify;
-        align-items: center;
-        width: fit-content;
-        margin: auto;
-        color: black;
-    }
 
     #contact{
         min-height: 100vh;

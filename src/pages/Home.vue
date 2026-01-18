@@ -34,7 +34,6 @@
             <MyServices />
         </div>
     </div> -->
-    <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="50px"/>
 
 <!-- Section des compétences -->
     <div id="skills" >
@@ -44,7 +43,6 @@
     </div>
 
 <!-- Section des projets -->
-<SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="50px"/>
     <div id="projects" >
         <div class="main-container mx-auto py-6">
             <ProjectsSection />
