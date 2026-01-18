@@ -14,6 +14,8 @@ export default {
     PROJECTS_BUTTON:"Check my other projects",
     PROJECTS_ALL_BUTTON:"All my projects",
 
+    NETWORKS_TITLE:"Socials",
+
     FOOTER_TEXT:"All rights reserved",
     FOOTER_LEGAL_TEXT:"Legal notices",
     FOOTER_SITE_PLAN:"Site plan",

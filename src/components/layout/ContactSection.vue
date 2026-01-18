@@ -5,6 +5,7 @@
 
     import ContactForm from '../ui/ContactForm.vue';
     import ContactLinks from '../ui/ContactLinks.vue';
+    import SeparatorProp from '../ui/SeparatorProp.vue';
 
 </script>
 
@@ -13,8 +14,10 @@
         <div class="container ">
 
             <div class="box">
-                <h2 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h2>
-                <h1 class="title is-5 mb-3 has-text-centered"> {{ t('contactMe:CTA') }} </h1>
+                <p class="title has-text-centered is-1">{{ t('contactMe:TITLE') }}</p>
+                <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
+                <h1 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h1>
+                <h2 class="subtitle is-5 mb-3 has-text-centered"> {{ t('contactMe:CTA') }} </h2>
             </div>
 
             <div class="columns is-centered mb-6">

@@ -12,7 +12,7 @@
 
 <template>
   <section class="section" id="projects">
-    <div class="box">
+    <div class="box container">
       <article>
         <h1 class="title mb-2 has-text-centered ">{{ t('common:PROJECTS_TITLE') }}</h1>
         <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
@@ -27,7 +27,7 @@
 
     <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
       <div class="m-4" v-for="project in projectsList" :key="project.name">
-        <ProjectCard :project="project"></ProjectCard>
+          <ProjectCard :project="project"></ProjectCard>
       </div>
     </div>
 
@@ -50,9 +50,9 @@
       margin: auto;
   }
 
-[data-theme="dark"] .is-CTA {
-    background-color: var(--color-purple-transparent);
-  }
+  [data-theme="dark"] .is-CTA {
+      background-color: var(--color-purple-transparent);
+    }
 
 
   [data-theme="light"] {

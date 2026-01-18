@@ -21,7 +21,9 @@
           <img :src="project.icon" :alt="project.name" />
         </router-link>
       </figure>
-      <div class="card-footer-item"> {{ t(`${project.localesName}.CARD_DESCRIPTION`) }} </div>
+
+      <!-- Description du projet -->
+      <div class="card-footer-item project-card-text has-text-justified is-flex is-align-items-flex-start"> {{ t(`${project.localesName}.CARD_DESCRIPTION`) }} </div>
     </div>
 
     <!-- Footer avec les compétences liés -->
@@ -79,5 +81,7 @@ defineProps<{
         background-color: var(--color-orange-transparent);
         box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   }
-
+.project-card-text{
+  min-height: 8rem;
+}
 </style>

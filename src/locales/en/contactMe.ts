@@ -1,5 +1,5 @@
 export default {
-    TITLE : "Contact me",
+    TITLE : "Contact",
     SUBTITLE : "A project ? Any question ? Let's talk about it!",
     CTA : "Through my social networks or using the following form : ",
     NAME : "Name",

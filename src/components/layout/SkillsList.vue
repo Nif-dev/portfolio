@@ -63,24 +63,22 @@ onMounted(() => {
 
 <template>
   <section class="section " id="skills">
-    <div class="box">
-      <article>
-        <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
-        <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
-      </article>
-    </div>
 
-    <div class="box">
-      <article>
-        <h2 class="subtitle my-5 p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
-      </article>
+    <div class="container my-5">
+      <div class="box">
+        <article>
+          <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
+          <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
+          <h2 class="subtitle my-5 p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+        </article>
+      </div>
     </div>
-      
+    
     <!-- Blocs de compétences -->
-      <div class="is-flex is-flex-wrap-wrap ">
+      <div class="is-flex is-flex-wrap-wrap container is-justify-content-space-between">
 
         <!-- Frontend -->
-        <div class="box">
+        <div class="box ">
           <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
           <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
@@ -94,7 +92,7 @@ onMounted(() => {
         </div>
 
         <!-- Backend -->
-        <div class="box">
+        <div class="box ">
           <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
           <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
@@ -108,7 +106,7 @@ onMounted(() => {
         </div>
 
         <!-- Database -->
-        <div class="box">
+        <div class="box ">
           <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
           <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
@@ -122,7 +120,7 @@ onMounted(() => {
       </div>
 
       <!-- Autres skills -->
-      <div class="box">
+      <div class="box ">
           <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
           <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div

@@ -1,5 +1,5 @@
 export default {
-    TITLE : "Contactez moi",
+    TITLE : "Contact",
     SUBTITLE : "Des questions ? Un projet ? Parlons en ensemble !",
     CTA : "Par mes réseaux sociaux ou en utilisant le formulaire suivant : ",
     NAME : "Nom",
