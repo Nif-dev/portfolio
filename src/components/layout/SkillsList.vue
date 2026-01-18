@@ -26,6 +26,7 @@ const favoriteVisible = ref(false);
 
 let observer: IntersectionObserver;
 
+// Gestionnaire d'intersection (ce qui apparait au scroll)
 onMounted(() => {
     observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -69,7 +70,7 @@ onMounted(() => {
       
       <div class="is-flex is-flex-wrap-wrap ">
         <!-- Frontend -->
-        <div class="m-6">
+        <div class="m-4">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_FRONTEND_TITLE') }}</h1>
           <div
           ref="frontendRef"
@@ -81,7 +82,7 @@ onMounted(() => {
         </div>
       </div>
         <!-- Backend -->
-        <div class="m-6">
+        <div class="m-4">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_BACKEND_TITLE') }}</h1>
           <div
             ref="backendRef"
@@ -93,7 +94,7 @@ onMounted(() => {
           </div>
         </div>
         <!-- Database -->
-        <div class="m-6">
+        <div class="m-4">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_DATABASE_TITLE') }}</h1>
           <div
           ref="databaseRef"
@@ -106,7 +107,7 @@ onMounted(() => {
       </div>
           
       <!-- Autres skills -->
-      <div class="m-6">
+      <div class="m-4">
           <h1 class="is-size-3 bcg-blur">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
           <div
           ref="otherRef"

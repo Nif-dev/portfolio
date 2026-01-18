@@ -22,7 +22,7 @@ import { gitlab_EN } from "../../data/skills/other/gitlab";
 import { intellij_EN } from "../../data/skills/other/intellij";
 import { vscode_EN } from "../../data/skills/other/vscode";
 
-import { cryptopapyrus_EN } from "../../data/skills/other/cryptopapyrus";
+import { logicoder_EN } from "../../data/skills/other/logicoder";
 
 export default {
     Java : java_EN,
@@ -49,6 +49,6 @@ export default {
     IntelliJ : intellij_EN,
     VSCode : vscode_EN,
 
-    Cryptopapyrus : cryptopapyrus_EN,
+    LogiCoder : logicoder_EN,
 
 }

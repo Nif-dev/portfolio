@@ -24,7 +24,7 @@ import { intellij } from "./other/intellij";
 import { vscode } from "./other/vscode";
 import { docker } from "./other/docker";
 
-import { cryptopapyrus } from "./other/cryptopapyrus";
+import { logicoder } from "./other/logicoder";
 
 export const skillsList: Skill[] = [
     html, css, sass, bulma,
@@ -35,7 +35,7 @@ export const skillsList: Skill[] = [
     sql, mariadb, mongodb,
     intellij, vscode,
     docker,  figma,
-    cryptopapyrus,
+    logicoder,
 ]
 export const skillsListByType = {
     frontend: skillsList.filter(skill => skill.type === "frontend"),

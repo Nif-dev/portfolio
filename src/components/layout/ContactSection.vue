@@ -14,8 +14,8 @@
 
             <div class="has-text-centered ">
                 <div class="bcg-blur-white contact-title">
-                    <h2 class="title is-4 mb-5"> {{ t('contactMe:SUBTITLE') }} </h2>
-                    <h1 class="title is-5 mb-3"> {{ t('contactMe:CTA') }} </h1>
+                    <h2 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h2>
+                    <h1 class="title is-5 mb-3 has-text-centered"> {{ t('contactMe:CTA') }} </h1>
                 </div>
             </div>
 

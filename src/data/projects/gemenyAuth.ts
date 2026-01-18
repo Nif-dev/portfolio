@@ -18,7 +18,7 @@ export const gemenyAuth = {
 
     name: "Gemeny-Auth",
     localesName: "gemenyAuth",
-    icon: images[2],
+    icon: images[0],
     images: images,
     tags: ["Fullstack"],
     cardLinkedSkills: linkedSkills,
@@ -75,7 +75,7 @@ export const gemenyAuth_FR = {
     DEPLOYMENT_TITLE: "Déploiement et sécurité",
     DEPLOYMENT_DESCRIPTION: `Déploiement local sur Laragon, possibilité de conteneurisation (Docker). Sécurisation via variables d’environnement, logs anonymisés, contrôle des accès via tokens. Meilleures pratiques appliquées sur la gestion des erreurs, exposition minimale en production.`,
 
-        DWWM_TITLE : "Soutenance du titre DWWM ( Développeur Web & Web Mobile )",
+        DWWM_TITLE : "Soutenance du diplôme DWWM ",
     DWWM_DESCRIPTION : "Ce projet a servi de support principal à ma soutenance pour l'obtention du titre Développeur Web et Web Mobile (DWWM).Vous pouvez consulter les documents de présentation ci-dessous :",
 
     DWWM_LINK_1 : "PDF 1 – Rapport de projet",
@@ -130,7 +130,7 @@ export const gemenyAuth_EN = {
     DEPLOYMENT_TITLE: "Deployment and security",
     DEPLOYMENT_DESCRIPTION: `Local deployment on Laragon, containerization possible (Docker). Security via environment variables, anonymized logs, access control via tokens. Best practices applied for error management and minimal production exposure.`,
 
-    DWWM_TITLE : "Support for the DWWM ( Web & Mobile Developer ) title",
+    DWWM_TITLE : "Support for the DWWM diploma",
     DWWM_DESCRIPTION : "This project served as the main support for my presentation at the SOFINS exhibition for obtaining the DWWM title. You can find the presentation documents below:",
 
     DWWM_LINK_1 : "PDF 1 - Project Report",

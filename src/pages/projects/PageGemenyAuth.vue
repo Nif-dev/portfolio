@@ -31,10 +31,10 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
 
         <NavBar />
         
-        <section class="section main-container mx-auto">
+        <section class="section main-container mx-auto has-text-centered">
             
             <!-- le titre de la page -->
-            <div class="block hero has-text-centered">
+            <div class="block hero  ">
                 <h1 class="title"> {{ gemenyAuth.name }} </h1>
                 <h2 class="subtitle mb-6">
                     {{ t(`projects:${gemenyAuth.localesName}.DESCRIPTION`) }}
@@ -183,9 +183,6 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
                 </div>
             </div>
             <div class="block columns is-vcentered">
-                <div class="column">
-                <img :src="gemenyAuth.images[7]" alt="code">
-                </div>
                 <div class="column-separator"></div>
                 <div class="column has-text-justified">
                 <h1 class="title">{{ t(`projects:${gemenyAuth.localesName}.REALISATION_TITLE`) }}</h1>
