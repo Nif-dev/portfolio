@@ -18,6 +18,7 @@
             </div>
 
             <div class="columns is-centered mb-6">
+                
                 <!-- formulaire de contact -->
                 <div class="column has-text-centered is-three-fifths">
                     <ContactForm />

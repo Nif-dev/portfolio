@@ -29,14 +29,14 @@
 <template>
     <section id="aboutMe" class="section">
         
-        <div ref = "sectionContent" :class="['container' ,'slide-anim', { 'slide-in': sectionContentVisible }] ">
-            <div class="box">
-                <article class="">
-                    <p class="title"> {{ t('aboutMe:TITLE') }}</p>
-                    <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
-                </article>
-            </div>
+
+        <div class="box">
+            <article class="">
+                <p class="title"> {{ t('aboutMe:TITLE') }}</p>
+                <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
+            </article>
         </div>
+
         <div ref = "sectionContent" :class="['container' ,'slide-anim-alt', { 'slide-in': sectionContentVisible }] ">
             <div class="box">
                 <article>
