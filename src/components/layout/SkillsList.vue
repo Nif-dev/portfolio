@@ -75,7 +75,7 @@ onMounted(() => {
     </div>
     
     <!-- Blocs de compétences -->
-      <div class="is-flex is-flex-wrap-wrap container is-justify-content-space-between">
+      <div class="is-flex is-flex-wrap-wrap container is-justify-content-space-evenly">
 
         <!-- Frontend -->
         <div class="box ">
@@ -85,7 +85,7 @@ onMounted(() => {
           ref="frontendRef"
           :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': frontendVisible }]"
           >
-            <div class="m-4 " v-for="skill in skillsListByType.frontend" :key="skill.name">
+            <div class="m-4" v-for="skill in skillsListByType.frontend" :key="skill.name">
               <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
             </div>
           </div>
@@ -113,25 +113,27 @@ onMounted(() => {
           ref="databaseRef"
           :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': databaseVisible }]"
           >
-          <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
-            <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            <div class="m-4" v-for="skill in skillsListByType.database" :key="skill.name">
+              <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Autres skills -->
-      <div class="box ">
+      <!-- Autres skills + triche sur le style pour alignement box-->
+      <div class="box " 
+        :style="'margin:0 0 24px'"
+      >
           <h1 class="is-size-3 has-text-centered">{{ t('common:SKILLS_OTHER_TITLE') }}</h1>
           <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
           <div
-          ref="otherRef"
-          :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': otherVisible }]"
-          >
-          <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
-            <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            ref="otherRef"
+            :class="['is-flex', 'is-flex-wrap-wrap', 'slide-anim','has-text-centered', { 'slide-in': otherVisible }]"
+            >
+            <div class="m-4" v-for="skill in skillsListByType.other" :key="skill.name">
+              <SkillsIcons :skill="skill" :desc="true" :hoverable="true" />
+            </div>
           </div>
         </div>
-      </div>
       </div>
 
   </section>

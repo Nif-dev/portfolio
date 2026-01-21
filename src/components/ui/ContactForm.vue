@@ -49,7 +49,7 @@ if (error.value) {
 
 <template>
 
-<div class="bcg-blur contactForm">
+<div class="bcg-blur contactForm p-3">
     <form @submit.prevent="handleSubmit" >
         <div class="field">
             <label class="label" for="form-name">{{ t('contactMe:NAME') }}</label>
@@ -76,7 +76,7 @@ if (error.value) {
             </div>
         </div>
         <div class="field">
-            <div class="control">
+            <div class="control mt-6">
                 <button class="button is-link" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
             </div>
         </div>

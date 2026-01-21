@@ -13,7 +13,7 @@
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
     import backgroundSVGDark from '../../assets/background/dark/endless-constellation.svg?raw';
-    import backgroundSVGLight from '../../assets/background/light/subtle-stripes.svg?raw';
+    import backgroundSVGLight from '../../assets/background/light/endless-constellation.svg?raw';
 
     const {t} = useTranslation()
 
@@ -122,7 +122,7 @@
     background-color: #5f5e5e51;
 }
 [data-theme="light"] .box{
-    background-color: #fd912b48;
+    background-color: var(--color-white-transparent);
 }
 
     .level{
@@ -144,17 +144,16 @@
         opacity: 0.3;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 560px) {
         .project-hero::before{
-            height: 0.5rem;
+            height: 8.5rem;
         }
-        
     }
 
     [data-theme="dark"] .project-hero::before{
         background-color: var(--color-purple);
     }
     [data-theme="light"] .project-hero::before{
-        background-color: var(--color-orange);
+        background-color: var(--color-orange-transparent);
     }
 </style>

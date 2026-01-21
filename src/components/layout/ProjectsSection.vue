@@ -3,6 +3,7 @@
 <script setup lang="ts">
     import { projectsList } from '../../data/projects/index.ts'; 
     import ProjectCard from '../ui/ProjectCard.vue';
+    import MyProjectsButton from '../ui/MyProjectsButton.vue';
     import SeparatorProp from '../ui/SeparatorProp.vue';
 
     import {useTranslation} from 'i18next-vue'
@@ -31,16 +32,13 @@
       </div>
     </div>
 
-    <div class="is-flex is-justify-content-center mt-6 pt-6">
-      <router-link to="/projets/">
-        <button class="button  has-text-weight-bold is-CTA" > {{ t('common:PROJECTS_BUTTON') }} </button>
-      </router-link>
-    </div>
+  <MyProjectsButton />
     
   </section>
 </template>
 
 <style scoped>
+
   .title, .subtitle{
       display: flex;
       justify-content: center;
@@ -50,19 +48,5 @@
       margin: auto;
   }
 
-  [data-theme="dark"] .is-CTA {
-      background-color: var(--color-purple-transparent);
-    }
-
-
-  [data-theme="light"] {
-    .bcg-blur {
-      background-color: var(--color-white-transparent);
-    }
-    .is-CTA {
-      background-color: var(--color-orange);
-      margin: 0 auto;
-    }
-  }
 
 </style>

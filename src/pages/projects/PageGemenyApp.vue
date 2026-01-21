@@ -42,11 +42,11 @@
         </div>
     
         <!-- les skills -->
-        <div class="block is-vcentered">
+        <div class="block is-vcentered mt-6">
                 <h1 class="title">
                     {{ t('projects:PROJECT_SKILLS') }}
                 </h1>
-                <div class="is-flex is-flex-wrap-wrap">
+                <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
                     <div v-for="skill in gemenyApp.allLinkedSkills" :key="skill.name" class="m-4">
                         <SkillIcons :skill="skill" :hoverable="true" :desc="true"></SkillIcons>
                     </div>
@@ -222,6 +222,7 @@
 </template>
 
 <style scoped>
+
     .main-container{
         max-width: 1600px;
     }

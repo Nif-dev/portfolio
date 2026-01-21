@@ -44,7 +44,7 @@ const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
             <!-- les skills -->
             <div class="block is-vcentered">
         <h1 class="title"> {{ t('projects:PROJECT_SKILLS') }} </h1>
-        <div class="is-flex is-flex-wrap-wrap">
+        <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
             <div v-for="skill in gemenyAuth.allLinkedSkills" :key="skill.name" class="m-4">
             <SkillIcons :skill="skill" :hoverable="true" :desc="true" />
             </div>

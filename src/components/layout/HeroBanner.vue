@@ -29,6 +29,7 @@
 
 .hero-background {
   width: 100%;
+  min-height: 50vh;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -41,6 +42,7 @@
 /* décollement du header */
 .section{
   position: relative;
+  top: 5rem;
   min-height: 100vh;
 }
 

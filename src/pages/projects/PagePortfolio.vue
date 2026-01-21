@@ -3,6 +3,7 @@
   import { computed } from 'vue'
 
   import { portfolio } from '../../data/projects/portfolio'
+
   import { useThemedSvgBackground } from '../../lib/useThemedBackground'
 
   import simpleStripeSVGDark from '../../assets/background/dark/subtle-stripes.svg?raw'
@@ -30,6 +31,7 @@
   import NavBar from '../../components/layout/NavBar.vue'
   import ScrollToTop from '../../components/ui/ScrollToTop.vue'
   import MyFooter from '../../components/layout/MyFooter.vue'
+  import SkillIcons from '../../components/ui/skillsIcons.vue'
   import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
   const { t } = useTranslation()
@@ -57,7 +59,7 @@
 
 <template>
   <NavBar />
-  <div :style= background.simpleGreen>
+  <div :style= background.simpleStripe>
 
     <section class="section main-container mx-auto has-text-centered">
 
@@ -67,29 +69,37 @@
           {{ t(`projects:${portfolio.localesName}.DESCRIPTION`) }}
         </h2>
       </div>
-
-      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-dark-grey)" />
+    
+<div class="block is-vcentered mt-6">
+        <h1 class="title"> {{ t('projects:PROJECT_SKILLS') }} </h1>
+        <div class="is-flex is-flex-wrap-wrap is-justify-content-center">
+            <div v-for="skill in portfolio.allLinkedSkills" :key="skill.name" class="m-4">
+            <SkillIcons :skill="skill" :hoverable="true" :desc="true" />
+            </div>
+        </div>
+            </div>
+      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-purple-transparent)" />
 
       <div class="block">
         <h1 class="title">{{ t(`projects:${portfolio.localesName}.GOAL_TITLE`) }}</h1>
         <h2 class="subtitle">{{ t(`projects:${portfolio.localesName}.GOAL_DESCRIPTION`) }}</h2>
       </div>
       
-      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-dark-grey)" />
+      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-purple-transparent)" />
       
       <div class="block">
         <h1 class="title">{{ t(`projects:${portfolio.localesName}.ORGANISATION_TITLE`) }}</h1>
         <h2 class="subtitle">{{ t(`projects:${portfolio.localesName}.ORGANISATION_DESCRIPTION`) }}</h2>
       </div>
 
-      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-dark-grey)" />
+      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-purple-transparent)" />
 
       <div class="block">
         <h1 class="title">{{ t(`projects:${portfolio.localesName}.ENVIRONMENT_TITLE`) }}</h1>
         <h2 class="subtitle">{{ t(`projects:${portfolio.localesName}.ENVIRONMENT_DESCRIPTION`) }}</h2>
       </div>
 
-      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-dark-grey)" />
+      <SeparatorProp color="var(--color-dark-orange-transparent)" color-dark="var(--color-purple-transparent)" />
       
       <!-- <div class="block">
         <h1 class="title">{{ t(`projects:${portfolio.localesName}.UX_TITLE`) }}</h1>
@@ -124,7 +134,13 @@
 </template>
 
 <style scoped>
-.block { margin: 2em; }
-.main-container { max-width: 1600px; }
-.section { padding-top: 8em; min-height: 100vh; }
+
+  .main-container { 
+    max-width: 1600px; 
+  }
+
+  .section { 
+    padding-top: 10em; 
+  }
+
 </style>
