@@ -5,11 +5,12 @@
     import SunIcon from '../../assets/icons/common/sun-shape.svg';
     import MoonIcon from '../../assets/icons/common/moon-shape.svg';
 
+
     // Clé pour le localStorage
   const STORAGE_KEY = 'theme';
 
     // Détection de la préférence du navigateur
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const prefersDarkScheme = globalThis.matchMedia('(prefers-color-scheme: dark)');
   
     // Fonction pour obtenir le thème sauvegardé
     function getSavedTheme() {
@@ -27,11 +28,10 @@
   );
 
     // Appliquer le thème initial
-    document.documentElement.setAttribute('data-theme', selectedTheme.value);
-
+    document.documentElement.dataset.theme = selectedTheme.value;
     // Mettre à jour le thème quand selectedTheme change
     watch(selectedTheme, (newTheme) => {
-        document.documentElement.setAttribute('data-theme', newTheme);
+        document.documentElement.dataset.theme = newTheme;
         setStoredTheme(newTheme);
     });
 
@@ -46,21 +46,24 @@
 <template>
 
     <label class="switch" aria-label="switch dark mode">
-        <input type="checkbox" 
+        <input 
+          type="checkbox" 
           :checked="selectedTheme === 'dark'" 
           @change="selectedTheme = selectedTheme === 'dark' ? 'light' : 'dark'"
         />
-
+        
+        <!-- <div class="slider-icons">
+          <SunIcon class="icon sun" />
+          <MoonIcon class="icon moon" />
+        </div> -->
         <span class="slider round"></span>
-
-        <!-- <img :src="selectedTheme === 'dark' ? SunIcon : MoonIcon" alt="theme icon"> -->
-
     </label>
 
 
 </template>
 
 <style scoped>
+  
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -78,10 +81,11 @@
 
 /* The slider */
 .slider {
+  z-index: 0;
   position: absolute;
   cursor: pointer;
   height: 34px;
-  width: 64px;
+  width: 80px;
   top: 0;
   left: 0;
   right: 0;
@@ -107,14 +111,20 @@ input:checked + .slider {
   background-color: var(--color-light-purple);
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-purple);
+input:focus, input:hover + .slider {
+  box-shadow: 0 0 10px var(--color-purple);
+}
+
+[data-theme="dark"] {
+  input:focus, input:hover + .slider {
+    box-shadow: 0 0 10px var(--color-orange);
+  }
 }
 
 input:checked + .slider:before  {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(44px);
+  -ms-transform: translateX(44px);
+  transform: translateX(44px);
 }
 
 
@@ -125,6 +135,28 @@ input:checked + .slider:before  {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.slider:after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Sun light */
+  background-image: url('../../assets/icons/common/sun-shape.svg');
+  right: 8px;
+}
+
+[data-theme="dark"] .slider:after {
+  /* Moon dark */
+  background-image: url('../../assets/icons/common/moon-shape.svg');
+  right: auto;
+  left: 8px;
 }
 
 
