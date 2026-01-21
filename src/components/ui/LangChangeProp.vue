@@ -27,5 +27,6 @@ import englishFlag from '../../assets/icons/common/englishFlag.svg';
 <style scoped>
     .lang-prop{
         background-color: transparent;
+        min-width: 40px;
     }
 </style>

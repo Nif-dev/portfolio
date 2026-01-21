@@ -62,8 +62,10 @@
                     <span aria-hidden="true"></span>
                 </button>
             </div>
+        
             <!-- Menu -->
             <div id="navbar" class="navbar-menu" :class="{'is-active': isBurgerActive}" >
+            
                 <!-- Liens de navigation sur la page d'accueil -->
                 <div class="navbar-start ml-6" v-if="isHomePage" @click="toggleMenu" >
                     <a class="navbar-item"
@@ -110,18 +112,19 @@
 
                 <!-- Boutons de changement de langue et le dark mode -->
                 <div class="navbar-end">
-                        <div class="is-hidden-tablet m-4"></div>
-                        <div class="buttons">
-                            <div class="m-4"></div>
-                            <ToggleDarkMode/>
-                            <div class="m-4"></div>
-                            <LangChangeProp/>
-                        </div>
-                        <div class="is-hidden-tablet m-4"></div>
-                    <button class="button is-hidden-tablet m-4"
-                        @click="toggleMenu">X</button>
+                
+                    <div class="buttons">
+                        <ToggleDarkMode/>
+                        <div class="mx-3"></div>
+                        <LangChangeProp/>
+                    </div>
                     
+                    <div class="close-button">
+                        <button class="button has-text-warning has-background-warning-dark is-hidden-desktop m-4"
+                        @click="toggleMenu">X</button>
+                    </div>
                 </div>
+            
             </div>
         </nav>
     </header>
@@ -130,114 +133,115 @@
 </template>
 
 <style scoped>
-:root .navbar {
-      /* Effet glassmorphism */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
-}
-
-/* Pour le dark mode */
-:root[data-theme="dark"] .navbar {
-    background: linear-gradient(180deg, var(--color-purple-transparent) 90%, var(--color-orange-transparent) 100%) ;
-    border-bottom: 1px solid var(--color-orange);
-}
-
-/* Pour le light mode */
-:root[data-theme="light"] .navbar {
-    background: linear-gradient(180deg, var(--color-light-purple-transparent) 90%, var(--color-orange-transparent) 100%);
-    border-bottom: 1px solid var(--color-orange);
-}
-
-/* Transition fade-in de la navbar au chargement */
-.fade-navbar-enter-active {
-    transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
-}
-.fade-navbar-enter-from {
-    opacity: 0;
-}
-.fade-navbar-enter-to {
-    opacity: 1;
-}
-
-
-
-/* Style de base pour la liste du dropdown */
-.custom-dropdown .dropdown-list {
-
-    list-style: none;
-    margin: 0;
-    padding: 0.5em 0;
-}
-
-.custom-dropdown .dropdown-link {
-
-    white-space: nowrap;
-    color: inherit;
-    display: block;
-    padding: 0.5em 1.5em;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.2s;
-
-}
-
-/* Effet hover avec ::before (soulignement animé) */
-@media (min-width: 1024px) {
-    .navbar-item::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0.6em; 
-    width: 0;
-    height: 2px;
-    background: var(--color-orange); 
-    transition: all 0.3s cubic-bezier(.4,0,.2,1);
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.navbar-item:hover::before,
-.navbar-item:focus::before {
-    width: 70%;
-}
-    .custom-dropdown .dropdown-link::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0.3em;
-        width: 0;
-        height: 2px;
-        background: var(--color-orange);
-        transition: width 0.3s cubic-bezier(.4,0,.2,1);
-        transform: translateX(-50%);
-    }
-    
-    .custom-dropdown .dropdown-link:hover::before,
-    .custom-dropdown .dropdown-link:focus::before {
-        width: 70%;
-    }
-    
-    .custom-dropdown .dropdown-link:hover,
-    .custom-dropdown .dropdown-link:focus {
-        color: var(--color-orange);
-        background: none;
-    }
-}
-    
-    /* Version mobile */
-@media (max-width: 1023px) {
-    .navbar-dropdown {
-    background-color: transparent !important;
-    padding-left: 1rem !important;
-}
-}
 
     .logoNif {
         height: 4em;
     }
 
+    :root .navbar {
+        /* Effet glassmorphism */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+    }
+
+    /* Pour le dark mode */
+    :root[data-theme="dark"] .navbar {
+        background: linear-gradient(180deg, var(--color-purple-transparent) 90%, var(--color-orange-transparent) 100%) ;
+        border-bottom: 1px solid var(--color-orange);
+    }
+
+    /* Pour le light mode */
+    :root[data-theme="light"] .navbar {
+        background: linear-gradient(180deg, var(--color-light-purple-transparent) 90%, var(--color-orange-transparent) 100%);
+        border-bottom: 1px solid var(--color-orange);
+    }
+
+    /* Transition fade-in de la navbar au chargement */
+    .fade-navbar-enter-active {
+        transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .fade-navbar-enter-from {
+        opacity: 0;
+    }
+    .fade-navbar-enter-to {
+        opacity: 1;
+    }
+
+    /* Style de base pour la liste du dropdown */
+    .custom-dropdown .dropdown-list {
+
+        list-style: none;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+
+    .custom-dropdown .dropdown-link {
+
+        white-space: nowrap;
+        color: inherit;
+        display: block;
+        padding: 0.5em 1.5em;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s;
+
+    }
+
+    /* Version desktop */
+    @media (min-width: 1024px) {
+        
+        /* Effet hover avec ::before (soulignement animé) */
+        .navbar-item::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0.6em; 
+            width: 0;
+            height: 2px;
+            background: var(--color-orange); 
+            transition: all 0.3s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+    
+        .navbar-item:hover::before,
+        .navbar-item:focus::before {
+            width: 70%;
+        }
+    
+        .custom-dropdown .dropdown-link::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0.3em;
+            width: 0;
+            height: 2px;
+            background: var(--color-orange);
+            transition: width 0.3s cubic-bezier(.4,0,.2,1);
+            transform: translateX(-50%);
+        }
+        
+        .custom-dropdown .dropdown-link:hover::before,
+        .custom-dropdown .dropdown-link:focus::before {
+            width: 70%;
+        }
+        
+        .custom-dropdown .dropdown-link:hover,
+        .custom-dropdown .dropdown-link:focus {
+            color: var(--color-orange);
+            background: none;
+        }
+    }
+    
+    /* Version mobile */
     @media (max-width: 1023px) {
+    
+        .navbar-dropdown {
+            background-color: transparent !important;
+            padding-left: 1rem !important;
+        }
+    
         .navbar-menu {
             position: absolute;
             top: 100%;
@@ -246,9 +250,33 @@
             z-index: 1000;
             display: none;
         }
+    
         .navbar-menu.is-active {
             display: block;
         }
+    
+        .buttons {
+            padding-top: 1.5rem;
+            padding-left: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+        }
     }
+
+
+    .navbar-burger {
+        color: var(--color-dark-orange);
+    }
+
+    .buttons {
+        margin: 0 auto;
+        flex-wrap: nowrap;
+    }
+
+    .close-button{
+        margin-left: calc(50% - 50px);
+    }
+
 
 </style>
