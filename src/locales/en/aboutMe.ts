@@ -1,20 +1,24 @@
 export default {
     TITLE: "Who am I ?",
 
-    ABOUT_ME_1: "After eight years of experience in healthcare and social services, I decided to reinvent myself professionally by training in web development. I am now a graduate of the Professional Web & Mobile Web Developer program (AFPA Brest, 2025), and have acquired solid technical foundations and confirmed my interest in creating useful and accessible digital solutions.",
-    ABOUT_ME_2: "My background has allowed me to develop essential qualities: rigor, a service-oriented mindset, adaptability, and teamwork. Curious and motivated, I particularly enjoy collaborative work, continuous learning, and solving practical problems.",
-    ABOUT_ME_3: "My goal: to deepen my skills, actively contribute to innovative projects, and build the next chapter of my career in software development.",
-    ABOUT_ME_CONCLUSION: "Open-minded, committed, and ready to take on new challenges, I am seeking an apprenticeship for the 2025 academic year. Discover my skills and projects below!",
-    
-    NEWS: "My news : ",
-    DIPLOMA: "Web & Mobile Web Developer",
-    LFJOB_1: "Currently looking for a first job as a web developer, I would like to join a company to prepare the ",
-    FUTUR_DIPLOMA: "Application Designer & Developer (known as CDA)",
-    LFJOB_2: " qualification (bac+3/4 equivalent) for the 2025 academic year.",
+    ABOUT_ME_1: "After 8 years in healthcare and social services, I chose to pivot to web and software development.",
+    ABOUT_ME_2: "Certified Web & Web Mobile Developer (AFPA Brest 2025), I bring solid technical foundations combined with proven customer service experience.",
+    ABOUT_ME_3: "Medical-grade rigor, field adaptability, collaborative mindset: my background prepared me for teamwork and concrete problem-solving. Passionate about software architecture and optimization.",
+    ABOUT_ME_4: "Outside coding, I could talk for hours about comics and film scores.",
+    ABOUT_ME_CONCLUSION: "Available immediately for apprenticeship or full-time CDI.",
+    ABOUT_ME_CTA: "Discover my skills and projects below!",
 
-    RIGHT_NOW: "Right now working full-time as an ambulance and taxi driver and on web projects on my free-time as much as I can.",
+    DIPLOMA: "Fullstack Web Developer",
 
-    CV: "My CV",
-    CV_ZOOM: "Zoom",
-    CV_PDF: "View as PDF",
+    NEWS: "Current status ",
+    STATUS_1: "CDA training at AFPA Brest ",
+    STATUS_2: " (March 2026 - February 2027)",
+    AVAILABILITY: "Apprenticeship available immediately",
+    FUTURE: "Long term goal",
+    FUTURE_CDI: "Full-time role after completion",
+    FUTURE_BAC5: "Bachelor's +5 Software Architecture (apprenticeship)",
+
+    CV_DOWNLOAD: "Download CV",
+    CV_DOWNLOAD_LABEL: "Download Yoann Le Goff CV (PDF)",
+
 }

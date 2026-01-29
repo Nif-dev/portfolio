@@ -3,6 +3,7 @@
 <script setup lang="ts">
   import HeroCard from '../ui/HeroCard.vue';
   import SituationCard from '../ui/SituationCard.vue';
+  import CVButton from '../ui/CVButton.vue';
 </script>
 <template>
 
@@ -13,6 +14,10 @@
     <HeroCard />
     <div class="m-6"></div>
     <SituationCard />
+    <div class="m-6"></div>
+    <div class="has-text-centered">
+      <CVButton />
+    </div>
   </section>
 
 </template>

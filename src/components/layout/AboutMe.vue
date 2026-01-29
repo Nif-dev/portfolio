@@ -49,6 +49,7 @@
                 <div class="box small-box">
                     <article class="is-size-5">
                         <p> {{ t('aboutMe:ABOUT_ME_1') }} </p>
+                        <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
                     </article>
                 </div>
             </div>
@@ -56,9 +57,8 @@
             <div ref = "section2" :class="['container' ,'slide-anim', { 'slide-in': visible2 }] ">
                 <div class="box small-box">
                     <article class="is-size-5">
-                        <p> {{ t('aboutMe:ABOUT_ME_2') }} </p>
-                        <br>
-                        <p> {{ t('aboutMe:ABOUT_ME_3') }} </p>
+                        <span> {{ t('aboutMe:ABOUT_ME_3') }} </span>
+                        <span class="is-italic"> {{ t('aboutMe:ABOUT_ME_4') }} </span>
                     </article>
                 </div>
             </div>
@@ -68,6 +68,7 @@
                     <article class="is-size-4">
                         <p class="has-text-weight-bold"> {{ t('aboutMe:ABOUT_ME_CONCLUSION') }} </p>
                         <SeparatorProp size="8px" margin="1em" color="var(--color-orange)" colorDark="var(--color-purple)"/>
+                        <p> {{ t('aboutMe:ABOUT_ME_CTA') }}</p>
                     </article>
                 </div>
             </div>
