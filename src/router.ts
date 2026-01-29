@@ -28,12 +28,18 @@ const routes = [
 ]
 
 const router = createRouter({
-    // selon l'hébergeur, le chemin peut varier
+    // Seulement scroll en haut pour les changements de route (pas les ancres)
     history: createWebHistory( DEPLOY_CONFIG.base ),
     routes,
-    scrollBehavior() {
-        // remet en haut de page
-        return { top: 0}
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        }
+        if (to.path !== from.path) {
+            return { top: 0 }
+        }
+         // Pour les ancres sur la même page (Firefox/Chrome), laisser le navigateur gérer
+        return false
     }
 
 })
