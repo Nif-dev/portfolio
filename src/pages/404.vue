@@ -24,8 +24,8 @@
         <div class="subtitle">
             <p class="m-5">{{ t('errors:PAGE_NOT_FOUND_TEXT') }}</p>
             <p>{{ t('errors:PAGE_NOT_FOUND_HOME') }}</p>
-
         </div>
+
     </section>
 </template>
 
