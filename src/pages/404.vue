@@ -26,6 +26,12 @@
             <p>{{ t('errors:PAGE_NOT_FOUND_HOME') }}</p>
         </div>
 
+        <div>
+            <router-link to="/">
+                <button class="button is-CTA-button mt-6">{{ t('common:HOMEPAGE_BUTTON') }}</button>
+            </router-link>
+        </div>
+
     </section>
 </template>
 

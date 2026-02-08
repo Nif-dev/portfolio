@@ -66,7 +66,7 @@ onMounted(() => {
 
     <!-- Header de la section Skills -->
     <div class="container">
-      <div class="box">
+      <div class="box mb-6">
         <article>
           <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
           <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>

@@ -19,4 +19,6 @@ export default {
     FOOTER_TEXT:"Tous droits reservés",
     FOOTER_LEGAL_TEXT:"Mentions légales",
     FOOTER_SITE_PLAN:"Plan du site",
+
+    HOMEPAGE_BUTTON:"Aller à la page d'accueil",
 }

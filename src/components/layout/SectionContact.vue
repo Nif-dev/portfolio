@@ -12,10 +12,10 @@
 
 <template>
     <section class="section">
-        <div class="container ">
+        <div class="container">
 
             
-            <div class="box">
+            <div class="box mb-6">
                 <p class="title has-text-centered is-1">{{ t('contactMe:TITLE') }}</p>
                 <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
                 <h1 class="title is-4 mb-5 mx-2 has-text-centered"> {{ t('contactMe:SUBTITLE') }} </h1>
@@ -23,7 +23,7 @@
             </div>
 
                         <!-- CV CTA -->
-            <div class="has-text-centered my-4">
+            <div class="has-text-centered mb-6">
                 <CVButton />
             </div>
             
