@@ -9,7 +9,8 @@
       
     <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
           <button class="button">
-            Voir projet <p class="is-size-4 ml-2">⭷</p>
+            Voir projet
+            <i class="fas fa-external-link-alt ml-2"></i>
           </button>
         </router-link>
     </header>

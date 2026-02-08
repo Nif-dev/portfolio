@@ -11,12 +11,14 @@
 
             <a class="button" href="https://www.linkedin.com/in/yoann-le-goff-0129a0283/" target="_blank" rel="noopener" >
                 <img :src="linkedIn" alt="logo linkedin" width="36px"/>
-                <p class="link-text">LinkedIn </p> ⭷
+                <p class="link-text">LinkedIn </p> 
+                <i class="fas fa-external-link-alt ml-2"></i>
             </a>
             
             <a class="button" href="https://github.com/nif-dev" target="_blank" rel="noopener" >
                 <img :src="github" alt="logo github" width="36px"/>
-                <p class="link-text">GitHub </p> ⭷
+                <p class="link-text">GitHub </p> 
+                <i class="fas fa-external-link-alt ml-2"></i>
             </a>
         </div>
     </div>

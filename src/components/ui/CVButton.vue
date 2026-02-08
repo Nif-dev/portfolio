@@ -10,18 +10,9 @@
         class="is-CTA-button button"
         :aria-label="t('aboutMe:CV_DOWNLOAD_LABEL')"
     >
-        <svg class="icon-download" viewBox="0 0 24 24" fill="none">
-            <path d="M12 4v7m0 0v7m0-7h7m-7 0H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <i class="fa-solid fa-file-pdf mr-2"></i>
         <span>{{ t('aboutMe:CV_DOWNLOAD') }}</span>
+        <i class="fa-solid fa-download ml-2"></i>
     </a>
 </template>
 
-<style scoped>
-
-    .icon-download {
-        width: 1.2em;
-        height: 1.2em;
-    }
-
-</style>
