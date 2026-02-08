@@ -1,6 +1,6 @@
+
 html { 
     scroll-behavior: smooth;
-    scroll-padding-top: 64px;
 }
 
 .body-modal-open {
@@ -17,20 +17,6 @@ html {
     border-radius: 20px;
 }
 
-.bcg-blur-white{
-    backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
-    border-radius: 20px;
-    border-radius: 30px;
-    background-color: var(--color-white-transparent);
-    color: black;
-    position: relative;           
-    padding: 1em;
-    height: fit-content;
-
-}
-
 .navbar-item {
     text-decoration: none !important; /* enlever le soulignement - sur github pages surtout */
 }
@@ -39,61 +25,3 @@ html {
     text-decoration: none !important; 
 }
 
-.is-CTA {
-    font-size: 24px;
-}
-
-
-.bcg-blur-bulles{
-    width: fit-content;
-}
-[data-theme="dark"]
-    .bcg-blur-bulles{
-        background-color: var(--color-purple-transparent);
-    }
-[data-theme="light"]
-    .bcg-blur-bulles{
-        background-color: var(--color-white-transparent);
-    }
-
-
-.is-CTA-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    padding: 0.75em 1.5em;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.is-CTA-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    -webkit-transform: translateY(-3px);
-    -moz-transform: translateY(-3px);
-    -ms-transform: translateY(-3px);
-    -o-transform: translateY(-3px);
-}
-
-    [data-theme="light"] .is-CTA-button {
-        color: black;
-        background-color: var(--color-orange);
-    }
-    
-    [data-theme="light"] .is-CTA-button:hover {
-        color: black;
-        background-color: var(--color-dark-orange);
-    }
-    
-    [data-theme="dark"] .is-CTA-button {
-        color: white;
-        background-color: var(--color-purple);
-    }
-    
-    [data-theme="dark"] .is-CTA-button:hover {
-        color: white;
-        background-color: var(--color-purple-transparent);
-    }

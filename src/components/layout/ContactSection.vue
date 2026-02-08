@@ -55,11 +55,5 @@
         width: fit-content;
     }
 
-    .bcg-blur-white{
-        margin: auto;
-        padding: 10px;
-        margin-bottom: 1.5rem;
-    }
-
 
 </style>

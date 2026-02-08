@@ -142,10 +142,6 @@ onMounted(() => {
 
 <style scoped>
 
-.bcg-blur-white{
-    width: fit-content;
-}
-
   .title{
       display: flex;
       justify-content: center;
@@ -157,12 +153,6 @@ onMounted(() => {
 
   .section {
     position: relative;
-  }
-
-  [data-theme="light"] {
-    .bcg-blur {
-      background-color: var(--color-white-transparent);
-    }
   }
 
   /* Animation slide-in */

@@ -1,0 +1,42 @@
+
+.is-CTA-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+.is-CTA-button:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+
+/* [data-theme="light"] */
+    [data-theme="light"] .is-CTA-button {
+        color: black;
+        background-color: var(--color-orange);
+    }
+    
+    [data-theme="light"] .is-CTA-button:hover {
+        background-color: var(--color-dark-orange);
+    }
+    
+/* [data-theme="dark"] */
+    [data-theme="dark"] .is-CTA-button {
+        color: white;
+        background-color: var(--color-purple);
+    }
+    
+    [data-theme="dark"] .is-CTA-button:hover {
+        background-color: var(--color-purple-transparent);
+    }
