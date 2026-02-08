@@ -10,7 +10,7 @@
   <div class="hero-background fullwidth">
   </div>
   
-  <section class="section is-align-content-center" >
+  <section class="section is-align-content-center" id="hero">
     <HeroCard />
     <div class="m-6"></div>
     <SituationCard />

@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <section class="section" id="projects">
+  <section class="section">
     <div class="box container">
       
       <article>

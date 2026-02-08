@@ -11,7 +11,7 @@
 </script>
 
 <template>
-    <section id="contact" class="section is-align-content-center">
+    <section class="section">
         <div class="container ">
 
             
@@ -47,8 +47,8 @@
 
 <style scoped>
 
-    #contact{
-        min-height: 100vh;
+    .section{
+        margin-bottom: 10rem;
     }
 
     .contact-title{

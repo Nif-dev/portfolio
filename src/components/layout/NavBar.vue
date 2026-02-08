@@ -36,6 +36,13 @@
     }, 80); // 100ms
     });
 
+    const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    }
 </script>
 
 <template>
@@ -48,7 +55,7 @@
             <div class="navbar-brand" id="logo" >
 
                 <!-- logo vers HomePage -->
-                <router-link to="/" id="home-logo" aria-label="Retour à l'accueil" >
+                <router-link to="/" id="home-logo" aria-label="Retour à l'accueil" @click="scrollToTop">
                     <img :src="logo" class="logoNif" alt="Logo renard Nif">
                 </router-link>
 

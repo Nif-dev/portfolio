@@ -10,5 +10,5 @@ export const intellij_EN = {
     description : "Integrated development environment for Java and other languages.",
 }
 export const intellij_FR = {
-    description : "Environnement de développement integre pour Java et autres langages.",
+    description : "Environnement de développement intégré pour Java et autres langages.",
 }

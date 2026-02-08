@@ -9,7 +9,7 @@
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
     import SkillIcons from '../../components/ui/skillsIcons.vue'
-    import MyFooter from '../../components/layout/MyFooter.vue'
+    import MyFooter from '../../components/layout/Footer.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
     import backgroundSVGDark from '../../assets/background/dark/endless-constellation.svg?raw';
@@ -97,9 +97,9 @@
                             </button>
                         </router-link>
                     
-                        <button v-if='project.link' class="button is-link is-CTA-button m-4" :href="project.link">
+                        <a v-if='project.link' class="button is-link is-CTA-button m-3" :href="project.link">
                             {{ t('projects:PROJECT_LINK') }}
-                        </button>
+                        </a>
                     
                     </div>
 

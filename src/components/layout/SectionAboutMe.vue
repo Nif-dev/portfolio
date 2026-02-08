@@ -34,7 +34,7 @@
 </script>
 
 <template>
-    <section id="aboutMe" class="section">
+    <section class="section">
         
         <div class="container has-text-centered">
 
@@ -88,30 +88,30 @@
         margin-bottom: 2rem;
     }   
 
-.title{
-    display: flex;
-    justify-content: center;
-    text-align: justify;
-    align-items: center;
-    width: fit-content;
-    margin: auto;
-}
+    .title{
+        display: flex;
+        justify-content: center;
+        text-align: justify;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
 
-  /* Animation slide-in */
-.slide-anim {
-    opacity: 0;
-    transform: translateX(-300px);
-    transition: opacity 1.7s cubic-bezier(.4,0,.2,1), transform 1.7s cubic-bezier(.4,0,.2,1);
-}
-.slide-anim-alt {
-    opacity: 0;
-    transform: translateX(300px);
-    transition: opacity 1.7s cubic-bezier(.4,0,.2,1), transform 1.7s cubic-bezier(.4,0,.2,1);
-}
-.slide-in {
-    opacity: 1;
-    transform: translateX(0);
-}
+    /* Animation slide-in */
+    .slide-anim {
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: opacity 1.7s cubic-bezier(.4,0,.2,1), transform 1.7s cubic-bezier(.4,0,.2,1);
+    }
+    .slide-anim-alt {
+        opacity: 0;
+        transform: translateX(300px);
+        transition: opacity 1.7s cubic-bezier(.4,0,.2,1), transform 1.7s cubic-bezier(.4,0,.2,1);
+    }
+    .slide-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
 
 </style>

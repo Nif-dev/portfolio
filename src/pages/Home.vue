@@ -3,13 +3,12 @@
     // Importation des components
     import NavBar from '../components/layout/NavBar.vue';
     import HeroBanner from '../components/layout/HeroBanner.vue';
-    import AboutMe from '../components/layout/AboutMe.vue';
-    import SkillsList from '../components/layout/SkillsList.vue';
-    import ProjectsSection from '../components/layout/ProjectsSection.vue';
-    import ContactSection from '../components/layout/ContactSection.vue';
-    import MyFooter from '../components/layout/MyFooter.vue';
+    import AboutMe from '../components/layout/SectionAboutMe.vue';
+    import SectionSkills from '../components/layout/SectionSkills.vue';
+    import SectionProjects from '../components/layout/SectionProjects.vue';
+    import SectionContact from '../components/layout/SectionContact.vue';
+    import MyFooter from '../components/layout/Footer.vue';
     import ScrollToTop from '../components/ui/ScrollToTop.vue';
-    import SeparatorProp from '../components/ui/SeparatorProp.vue';
 
 </script>
 
@@ -18,40 +17,33 @@
     <NavBar />
 
     <!-- Hero / image de fond -->
-    <div class="main-container mx-auto">
+    <section id="hero-banner">
         <HeroBanner />
-    </div>
+    </section>
 
 <!-- Section de presentation -->
-    <div id="about-me" class="is-align-content-center">
-        <div class="main-container mx-auto py-6">
-            <AboutMe />
-        </div>
-    </div>
+    <section id="aboutMe" >
+        <AboutMe />
+    </section>
 
-    <!-- <div id="my-services">
-        <div class="main-container mx-auto py-6">
-            <MyServices />
-        </div>
-    </div> -->
+    <!-- <section id="my-services">
+        <MyServices />
+    </section> -->
 
 <!-- Section des compétences -->
-    <div id="skills" >
-        <div class="main-container mx-auto py-6" >
-            <SkillsList />
-        </div>
-    </div>
+    <section id="skills" >
+        <SectionSkills />
+    </section>
 
 <!-- Section des projets -->
-    <div id="projects" >
-        <div class="main-container mx-auto py-6">
-            <ProjectsSection />
-        </div>
-    </div>
+    <section id="projects" >
+        <SectionProjects />
+    </section>
 
     <!-- Section de contact -->
-    <SeparatorProp color="var(--color-dutch-white)" color-dark="var(--color-purple-transparent)" margin="0em" size="50px"/>
-    <ContactSection />
+    <section id="contact">
+        <SectionContact />
+    </section>
 
     <!-- Footer et bouton haut de page -->
     <ScrollToTop />
@@ -61,13 +53,13 @@
 
 <style scoped>
 
-    .main-container{
+    section{
+        position: relative;
         max-width: 1600px;
+        margin-inline: auto;
+        min-height: 100vh;
+        top: 3rem;
     }
 
-    #about-me, #skills, #projects{
-        min-height: 1
-        0vh;
-    }
 </style>
 

@@ -62,9 +62,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="section " id="skills">
+  <section class="section">
 
-    <div class="container my-5">
+    <!-- Header de la section Skills -->
+    <div class="container">
       <div class="box">
         <article>
           <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
@@ -149,10 +150,6 @@ onMounted(() => {
       align-items: center;
       width: fit-content;
       margin: auto;
-  }
-
-  .section {
-    position: relative;
   }
 
   /* Animation slide-in */

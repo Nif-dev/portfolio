@@ -14,7 +14,7 @@
     
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
-    import MyFooter from '../../components/layout/MyFooter.vue'
+    import MyFooter from '../../components/layout/Footer.vue'
     import SkillIcons from '../../components/ui/skillsIcons.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
