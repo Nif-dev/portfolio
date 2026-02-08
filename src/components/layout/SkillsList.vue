@@ -69,7 +69,7 @@ onMounted(() => {
         <article>
           <h1 class="title has-text-centered">{{ t('common:SKILLS_TITLE') }}</h1>
           <SeparatorProp size="16px" margin="1em" color="var(--color-light-purple)" colorDark="var(--color-dark-orange)"/>
-          <h2 class="subtitle my-5 p-2 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
+          <h2 class="subtitle my-5 p-2 px-6 has-text-centered">{{ t('common:SKILLS_SUBTITLE') }}</h2>
         </article>
       </div>
     </div>

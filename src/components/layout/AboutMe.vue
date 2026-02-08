@@ -58,7 +58,7 @@
                 <div class="box small-box">
                     <article class="is-size-5">
                         <span> {{ t('aboutMe:ABOUT_ME_3') }} </span>
-                        <span class="is-italic"> {{ t('aboutMe:ABOUT_ME_4') }} </span>
+                        <p class="is-italic"> {{ t('aboutMe:ABOUT_ME_4') }} </p>
                     </article>
                 </div>
             </div>
