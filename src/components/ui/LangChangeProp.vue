@@ -45,12 +45,12 @@ const changeCurrentFlag = (newLangCode: string) => {
         </div>
         <div class="dropdown-menu compact-dropdown" id="language-dropdown" role="menu">
             <div class="dropdown-content">
-                <a v-for="lang in availableLanguages" :key="lang.code" class="dropdown-item" :class="{ 'is-active': currentLang === lang.code }" @click="changeLang(lang.code)">
+                <button v-for="lang in availableLanguages" :key="lang.code" class="dropdown-item" :class="{ 'is-active': currentLang === lang.code }" @click="changeLang(lang.code)">
                 <span class="icon is-small mr-3">
                     <img :src="lang.flag" alt="Drapeau" width="20" height="15" />
                 </span>
                 {{ lang.name.toUpperCase() }}
-                </a>
+                </button>
             </div>
         </div>
     </div>
