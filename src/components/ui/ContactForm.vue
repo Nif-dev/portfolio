@@ -71,8 +71,8 @@ if (error.value) {
         </div>
         <div class="field">
             <label class="label" for="form-message">{{ t('contactMe:MESSAGE') }}</label>
-            <div class="control" id="form-message">
-                <textarea class="textarea" v-model="form.message" :placeholder="t('contactMe:MESSAGE_FILLER')" rows="5" required></textarea>
+            <div class="control">
+                <textarea class="textarea" id="form-message" v-model="form.message" :placeholder="t('contactMe:MESSAGE_FILLER')" rows="5" required></textarea>
             </div>
         </div>
         <div class="field">
