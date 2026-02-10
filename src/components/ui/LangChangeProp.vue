@@ -7,22 +7,31 @@ import englishFlag from '../../assets/icons/common/englishFlag.svg';
 // import spanishFlag from '../../assets/icons/common/spanishFlag.svg';
 
 const availableLanguages = [
-  { code: 'fr', flag: frenchFlag, name: 'fr' },
-  { code: 'en', flag: englishFlag, name: 'en' },
+    { code: 'fr', flag: frenchFlag, name: 'fr' },
+    { code: 'en', flag: englishFlag, name: 'en' },
 //   { code: 'es', flag: spanishFlag, name: 'es' }
 ];
 
 const currentLang = ref(i18next.language);
 
+const currentFlag = ref(availableLanguages.find(l => l.code === currentLang.value)?.flag || frenchFlag);
+
 i18next.on('languageChanged', (lng) => {
-  currentLang.value = lng;
+    currentLang.value = lng;
 });
 
-const changeLang = (langCode: string) => {
-  changeLanguage(langCode);
+
+const changeLang = (newLangCode: string) => {
+    // fonction i18next pour changer la langue
+    changeLanguage(newLangCode);
+    // fonction custom de mise a jour de l'icone drapeau
+    changeCurrentFlag(newLangCode);
 };
 
-const currentFlag = ref(availableLanguages.find(l => l.code === currentLang.value)?.flag || frenchFlag);
+const changeCurrentFlag = (newLangCode: string) => {
+    currentFlag.value = availableLanguages.find(l => l.code === newLangCode)?.flag || frenchFlag
+}
+
 </script>
 
 <template>
