@@ -35,8 +35,9 @@
 .hero-background {
   width: 100%;
   height: 100vh;
-  /* réserve espace CLS avec le ratio */
-  aspect-ratio: 16/9;
+
+  aspect-ratio: 16/9; /* réserve espace CLS avec le ratio */
+
   position: fixed;
   top: 0;
   left: 0;
