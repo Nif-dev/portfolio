@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, defineAsyncComponent, Suspense } from 'vue'
+import { computed, defineAsyncComponent } from 'vue'
 import CardFormat from './CardFormat.vue'
 
 import type { CardData, TemplateType } from '../EQonnectTypes.ts'
