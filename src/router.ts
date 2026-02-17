@@ -10,6 +10,8 @@ import PageGemenyApp from './pages/projects/PageGemenyApp.vue'
 import PageGemenyAuth from './pages/projects/PageGemenyAuth.vue'
 import PagePortfolio from './pages/projects/PagePortfolio.vue'
 
+import EQonnectPOC from './eQonnect/EQonnect-page.vue'
+
 
 
 const routes = [
@@ -25,6 +27,10 @@ const routes = [
     { path: '/mentions', name: 'MentionsLegales', component: LegalMentions },
 
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+
+    { path: '/EQonnect', name: 'EQonnect-POC', component: EQonnectPOC },
+    { path: '/EQonnect/:any?', name: 'EQonnect-POC', component: EQonnectPOC },
+
 ]
 
 const router = createRouter({
