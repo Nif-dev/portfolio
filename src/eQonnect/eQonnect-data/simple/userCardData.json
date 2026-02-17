@@ -1,0 +1,34 @@
+{
+    "name": "Yoann Le Goff",
+    "title": "Concepteur Développeur d'Applications",
+    "tagline": "Vue.js • Node.js • TypeScript",
+    "color": "#44355b",
+    "avatarUrl": "https://placehold.co/72x72",
+    "location": "Brest, Bretagne",
+    "availability": "Alternance/CDI 2026",
+    "template": "simple",
+    "primaryLinks": [
+        {
+        "label": "Portfolio ↑",
+        "url": "/",
+        "color": "primary"
+        },
+        {
+        "label": "CV",
+        "url": "/cv-nif.pdf",
+        "color": "primary"
+        }
+    ],
+    "socials": [
+        {
+        "label": "GitHub",
+        "url": "https://github.com/nif-dev",
+        "icon": "github"
+        },
+        {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/nif-dev",
+        "icon": "linkedin"
+        }
+    ]
+}
