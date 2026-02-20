@@ -1,15 +1,19 @@
 <script setup lang="ts">
-import type { CardData } from '../../EQonnectTypes.ts'
+import type { CardData, QRCodeOptions } from '../../EQonnectTypes.ts'
+import QRViewer from '../components/QRViewer.vue';
 
 defineProps<{
   cardData: CardData
 }>()
+
+  
 </script>
 
 <template>
+
   <div class="simple-template" 
-       :style="{ backgroundColor: cardData.color || '#f9fafb' }">
-    
+      :style="{ backgroundColor: cardData.color || '#f9fafb' }">
+
     <!-- Centré ultra-minimal -->
     <div class="simple-content">
       <!-- Avatar petit + discret -->
@@ -19,13 +23,13 @@ defineProps<{
         :alt="cardData.name"
         loading="lazy"
       />
-      
+    
       <!-- Nom + titre -->
       <div class="simple-text">
         <h1 class="simple-name">{{ cardData.name }}</h1>
         <h2 class="simple-title">{{ cardData.title }}</h2>
       </div>
-      
+    
       <!-- UN SEUL bouton principal -->
       <a 
         v-if="cardData.primaryLinks?.[0]" 
@@ -36,13 +40,20 @@ defineProps<{
       >
         {{ cardData.primaryLinks[0].label }}
       </a>
-      
+    
+      <!-- QR Codes -->
+      <div class="simple-qr" v-if="cardData.qrCodes?.length">
+        <QRViewer :qrOptions="...cardData.qrCodes[0], {htmlElement: 'simple-qr'}" />
+      </div>
+    
       <!-- Localisation discrète -->
       <p v-if="cardData.location" class="simple-location">
         {{ cardData.location }}
       </p>
+    
     </div>
   </div>
+
 </template>
 
 <style scoped>
