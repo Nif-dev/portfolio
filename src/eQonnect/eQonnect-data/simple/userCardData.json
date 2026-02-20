@@ -31,7 +31,7 @@
         "icon": "linkedin"
         }
     ],
-    "qrCodes": [
+    "qrCodeLinks": [
         {
         "label": "GitHub",
         "urlLink": "https://github.com/nif-dev"

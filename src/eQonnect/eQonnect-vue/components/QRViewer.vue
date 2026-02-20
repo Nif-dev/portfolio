@@ -1,64 +1,36 @@
 <!-- QRViewer.vue -->
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import type { QRCodeOptions } from '../../EQonnectTypes.ts';
+import { onMounted, ref, nextTick } from 'vue'
+import type { QRCodeLink, QRCodeOptions } from '../../EQonnectTypes.ts';
 import { generateQRCode } from '../../eQonnect-scripts/generateQRCode.ts'
 
 
 const props = defineProps<{
-    qrOptions: QRCodeOptions
+    qrCode: QRCodeLink,
+    htmlContainer: string,
 }>()
 
 // création de l'ID unique du container pour le QR code
-const containerID = `qr-container-${props.qrOptions.htmlElement}-${Date.now()}`
+const containerID = ref(`qr-container-${props.htmlContainer}-${Date.now()}`)
 
-onMounted( () => {
-        // 1. Génère HTML via utilitaire
-        generateQRCode({
-            ...props.qrOptions,
-            htmlElement: containerID
-        })
+const qrOptions: QRCodeOptions = {
+    QRCodeLink: props.qrCode,
+    htmlElement: containerID.value
+}
 
-        //2. Charge lib + return QR code
-        // loadQRCodeAndRender(`qr-${containerID}`)
-    })
-
-
-
-//  watch(() => props.qrOptions, () => {
-//   generateQRCode({ 
-//     ...props.qrOptions, 
-//     htmlElement: containerID 
-//   })
-//   loadQRCodeAndRender(`qr-${containerID}`)
-// }, { deep: true })
-
-// function loadQRCodeAndRender(qrId: string) {
-//   // Si lib déjà chargée
-//   if ((globalThis as any).QRCode) {
-//     new (globalThis as any).QRCode(qrId, {
-//       text: props.qrOptions.urlLink
-//     })
-//     return
-//   }
-  
-//   // Charge lib
-//   const script = document.createElement('script')
-//   script.src = 'https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js'
-//   script.onload = () => {
-//     new (globalThis as any).QRCode(qrId, {
-//       text: props.qrOptions.urlLink
-//     })
-//   }
-//   document.head.appendChild(script)
-// }
+onMounted(async () => {
+    // Attend que le DOM soit chargé
+    await nextTick()
+    // Génére le QR code avec son container
+    await generateQRCode(qrOptions)
+})
 
 </script>
 
 <template>
 
-    <div class="qr-card">
+    <div :id="props.htmlContainer" class="qr-card">
         <div :id="containerID" class="qr-container"></div>
     </div>
 

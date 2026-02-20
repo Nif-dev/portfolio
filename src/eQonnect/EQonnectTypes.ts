@@ -7,13 +7,13 @@ export interface CardData {
     avatarUrl: string
     primaryLinks: Link[]
     socials: Link[]
-    qrCodes: QRCode[]
+    qrCodeLinks?: QRCodeLink[]
     location?: string
     template: TemplateType
 
 }
 
-export interface QRCode {
+export interface QRCodeLink {
     label: string // label du lien du code QR
     
     urlLink: string // lien du code QR à générer
@@ -23,7 +23,7 @@ export interface QRCode {
 }
 
 export interface QRCodeOptions {
-    QRCode: QRCode,
+    QRCodeLink: QRCodeLink,
     htmlElement: string // id de mon conteneur
 }
 

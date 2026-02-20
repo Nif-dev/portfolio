@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import type { CardData, QRCodeOptions } from '../../EQonnectTypes.ts'
+import type { CardData } from '../../EQonnectTypes.ts'
 import QRViewer from '../components/QRViewer.vue';
 
 defineProps<{
   cardData: CardData
 }>()
 
-  
+  function consoleLog() {
+    console.log('click')
+  }
 </script>
 
 <template>
@@ -42,8 +44,10 @@ defineProps<{
       </a>
     
       <!-- QR Codes -->
-      <div class="simple-qr" v-if="cardData.qrCodes?.length">
-        <QRViewer :qrOptions="...cardData.qrCodes[0], {htmlElement: 'simple-qr'}" />
+      <div class="simple-qr" v-if="cardData.qrCodeLinks?.length" id="qrCode-caller">
+        <QRViewer 
+        :qr-code="cardData.qrCodeLinks[0]"
+        html-container="simple-qr" />
       </div>
     
       <!-- Localisation discrète -->

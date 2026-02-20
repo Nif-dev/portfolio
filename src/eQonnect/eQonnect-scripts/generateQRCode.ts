@@ -2,26 +2,29 @@
 // Fonction pour générer un code QR à partir d'un lien URL et l'inserer dans un conteneur HTML
 
 import type { QRCodeOptions } from "../EQonnectTypes.ts"
-function generateQRCode(options: QRCodeOptions) {
-  
+import QRCode from 'qrcode'
+export async function generateQRCode(options: QRCodeOptions): Promise<string> {
   const container = document.getElementById(options.htmlElement)
-  if (!container) {
-    return console.error('Conteneur non trouvé')
-  }
+  if (!container) throw new Error('Conteneur non trouvé')
 
-  const qrId = `qr-${options.htmlElement}`
-  const qr = options.QRCode
+  const qrId = `qr-${Date.now()}`
+  const qr = options.QRCodeLink
 
-  // HTML contenant le code QR avec le lien fourni
   container.innerHTML = `
     <div class="qr-item">
       <label>${qr.label}</label>
-      <div id="qr-${options.htmlElement}" class="qr-code"></div>
+      <canvas id="${qrId}" class="qr-code"></canvas>
     </div>
   `
-  // retourne l'ID du conteneur contenant le code QR
+
+  const canvas = document.getElementById(qrId) as HTMLCanvasElement
+  await QRCode.toCanvas(canvas, qr.urlLink, {
+    width: qr.width || 128,
+    margin: 1,
+    color: { dark: '#000', light: '#FFF' }
+  })
+
   return qrId
 }
 
-export { generateQRCode }
 
