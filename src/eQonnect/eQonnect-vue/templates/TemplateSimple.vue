@@ -6,9 +6,6 @@ defineProps<{
   cardData: CardData
 }>()
 
-  function consoleLog() {
-    console.log('click')
-  }
 </script>
 
 <template>
