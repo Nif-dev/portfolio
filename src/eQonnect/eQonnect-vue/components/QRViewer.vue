@@ -22,6 +22,7 @@ const qrOptions: QRCodeOptions = {
 onMounted(async () => {
     // Attend que le DOM soit chargé
     await nextTick()
+    console.log("🚀 ~ qrCode:", qrOptions.QRCodeLink.label)
     // Génére le QR code avec son container
     await generateQRCode(qrOptions)
 })
@@ -47,18 +48,13 @@ onMounted(async () => {
         text-align: center;
     }
 
-    .qr-item {
-        display: inline-block;
+    /* Ciblage des éléments injectés en innerHTML avec :deep */
+    :deep(.qr-item) {
+        display: flex;
+        flex-direction: column;
     }
 
-    .qr-item label {
-        display: block;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-        color: #333;
-    }
-
-    .qr-code {
+    :deep(.qr-code) {
         border: 2px solid #e9ecef;
         border-radius: 8px;
         padding: 0.5rem;
