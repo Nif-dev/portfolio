@@ -6,9 +6,6 @@ defineProps<{
   cardData: CardData
 }>()
 
-  function consoleLog() {
-    console.log('click')
-  }
 </script>
 
 <template>
@@ -64,7 +61,7 @@ defineProps<{
 .simple-template {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
   padding: 32px 24px;
   gap: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

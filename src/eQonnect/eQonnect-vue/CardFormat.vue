@@ -10,10 +10,10 @@
 
 .card-frame {
     /* DIMENSIONS STRICTES */
-    max-width: 380px;
+    /* max-width: 380px;
     max-height: 520px;
     min-width: 280px;
-    min-height: 360px;
+    min-height: 360px; */
     
     /* RATIO CARTE PHYSIQUE */
     aspect-ratio: 4 / 5.5;
@@ -27,10 +27,10 @@
     margin: 0 auto;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     .card-frame {
-        max-width: 320px;
-        max-height: 440px;
+        max-width: 480px;
+        max-height: 100vh;
         aspect-ratio: 9 / 12;
     }
 }

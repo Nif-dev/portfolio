@@ -10,7 +10,7 @@
     "primaryLinks": [
         {
         "label": "Portfolio ↑",
-        "url": "/",
+        "url": "https://nif-dev.github.io/nif-portfolio/",
         "color": "primary"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
         "label": "LinkedIn",
-        "url": "https://linkedin.com/in/nif-dev",
+        "url": "https://www.linkedin.com/in/yoann-le-goff-0129a0283/",
         "icon": "linkedin"
         }
     ],
@@ -38,7 +38,7 @@
         },
         {
         "label": "LinkedIn",
-        "urlLink": "https://linkedin.com/in/nif-dev"
+        "urlLink": "https://www.linkedin.com/in/yoann-le-goff-0129a0283/"
         }
     ]
 }
