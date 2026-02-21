@@ -3,6 +3,8 @@
 import type { CardData } from '../eQonnect/EQonnectTypes.ts'
 import CardTemplate from './eQonnect-vue/CardTemplate.vue';
 
+import QRSelector from './eQonnect-vue/components/QRSelector.vue';
+
 //! import temporaire, voir plus tard ajustement appel de data
 import SimpleDataJSON from '../eQonnect/eQonnect-data/simple/userCardData.json';
 const Simple = SimpleDataJSON as CardData
@@ -18,16 +20,18 @@ const Hexagon = HexagonDataJSON as CardData
 <template>
 
     <h1 class="title has-text-centered">eQonnect POC</h1>
-    
+
     <section>
         <h2 class="subtitle has-text-centered">Simple template</h2>
         <CardTemplate :card-data="Simple"/>
+    <!--     
         <br>
         <h2 class="subtitle has-text-centered">Pro template</h2>
         <CardTemplate :card-data="Pro"/>
         <br>
         <h2 class="subtitle has-text-centered">Hexagon*</h2>
         <CardTemplate :card-data="Hexagon"/>
+    -->
     </section>
 
 </template>
