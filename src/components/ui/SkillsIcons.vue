@@ -1,4 +1,4 @@
-<!-- src/components/ui/skillsIcons.vue -->
+<!-- src/components/ui/SkillsIcons.vue -->
 <template>
 <Tooltip :title="skill.name" :text="t(`${skill.name}.description`)">
 

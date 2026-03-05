@@ -8,7 +8,7 @@
     const {t} = useTranslation();
     
     import { skillsListByType } from '../../data/skills';
-    import SkillsIcons from '../ui/skillsIcons.vue';
+    import SkillsIcons from '../ui/SkillsIcons.vue';
 
 // Refs pour chaque bloc
 const frontendRef = ref<HTMLElement | null>(null);
