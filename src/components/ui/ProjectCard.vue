@@ -1,4 +1,27 @@
 <!-- src/components/ui/ProjectCard.vue -->
+<script setup lang="ts">
+
+import type { Project } from '../../types/project'
+import skillIcon from './SkillsIcons.vue'
+
+import { useTranslation } from 'i18next-vue';
+const { t } = useTranslation('projects');
+
+// Fonction pour ajuster le scroll lors d'un changement de page - retour haut de page plutot que position sur la page actuelle
+function adjustScrollOnRedirect() {
+  // Petit délai pour laisser le routeur changer la page
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 0);
+}
+
+
+// Props attend un objet Projet comme portfolio
+defineProps<{
+  project: Project
+}>()
+</script>
+
 <template>
   <div class="card" style="width: 20rem;">
     <!-- Header avec le nom du projet -->
@@ -40,29 +63,6 @@
 
   </div>
 </template>
-
-<script setup lang="ts">
-
-import type { Project } from '../../types/project'
-import skillIcon from './skillsIcons.vue'
-
-import { useTranslation } from 'i18next-vue';
-const { t } = useTranslation('projects');
-
-// Fonction pour ajuster le scroll lors d'un changement de page - retour haut de page plutot que position sur la page actuelle
-function adjustScrollOnRedirect() {
-  // Petit délai pour laisser le routeur changer la page
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, 0);
-}
-
-
-// Props attend un objet Projet comme portfolio
-defineProps<{
-  project: Project
-}>()
-</script>
 
 <style scoped>
   [data-theme="light"] .card{

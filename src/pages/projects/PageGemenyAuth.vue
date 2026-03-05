@@ -15,7 +15,7 @@ import simpleStripeSVGLight from '../../assets/background/light/subtle-stripes.s
 import NavBar from '../../components/layout/NavBar.vue'
 import ScrollToTop from '../../components/ui/ScrollToTop.vue'
 import MyFooter from '../../components/layout/Footer.vue'
-import SkillIcons from '../../components/ui/skillsIcons.vue'
+import SkillIcons from '../../components/ui/SkillsIcons.vue'
 import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
 const { t } = useTranslation()

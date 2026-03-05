@@ -12,14 +12,13 @@ export async function generateQRCode(options: QRCodeOptions): Promise<string> {
 
   container.innerHTML = `
     <div class="qr-item">
-      <label>${qr.label}</label>
       <canvas id="${qrId}" class="qr-code"></canvas>
     </div>
   `
 
   const canvas = document.getElementById(qrId) as HTMLCanvasElement
   await QRCode.toCanvas(canvas, qr.urlLink, {
-    width: qr.width || 128,
+    width: qr.width || 150,
     margin: 1,
     color: { dark: '#000', light: '#FFF' }
   })

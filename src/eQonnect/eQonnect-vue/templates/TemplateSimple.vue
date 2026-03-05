@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { CardData } from '../../EQonnectTypes.ts'
-import QRViewer from '../components/QRViewer.vue';
+import QRSelector from '../components/QRSelector.vue';
 
 defineProps<{
   cardData: CardData
@@ -42,9 +42,8 @@ defineProps<{
     
       <!-- QR Codes -->
       <div class="simple-qr" v-if="cardData.qrCodeLinks?.length" id="qrCode-caller">
-        <QRViewer 
-        :qr-code="cardData.qrCodeLinks[0]"
-        html-container="simple-qr" />
+        <QRSelector 
+        :qr-codes="cardData.qrCodeLinks"/>
       </div>
     
       <!-- Localisation discrète -->
@@ -61,7 +60,7 @@ defineProps<{
 .simple-template {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
+  height: 100%;
   padding: 32px 24px;
   gap: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
