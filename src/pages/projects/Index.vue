@@ -1,11 +1,20 @@
 <script setup lang="ts">
 
     import { useTranslation } from 'i18next-vue'
-    import { computed } from 'vue'
+    import { computed, inject, watch } from 'vue'
+    const lightbox = (inject('lightbox') as any) || {}
+
+    watch(() => lightbox.isOpen, (val) => {
+        console.log('🔥 isOpen changed:', val)
+    })
+
+
+    
+    import LightboxModal from '../../components/ui/LightboxModal.vue'
 
     import { projectsList } from '../../data/projects'
     import { useThemedSvgBackground } from '../../lib/useThemedBackground';
-    
+
     import NavBar from '../../components/layout/NavBar.vue'
     import ScrollToTop from '../../components/ui/ScrollToTop.vue'
     import SkillIcons from '../../components/ui/SkillsIcons.vue'
@@ -46,38 +55,38 @@
                     <div class="">
                         <h1 class="title has-text-centered m-2"> {{ project.name }} </h1>
                         <h2 class="subtitle has-text-centered"> {{t(`projects:${project.localesName}.CARD_DESCRIPTION`)}}</h2>
+                        
                     </div>
                 
                     
                     <!-- Images desktop -->
-                    <div v-if="project.images" class="is-hidden-mobile is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
+                    <div v-if="project.images" class="is-hidden-touch is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-6">
                     
                         <!-- Affiche les 3 premières images de chaque projet -->
-                            <img
-                            v-for="(img, idx) in project.images.slice(0, 3)" 
+                            <img v-for="(img, idx) in project.images.slice(0, 3)" 
+                            @click="lightbox.open(img, `screen ${idx + 1} projet ${project.name}`)"
                             :key="idx"
                             :src="img"
                             :alt="`screen ${idx + 1} projet ${project.name}`"
                             style="max-width: 20%;"
                             class=""
                             />
-                            
                     </div>
                     
                     <!-- Images mobile -->
                     <div v-if="project.images" class="is-hidden-desktop is-flex is-flex-wrap-wrap is-justify-content-space-evenly m-2">
                     
                         <!-- Affiche les 3 premières images de chaque projet -->
-                            <img
-                            v-for="(img, idx) in project.images.slice(0, 3)" 
+                            <img v-for="(img, idx) in project.images.slice(0, 3)" 
+                            @click="lightbox.open(img, `screen ${idx + 1} projet ${project.name}`)"
                             :key="idx"
                             :src="img"
                             :alt="`screen ${idx + 1} projet ${project.name}`"
                             style="max-width: 60%;"
                             class="m-2"
                             />
-                            
-                    </div>
+                        </div>
+                        
                 
                     <!-- Compétences -->
                     <div class="is-justify-content-center">
@@ -108,8 +117,8 @@
 
             </li>
         </ul>
-        
         </section>
+            <LightboxModal :lightbox="lightbox"/>
             <ScrollToTop />
             <MyFooter/>
     </div>
