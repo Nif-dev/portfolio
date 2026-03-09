@@ -7,14 +7,14 @@
 - Interface responsive et interactive
 - **Multilingue (i18n)** : FR/EN
 - Sitemap auto-généré (SEO)
-- Build optimisé Vite pour prod
+- Build optimisé avec Vite pour prod
 - Déploiement automatisé (CI/CD)
 - Opengraph, Favicon personnalisé
 
 
 ## 🛠️ Stack technique
 Langages : HTML, CSS, JS, TypeScript
-Framework : VUE, Vite (dev server + build)
+Framework : Vue 3, Vite (dev server + build)
 Gestionnaire : npm
 
 
