@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://nif-dev.github.io/nif-portfolio/</loc>
+        <loc>https://nif-dev.github.io/portfolio/</loc>
     </url>
     <url>
-        <loc>https://nif-dev.github.io/nif-portfolio/projets/</loc>
+        <loc>https://nif-dev.github.io/portfolio/projets/</loc>
     </url>
     <url>
-        <loc>https://nif-dev.github.io/nif-portfolio/projet/gemeny-app</loc>
+        <loc>https://nif-dev.github.io/portfolio/projet/gemeny-app</loc>
     </url>
     <url>
-        <loc>https://nif-dev.github.io/nif-portfolio/projet/gemeny-auth</loc>
+        <loc>https://nif-dev.github.io/portfolio/projet/gemeny-auth</loc>
     </url>
     <url>
-        <loc>https://nif-dev.github.io/nif-portfolio/projet/portfolio</loc>
+        <loc>https://nif-dev.github.io/portfolio/projet/portfolio</loc>
     </url>
 </urlset>
