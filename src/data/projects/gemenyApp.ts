@@ -1,5 +1,5 @@
 // projet gemenyApp.ts
-
+import type { Project } from "../../types/project"
 import { images } from '../../assets/img/projects/gemenyApp/index.ts';
 
 import { skillsList } from '../skills/index.ts';
@@ -14,7 +14,7 @@ const otherSkills = skillsList.filter(skill =>
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]
 
-export const gemenyApp = {
+export const gemenyApp: Project = {
 
     name: "Gemeny-App",
     localesName: "gemenyApp", 
@@ -24,6 +24,7 @@ export const gemenyApp = {
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
     link : "https://gemeny.io/",
+    onlineLink : "https://gemeny.surge.sh/",
     presentation : "/projet/gemeny-app",
 
 }
@@ -43,6 +44,9 @@ export const gemenyApp_EN = {
 
     INTERNSHIP_TITLE: "Internship Project Context at Gemeny Software",
     INTERNSHIP_DESCRIPTION: "As part of my internship at Gemeny Software, the main objective was to develop a web interface allowing any user to test the Gemeny product online, easily and without installation. This interface was designed to support commercial demonstrations of the product to the public and potential clients.",
+    INTERNSHIP_RESULT: "The Gemeny product allowed users to test the product easily and without installation online.",
+
+    ONLINE: "Online Tool",
 
     OBJECTIVES: "Objectives and Challenges",
     OBJECTIVE_1: "Allow users to easily test the Gemeny product online, without installation.",
@@ -91,6 +95,9 @@ export const gemenyApp_FR = {
 
     INTERNSHIP_TITLE : "Contexte du projet de stage",
     INTERNSHIP_DESCRIPTION : "Dans le cadre de mon stage chez Gemeny Software, l’objectif principal était de développer une interface web permettant à tout utilisateur de tester le produit Gemeny en ligne, facilement et sans installation. Cette interface devait servir de support à la démonstration commerciale du produit auprès du public et de potentiels clients.",
+    INTERNSHIP_RESULT : "Le produit Gemeny a ainsi permis aux utilisateurs de tester facilement et sans installation le produit Gemeny en ligne.",
+
+    ONLINE : "L'outil en ligne",
 
     OBJECTIVES : "Objectifs et enjeux",
     OBJECTIVE_1 : "Permettre aux utilisateurs de tester facilement et sans installation le produit Gemeny en ligne.",

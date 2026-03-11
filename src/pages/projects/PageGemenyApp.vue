@@ -25,6 +25,8 @@
     const simpleStripeSVG = useThemedSvgBackground(simpleStripeSVGLight, simpleStripeSVGDark);
     const background = computed(() => ({ simpleStripe:simpleStripeSVG.value }));
 
+    const gemenyWebsiteURL = gemenyApp.onlineLink
+
 </script>
 
 <template>
@@ -81,6 +83,10 @@
                 <div class="column has-text-centered">
                     <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.COMPANY_NAME`) }}</h1>
                     <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.COMPANY_DESCRIPTION`) }}</h2>
+                    <a :href=gemenyApp.link target="_blank" rel="noopener">
+
+                        <button class="button is-CTA-button" > {{ "Gemeny Software" }} </button>
+                    </a>
                 </div>
             </div>
             
@@ -101,8 +107,13 @@
         <!-- le projet de stage -->
         <div class="block columns is-vcentered">
             <div class="column has-text-centered">
-                <h1 class="title">{{ t(`projects:${gemenyApp.localesName}.INTERNSHIP_TITLE`) }}</h1>
+                <h1 class="title my-2">{{ t(`projects:${gemenyApp.localesName}.INTERNSHIP_TITLE`) }}</h1>
                 <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.INTERNSHIP_DESCRIPTION`) }}</h2>
+                <h2 class="subtitle">{{ t(`projects:${gemenyApp.localesName}.INTERNSHIP_RESULT`) }}</h2>
+                <a :href=gemenyApp.onlineLink target="_blank" rel="noopener">
+
+                    <button class="button is-CTA-button" > {{ t(`projects:${gemenyApp.localesName}.ONLINE`) }} </button>
+                </a>
             </div>
             <div class="column">
                 <img :src="gemenyApp.images[1]" :alt="gemenyApp.name" />
