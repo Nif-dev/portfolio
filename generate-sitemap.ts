@@ -29,3 +29,4 @@ ${urls}
 
 writeFileSync('./dist/sitemap.xml', sitemap);
 console.log('Sitemap generated! for ', host);
+console.log(sitemap);
