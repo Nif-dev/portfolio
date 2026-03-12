@@ -28,7 +28,7 @@
 
         <div>
             <router-link to="/">
-                <button class="button is-CTA-button mt-6">{{ t('common:HOMEPAGE_BUTTON') }}</button>
+                <button class="button is-CTA is-CTA-button mt-6">{{ t('common:HOMEPAGE_BUTTON') }}</button>
             </router-link>
         </div>
 

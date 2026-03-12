@@ -9,7 +9,7 @@
             <p class="has-text-centered">
                 <b>{{ title }}</b>
             </p>
-            <p class="has-text-centered wrap">
+            <p :v-if="text" class="has-text-centered wrap">
                 {{ text }}
             </p>
         </div>
@@ -19,7 +19,7 @@
 <script setup lang="ts">
 
     import { ref, watch, nextTick } from 'vue';
-    defineProps<{ text: string , title: string}>();
+    defineProps<{ text: string , title?: string}>();
     const show = ref(false);
 
     const tooltipRef = ref<HTMLElement | null>(null);

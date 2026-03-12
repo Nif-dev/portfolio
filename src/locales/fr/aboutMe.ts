@@ -18,6 +18,7 @@ export default {
     FUTURE_CDI: "CDI à l'issue de la formation",
     FUTURE_BAC5: "Bac+5 Expert Architecture Logiciel (alternance)",
 
-    CV_DOWNLOAD: "Télécharger CV",
-    CV_DOWNLOAD_LABEL: "Télécharger le CV de Yoann Le Goff (PDF)",
+    CV_CTA: "Voir mon CV",
+    CV_DOWNLOAD_LABEL: "Télécharger PDF",
+    CV_NEWTAB_LABEL: "Ouvrir dans un nouvel onglet",
 }

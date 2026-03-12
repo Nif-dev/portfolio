@@ -18,7 +18,8 @@ export default {
     FUTURE_CDI: "Full-time role after completion",
     FUTURE_BAC5: "Bachelor's +5 Software Architecture (apprenticeship)",
 
-    CV_DOWNLOAD: "Download CV",
-    CV_DOWNLOAD_LABEL: "Download Yoann Le Goff CV (PDF)",
+    CV_CTA: "Check my CV",
+    CV_DOWNLOAD_LABEL: "Download PDF",
+    CV_NEWTAB_LABEL: "Open in a new tab",
 
 }

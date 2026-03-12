@@ -1,10 +1,12 @@
 import { gemenyApp_EN } from "../../data/projects/gemenyApp"
 import { gemenyAuth_EN } from "../../data/projects/gemenyAuth"
 import { portfolio_EN } from "../../data/projects/portfolio"
+import { eQonnect_EN } from "../../data/projects/eQonnect"
 export default {
     gemenyApp : gemenyApp_EN,
     gemenyAuth : gemenyAuth_EN,
     portfolio : portfolio_EN,
+    eQonnect : eQonnect_EN,
 
     PROJECT_NAME : "Project name",
     PROJECT_DESCRIPTION : "Project description",
