@@ -77,7 +77,7 @@ if (error.value) {
         </div>
         <div class="field">
             <div class="control mt-6">
-                <button class="button is-CTA-button" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
+                <button class="button is-CTA is-CTA-button" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
             </div>
         </div>
         <div v-if="error">{{ t('contactMe:ERROR_MESSAGE') }}</div>

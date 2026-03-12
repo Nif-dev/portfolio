@@ -92,12 +92,12 @@
                     <div class="is-flex is-flex-wrap-wrap is-justify-content-center mt-6  ">
 
                         <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" class="">
-                            <button v-if="project.presentation" class="button is-success is-CTA-button m-3 ">
+                            <button v-if="project.presentation" class="button is-success is-CTA is-CTA-button m-3 ">
                                 {{ t('projects:PROJECT_PRESENTATION') }}
                             </button>
                         </router-link>
                     
-                        <a v-if='project.link' class="button is-link is-CTA-button m-3" :href="project.link">
+                        <a v-if='project.link' class="button is-link is-CTA is-CTA-button m-3" :href="project.link">
                             {{ t('projects:PROJECT_LINK') }}
                         </a>
                     

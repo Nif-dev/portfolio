@@ -9,7 +9,7 @@ const linkedSkills = skillsList.filter(skill =>
 );
 
 const otherSkills = skillsList.filter(skill =>
-    ["HTML", "CSS", "JavaScript", "Bulma", "VSCode", "Figma"].includes(skill.name)
+    ["HTML",, "JavaScript", "Bulma", "VSCode", "Figma"].includes(skill.name)
 );
 
 const allLinkedSkills = [...linkedSkills,... otherSkills]

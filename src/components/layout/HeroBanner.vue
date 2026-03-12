@@ -7,6 +7,7 @@
 </script>
 <template>
 
+<!-- Background de la page d'accueil -->
   <div class="hero-background fullwidth">
   </div>
   
@@ -14,8 +15,7 @@
     <HeroCard />
     <div class="m-6"></div>
     <SituationCard />
-    <div class="m-6"></div>
-    <div class="has-text-centered">
+    <div class="my-6 is-centered">
       <CVButton />
     </div>
   </section>
@@ -25,11 +25,13 @@
 <style scoped>
 
 [data-theme="light"] .hero-background {
-  background-image: url('../../assets/img/common/hero-banner-jour.png') ;
+  background-color: rgb(255, 248, 239);
+  /* background-image: url('../../assets/img/common/hero-banner-jour.png') ; */
 }
 
 [data-theme="dark"] .hero-background {
-  background-image: url('../../assets/img/common/hero-banner-nuit.png');
+  background-color: #333330;
+  /* background-image: url('../../assets/img/common/hero-banner-nuit.png'); */
 }
 
 .hero-background {
@@ -46,6 +48,9 @@
   background-position: center;
 }
 
+.is-centered{
+  margin:0 auto;
+}
 /* décollement du header */
 .section{
   position: relative;
