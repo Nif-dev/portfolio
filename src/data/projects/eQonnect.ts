@@ -23,7 +23,7 @@ export const eQonnect = {
     cardLinkedSkills: linkedSkills,
     allLinkedSkills: allLinkedSkills,
     link: "/portfolio/eQonnect",
-    presentation : undefined,
+    presentation : "/projet/eQonnect",
 }
 
 export const eQonnect_EN = {
