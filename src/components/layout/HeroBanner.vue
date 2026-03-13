@@ -25,12 +25,12 @@
 <style scoped>
 
 [data-theme="light"] .hero-background {
-  background-color: rgb(255, 248, 239);
+  background-color:  var(--color-light-sable);
   /* background-image: url('../../assets/img/common/hero-banner-jour.png') ; */
 }
 
 [data-theme="dark"] .hero-background {
-  background-color: #333330;
+  background-color: var(--color-dark-grey);
   /* background-image: url('../../assets/img/common/hero-banner-nuit.png'); */
 }
 
@@ -54,7 +54,6 @@
 /* décollement du header */
 .section{
   position: relative;
-  top: 5rem;
   min-height: 100vh;
 }
 
