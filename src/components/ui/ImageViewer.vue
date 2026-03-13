@@ -2,11 +2,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const props = defineProps<{
-  src: string
-  size?: string
-  alt?: string
-}>()
+    defineProps<{
+        src: string
+        size?: string
+        alt?: string
+    }>()
 
 const isOpen = ref(false)
 
