@@ -91,5 +91,11 @@ if (error.value) {
         min-height: 3rem;
         max-height: 30rem;
     }
+    .label{
+        text-align: left;
+    }
+    .field{
+        margin-bottom: 1.5rem;
+    }
 </style>
 
