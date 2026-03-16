@@ -1,7 +1,7 @@
 # Portfolio
 
 **Mon portfolio web personnel** - Vue d'ensemble de mes compétences, projets et parcours dev.  
-*Démo live : [https://nif-dev.github.io/nif-portfolio/](https://nif-dev.github.io/nif-portfolio/)*
+*Démo live : [https://nif-dev.github.io/nif-portfolio/](https://nif-dev.github.io/portfolio/)*
 
 ## ✨ Fonctionnalités clés
 - Interface responsive et interactive
