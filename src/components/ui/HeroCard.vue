@@ -68,7 +68,7 @@
 
 <style scoped>
     .box{
-        max-width: 40rem;
+        max-width: 80%;
         margin: 0 auto;
     }
 

@@ -1,5 +1,5 @@
 
-.is-CTA-button {
+.is-CTA  {
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
@@ -10,9 +10,8 @@
     font-size: 1.2rem;
     transition: all 0.2s ease;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    cursor: pointer;
 }
-.is-CTA-button:hover {
+.is-CTA:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     transform: translateY(-3px);
     -webkit-transform: translateY(-3px);
@@ -21,22 +20,29 @@
     -o-transform: translateY(-3px);
 }
 
+.is-CTA-button {
+    cursor: pointer;
+}
+
+
+
 /* [data-theme="light"] */
-    [data-theme="light"] .is-CTA-button {
+    [data-theme="light"] .is-CTA {
         color: black;
-        background-color: var(--color-orange);
+        background-color: var(--color-sable);
     }
+
     
-    [data-theme="light"] .is-CTA-button:hover {
-        background-color: var(--color-dark-orange);
+    [data-theme="light"] .is-CTA:hover {
+        background-color: var(--color-orange-transparent);
     }
     
 /* [data-theme="dark"] */
-    [data-theme="dark"] .is-CTA-button {
+    [data-theme="dark"] .is-CTA{
         color: white;
         background-color: var(--color-purple);
     }
     
-    [data-theme="dark"] .is-CTA-button:hover {
+    [data-theme="dark"] .is-CTA:hover {
         background-color: var(--color-purple-transparent);
     }

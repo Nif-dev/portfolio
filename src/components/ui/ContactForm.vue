@@ -77,7 +77,7 @@ if (error.value) {
         </div>
         <div class="field">
             <div class="control mt-6">
-                <button class="button is-CTA-button" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
+                <button class="button is-CTA is-CTA-button" type="submit" :disabled="isSubmitting">{{ t('contactMe:SEND') }}</button>
             </div>
         </div>
         <div v-if="error">{{ t('contactMe:ERROR_MESSAGE') }}</div>
@@ -90,6 +90,12 @@ if (error.value) {
     textarea{
         min-height: 3rem;
         max-height: 30rem;
+    }
+    .label{
+        text-align: left;
+    }
+    .field{
+        margin-bottom: 1.5rem;
     }
 </style>
 

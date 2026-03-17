@@ -29,13 +29,10 @@ defineProps<{
       <p class="card-header-title">
         {{ t(`${project.localesName}.TITLE`) }}
       </p>
+      <button class="button button-top">
+        <i class="fas fa-external-link-alt ml-2"></i>
+      </button>
       
-    <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
-          <button class="button">
-            Voir projet
-            <i class="fas fa-external-link-alt ml-2"></i>
-          </button>
-        </router-link>
     </header>
 
     <!-- Image principale du projet -->
@@ -60,11 +57,44 @@ defineProps<{
         <skillIcon :skill="skill" :desc="false" :hoverable="false" />
       </span>
     </footer>
+    
+    <!-- Footer CTA avec liens vers la page projet ou projet en ligne si disponible -->
+    <footer 
+      class="card-footer invisible-footer"
+      :class="{
+        'is-flex is-justify-content-space-between': project?.link,
+        'is-flex is-justify-content-flex-end': !project?.link
+      }">
+      <!-- lien page projet -->
+      <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
+        <button class="button">
+          Page projet
+          <i class="fas fa-external-link-alt ml-2"></i>
+        </button>
+      </router-link>
+      <!-- lien page du projet en ligne -->
+      <a v-if="project?.link" :href="project.link" rel="noopener" @click="console.log(project.link)">
+        <button class="button">
+          Projet en ligne
+          <i class="fas fa-external-link-alt ml-2"></i>
+        </button>
+      </a>
+    </footer>
 
   </div>
 </template>
 
 <style scoped>
+
+  .button{
+    width: 10rem;
+    height: 3rem;
+  }
+
+  .button-top{
+    width: 7rem
+  }
+
   [data-theme="light"] .card{
         background-color: var(--color-dutch-white);
         box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
