@@ -17,7 +17,7 @@ export const eQonnect = {
 
     name: "eQonnect",
     localesName: "eQonnect",
-    icon: "/assets/img/projects/eQonnect/logo.png",
+    icon: images[0],
     images: images,
     tags: ["Fullstack"],
     cardLinkedSkills: linkedSkills,

@@ -29,15 +29,15 @@ defineProps<{
       <p class="card-header-title">
         {{ t(`${project.localesName}.TITLE`) }}
       </p>
-      <button class="button button-top">
+      <!-- <button class="button button-top">
         <i class="fas fa-external-link-alt ml-2"></i>
-      </button>
+      </button> -->
       
     </header>
 
     <!-- Image principale du projet -->
     <div class="card-image">
-      <figure class="image is-4by4">
+      <figure class="image is-4by4 p-4">
         <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
           <img :src="project.icon" :alt="project.name" />
         </router-link>
@@ -65,6 +65,13 @@ defineProps<{
         'is-flex is-justify-content-space-between': project?.link,
         'is-flex is-justify-content-flex-end': !project?.link
       }">
+      <!-- lien page du projet en ligne -->
+      <a v-if="project?.link" :href="project.link" rel="noopener" target="_blank" @click="console.log(project.link)">
+        <button class="button">
+          Projet en ligne
+          <i class="fas fa-external-link-alt ml-2"></i>
+        </button>
+      </a>
       <!-- lien page projet -->
       <router-link :to="`/projet/${project.name.toLowerCase()}`" rel="noopener" @click="adjustScrollOnRedirect">
         <button class="button">
@@ -72,13 +79,6 @@ defineProps<{
           <i class="fas fa-external-link-alt ml-2"></i>
         </button>
       </router-link>
-      <!-- lien page du projet en ligne -->
-      <a v-if="project?.link" :href="project.link" rel="noopener" @click="console.log(project.link)">
-        <button class="button">
-          Projet en ligne
-          <i class="fas fa-external-link-alt ml-2"></i>
-        </button>
-      </a>
     </footer>
 
   </div>

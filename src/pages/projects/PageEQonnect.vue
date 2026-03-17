@@ -7,7 +7,7 @@
     import SkillIcons from '../../components/ui/SkillsIcons.vue'
     import SeparatorProp from '../../components/ui/SeparatorProp.vue'
 
-    import ImageViewer from '../../components/ui/ImageViewer.vue';
+    import ImageZoom from '../../components/ui/ImageZoom.vue';
     const images = eQonnect.images
     
 </script>
@@ -33,7 +33,7 @@
         </div> 
 <SeparatorProp color="#095b16" />
 <div v-for="image in images" :key="image">
-    <ImageViewer :src="image" size="20rem" :alt="eQonnect.name" />
+    <ImageZoom :src="image" size="20rem" :alt="eQonnect.name" />
 
 </div>
 
