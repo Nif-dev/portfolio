@@ -17,7 +17,7 @@ const Hexagon = HexagonDataJSON as CardData
 
 <template>
 
-    <h1 class="title has-text-centered">eQonnect POC</h1>
+    <!-- <h1 class="title has-text-centered">eQonnect POC</h1>
 
     <section>
         <h2 class="subtitle has-text-centered">Simple template</h2>
@@ -28,9 +28,14 @@ const Hexagon = HexagonDataJSON as CardData
         <br>
         <h2 class="subtitle has-text-centered">Hexagon*</h2>
         <CardTemplate :card-data="Hexagon"/>
+    </section> -->
+
+    <section class="">
+        <CardTemplate :card-data="Simple"/>
     </section>
 
 </template>
 
 <style scoped>
+
 </style>
